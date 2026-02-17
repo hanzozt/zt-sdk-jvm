@@ -19,7 +19,7 @@
 |**name** | **String** |  |  |
 |**permissions** | **List&lt;DialBind&gt;** |  |  |
 |**postureQueries** | [**List&lt;PostureQueries&gt;**](PostureQueries.md) |  |  |
-|**roleAttributes** | **List&lt;String&gt;** | A set of strings used to loosly couple this resource to policies |  |
+|**roleAttributes** | **List&lt;String&gt;** | A set of strings used to loosely couple this resource to policies |  |
 |**terminatorStrategy** | **String** |  |  |
 
 

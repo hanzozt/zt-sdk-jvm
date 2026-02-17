@@ -110,11 +110,11 @@ CompletableFuture<[**CreateCurrentApiSessionCertificateEnvelope**](CreateCurrent
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | A response of a create API Session certificate |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **201** | A response of a create API Session certificate |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## createCurrentApiSessionCertificateWithHttpInfo
 
@@ -201,11 +201,11 @@ CompletableFuture<ApiResponse<[**CreateCurrentApiSessionCertificateEnvelope**](C
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | A response of a create API Session certificate |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **201** | A response of a create API Session certificate |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## createTotpToken
@@ -283,9 +283,9 @@ CompletableFuture<[**TotpTokenEnvelope**](TotpTokenEnvelope.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A TOTP token create response, contains a token used to satisfy posture checks |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | A TOTP token create response, contains a token used to satisfy posture checks |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## createTotpTokenWithHttpInfo
 
@@ -372,9 +372,9 @@ CompletableFuture<ApiResponse<[**TotpTokenEnvelope**](TotpTokenEnvelope.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A TOTP token create response, contains a token used to satisfy posture checks |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | A TOTP token create response, contains a token used to satisfy posture checks |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## currentApiSessionDelete
@@ -448,8 +448,8 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## currentApiSessionDeleteWithHttpInfo
 
@@ -532,8 +532,8 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## deleteCurrentApiSessionCertificate
@@ -611,11 +611,11 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The delete request was successful and the resource has been removed |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | The delete request was successful and the resource has been removed |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## deleteCurrentApiSessionCertificateWithHttpInfo
 
@@ -702,11 +702,11 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The delete request was successful and the resource has been removed |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | The delete request was successful and the resource has been removed |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## detailCurrentApiSessionCertificate
@@ -784,11 +784,11 @@ CompletableFuture<[**DetailCurrentApiSessionCertificateEnvelope**](DetailCurrent
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A response containing a single API Session certificate |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | A response containing a single API Session certificate |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## detailCurrentApiSessionCertificateWithHttpInfo
 
@@ -875,11 +875,11 @@ CompletableFuture<ApiResponse<[**DetailCurrentApiSessionCertificateEnvelope**](D
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A response containing a single API Session certificate |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | A response containing a single API Session certificate |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## detailCurrentIdentityAuthenticator
@@ -957,9 +957,9 @@ CompletableFuture<[**DetailAuthenticatorEnvelope**](DetailAuthenticatorEnvelope.
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A singular authenticator resource |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | A singular authenticator resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## detailCurrentIdentityAuthenticatorWithHttpInfo
 
@@ -1046,9 +1046,9 @@ CompletableFuture<ApiResponse<[**DetailAuthenticatorEnvelope**](DetailAuthentica
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A singular authenticator resource |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | A singular authenticator resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## extendCurrentIdentityAuthenticator
@@ -1128,8 +1128,8 @@ CompletableFuture<[**IdentityExtendEnrollmentEnvelope**](IdentityExtendEnrollmen
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A response containg the identity&#39;s new certificate |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | A response containg the identity&#39;s new certificate |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## extendCurrentIdentityAuthenticatorWithHttpInfo
 
@@ -1218,8 +1218,8 @@ CompletableFuture<ApiResponse<[**IdentityExtendEnrollmentEnvelope**](IdentityExt
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A response containg the identity&#39;s new certificate |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | A response containg the identity&#39;s new certificate |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## extendVerifyCurrentIdentityAuthenticator
@@ -1299,8 +1299,8 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## extendVerifyCurrentIdentityAuthenticatorWithHttpInfo
 
@@ -1389,8 +1389,8 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## getCurrentAPISession
@@ -1464,8 +1464,8 @@ CompletableFuture<[**CurrentApiSessionDetailEnvelope**](CurrentApiSessionDetailE
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The API session associated with the session used to issue the request |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | The API session associated with the session used to issue the request |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## getCurrentAPISessionWithHttpInfo
 
@@ -1548,8 +1548,8 @@ CompletableFuture<ApiResponse<[**CurrentApiSessionDetailEnvelope**](CurrentApiSe
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The API session associated with the session used to issue the request |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | The API session associated with the session used to issue the request |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## listCurrentApiSessionCertificates
@@ -1631,11 +1631,11 @@ CompletableFuture<[**ListCurrentApiSessionCertificatesEnvelope**](ListCurrentApi
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A list of the current API Session&#39;s certificate |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | A list of the current API Session&#39;s certificate |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## listCurrentApiSessionCertificatesWithHttpInfo
 
@@ -1726,11 +1726,11 @@ CompletableFuture<ApiResponse<[**ListCurrentApiSessionCertificatesEnvelope**](Li
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A list of the current API Session&#39;s certificate |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | A list of the current API Session&#39;s certificate |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## listCurrentIdentityAuthenticators
@@ -1812,9 +1812,9 @@ CompletableFuture<[**ListAuthenticatorsEnvelope**](ListAuthenticatorsEnvelope.md
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A list of authenticators |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | A list of authenticators |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## listCurrentIdentityAuthenticatorsWithHttpInfo
 
@@ -1905,9 +1905,9 @@ CompletableFuture<ApiResponse<[**ListAuthenticatorsEnvelope**](ListAuthenticator
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A list of authenticators |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | A list of authenticators |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## listServiceUpdates
@@ -1981,10 +1981,10 @@ CompletableFuture<[**ListCurrentApiSessionServiceUpdatesEnvelope**](ListCurrentA
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Data indicating necessary service updates |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | Data indicating necessary service updates |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## listServiceUpdatesWithHttpInfo
 
@@ -2067,10 +2067,10 @@ CompletableFuture<ApiResponse<[**ListCurrentApiSessionServiceUpdatesEnvelope**](
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Data indicating necessary service updates |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | Data indicating necessary service updates |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## patchCurrentIdentityAuthenticator
@@ -2150,10 +2150,10 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The patch request was successful and the resource has been altered |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | The patch request was successful and the resource has been altered |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## patchCurrentIdentityAuthenticatorWithHttpInfo
 
@@ -2242,10 +2242,10 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The patch request was successful and the resource has been altered |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | The patch request was successful and the resource has been altered |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## updateCurrentIdentityAuthenticator
@@ -2325,10 +2325,10 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The update request was successful and the resource has been altered |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | The update request was successful and the resource has been altered |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## updateCurrentIdentityAuthenticatorWithHttpInfo
 
@@ -2417,8 +2417,8 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The update request was successful and the resource has been altered |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | The update request was successful and the resource has been altered |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
