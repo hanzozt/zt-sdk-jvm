@@ -11,7 +11,7 @@
 |**createdAt** | **OffsetDateTime** |  |  |
 |**id** | **String** |  |  |
 |**name** | **String** |  |  |
-|**roleAttributes** | **List&lt;String&gt;** | A set of strings used to loosly couple this resource to policies |  |
+|**roleAttributes** | **List&lt;String&gt;** | A set of strings used to loosely couple this resource to policies |  |
 |**tags** | [**Tags**](Tags.md) |  |  |
 |**typeId** | **String** |  |  |
 |**updatedAt** | **OffsetDateTime** |  |  |
