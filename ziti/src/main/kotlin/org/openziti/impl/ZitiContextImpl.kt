@@ -123,6 +123,15 @@ internal class ZitiContextImpl(internal val id: Identity, enabled: Boolean) : Zi
             }
         }
 
+        launch {
+            accessToken.filterNotNull().collect { token ->
+                controller.setAccessToken(token)
+                channels.forEach { (_, channel) ->
+                    channel.updateToken(token)
+                }
+            }
+        }
+
         start()
     }
 
@@ -360,22 +369,30 @@ internal class ZitiContextImpl(internal val id: Identity, enabled: Boolean) : Zi
     }
 
     private fun maintainApiSession(authenticator: ZitiAuthenticator) = async {
+        var retries = 5
         while(true) {
-            val token = accessToken.value
-
-            if (token == null) break
-
+            val token = accessToken.value ?: break
             val now = OffsetDateTime.now()
-            var delay =  token.expiration.toEpochSecond() - now.toEpochSecond() - 10
-            if (delay < 0) {
-                delay = 0
+            if (token.expiration.isBefore(now)) break
+
+            if (retries == 0) {
+                w{"stopping refresh after 5 consecutive failed attempts"}
+                break
             }
+
+            val delay = (token.expiration.toEpochSecond() - now.toEpochSecond()) * 2 / 3
 
             d("[${name()}] sleeping for $delay seconds")
             delay(delay.toDuration(DurationUnit.SECONDS))
             d("[${name()}] refreshing access token")
-            val newToken = authenticator.refresh()
-            accessToken.value = newToken
+            runCatching {
+                val newToken = authenticator.refresh()
+                accessToken.value = newToken
+                retries = 5
+            }.onFailure {
+                retries--
+                w{ "failed to refresh access token: ${it.message}" }
+            }
         }
     }
 
