@@ -102,9 +102,9 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | Base empty response |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## authenticateMfaWithHttpInfo
 
@@ -191,9 +191,9 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | Base empty response |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## createMfaRecoveryCodes
@@ -271,9 +271,9 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## createMfaRecoveryCodesWithHttpInfo
 
@@ -360,9 +360,9 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## createTotpToken
@@ -440,9 +440,9 @@ CompletableFuture<[**TotpTokenEnvelope**](TotpTokenEnvelope.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A TOTP token create response, contains a token used to satisfy posture checks |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | A TOTP token create response, contains a token used to satisfy posture checks |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## createTotpTokenWithHttpInfo
 
@@ -529,9 +529,9 @@ CompletableFuture<ApiResponse<[**TotpTokenEnvelope**](TotpTokenEnvelope.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A TOTP token create response, contains a token used to satisfy posture checks |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | A TOTP token create response, contains a token used to satisfy posture checks |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## deleteMfa
@@ -609,9 +609,9 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## deleteMfaWithHttpInfo
 
@@ -698,9 +698,9 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## detailMfa
@@ -774,9 +774,9 @@ CompletableFuture<[**DetailMfaEnvelope**](DetailMfaEnvelope.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The details of an MFA enrollment |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | The details of an MFA enrollment |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## detailMfaWithHttpInfo
 
@@ -859,9 +859,9 @@ CompletableFuture<ApiResponse<[**DetailMfaEnvelope**](DetailMfaEnvelope.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The details of an MFA enrollment |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | The details of an MFA enrollment |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## detailMfaQrCode
@@ -1098,9 +1098,9 @@ CompletableFuture<[**DetailMfaRecoveryCodesEnvelope**](DetailMfaRecoveryCodesEnv
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The recovery codes of an MFA enrollment |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | The recovery codes of an MFA enrollment |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## detailMfaRecoveryCodesWithHttpInfo
 
@@ -1189,9 +1189,9 @@ CompletableFuture<ApiResponse<[**DetailMfaRecoveryCodesEnvelope**](DetailMfaReco
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The recovery codes of an MFA enrollment |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | The recovery codes of an MFA enrollment |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## enrollMfa
@@ -1265,9 +1265,9 @@ CompletableFuture<[**CreateEnvelope**](CreateEnvelope.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | The create request was successful and the resource has been added at the following location |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **409** | The identity is already enrolled in MFA |  -  |
+| **201** | The create request was successful and the resource has been added at the following location |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **409** | The identity is already enrolled in MFA |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## enrollMfaWithHttpInfo
 
@@ -1350,9 +1350,9 @@ CompletableFuture<ApiResponse<[**CreateEnvelope**](CreateEnvelope.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | The create request was successful and the resource has been added at the following location |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **409** | The identity is already enrolled in MFA |  -  |
+| **201** | The create request was successful and the resource has been added at the following location |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **409** | The identity is already enrolled in MFA |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## removeIdentityMfa
@@ -1430,11 +1430,11 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## removeIdentityMfaWithHttpInfo
 
@@ -1521,11 +1521,11 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## verifyMfa
@@ -1603,9 +1603,9 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## verifyMfaWithHttpInfo
 
@@ -1692,7 +1692,7 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 

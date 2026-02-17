@@ -98,11 +98,11 @@ CompletableFuture<[**CreateEnvelope**](CreateEnvelope.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | The create request was successful and the resource has been added at the following location |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **201** | The create request was successful and the resource has been added at the following location |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## createPostureCheckWithHttpInfo
 
@@ -189,11 +189,11 @@ CompletableFuture<ApiResponse<[**CreateEnvelope**](CreateEnvelope.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **201** | The create request was successful and the resource has been added at the following location |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **201** | The create request was successful and the resource has been added at the following location |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## deletePostureCheck
@@ -271,11 +271,11 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The delete request was successful and the resource has been removed |  -  |
-| **403** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | The delete request was successful and the resource has been removed |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **403** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## deletePostureCheckWithHttpInfo
 
@@ -362,11 +362,11 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The delete request was successful and the resource has been removed |  -  |
-| **403** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | The delete request was successful and the resource has been removed |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **403** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## detailPostureCheck
@@ -444,11 +444,11 @@ CompletableFuture<[**DetailPostureCheckEnvelope**](DetailPostureCheckEnvelope.md
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Retrieves a singular posture check by id |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | Retrieves a singular posture check by id |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## detailPostureCheckWithHttpInfo
 
@@ -535,11 +535,11 @@ CompletableFuture<ApiResponse<[**DetailPostureCheckEnvelope**](DetailPostureChec
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Retrieves a singular posture check by id |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | Retrieves a singular posture check by id |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## detailPostureCheckType
@@ -617,11 +617,11 @@ CompletableFuture<[**DetailPostureCheckTypeEnvelope**](DetailPostureCheckTypeEnv
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Retrieves a singular posture check type by id |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | Retrieves a singular posture check type by id |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## detailPostureCheckTypeWithHttpInfo
 
@@ -708,11 +708,11 @@ CompletableFuture<ApiResponse<[**DetailPostureCheckTypeEnvelope**](DetailPosture
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Retrieves a singular posture check type by id |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | Retrieves a singular posture check type by id |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## listPostureCheckTypes
@@ -794,11 +794,11 @@ CompletableFuture<[**ListPostureCheckTypesEnvelope**](ListPostureCheckTypesEnvel
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A list of posture check types |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | A list of posture check types |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## listPostureCheckTypesWithHttpInfo
 
@@ -889,11 +889,11 @@ CompletableFuture<ApiResponse<[**ListPostureCheckTypesEnvelope**](ListPostureChe
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A list of posture check types |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | A list of posture check types |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## listPostureChecks
@@ -979,11 +979,11 @@ CompletableFuture<[**ListPostureCheckEnvelope**](ListPostureCheckEnvelope.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A list of posture checks |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | A list of posture checks |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## listPostureChecksWithHttpInfo
 
@@ -1078,11 +1078,11 @@ CompletableFuture<ApiResponse<[**ListPostureCheckEnvelope**](ListPostureCheckEnv
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A list of posture checks |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | A list of posture checks |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## patchPostureCheck
@@ -1162,12 +1162,12 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The patch request was successful and the resource has been altered |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | The patch request was successful and the resource has been altered |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## patchPostureCheckWithHttpInfo
 
@@ -1256,12 +1256,12 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The patch request was successful and the resource has been altered |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | The patch request was successful and the resource has been altered |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## updatePostureCheck
@@ -1341,12 +1341,12 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The update request was successful and the resource has been altered |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | The update request was successful and the resource has been altered |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## updatePostureCheckWithHttpInfo
 
@@ -1435,10 +1435,10 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | The update request was successful and the resource has been altered |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **404** | The requested resource does not exist |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | The update request was successful and the resource has been altered |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **404** | The requested resource does not exist |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 

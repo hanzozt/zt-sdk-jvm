@@ -90,8 +90,8 @@ CompletableFuture<[**IdentityExtendEnrollmentEnvelope**](IdentityExtendEnrollmen
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A response containg the identity&#39;s new certificate |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | A response containg the identity&#39;s new certificate |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## extendCurrentIdentityAuthenticatorWithHttpInfo
 
@@ -180,8 +180,8 @@ CompletableFuture<ApiResponse<[**IdentityExtendEnrollmentEnvelope**](IdentityExt
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A response containg the identity&#39;s new certificate |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | A response containg the identity&#39;s new certificate |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## extendRouterEnrollment
@@ -248,10 +248,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A response containing the edge routers new signed certificates (server chain, server cert, CAs). |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
+| **200** | A response containing the edge routers new signed certificates (server chain, server cert, CAs). |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## extendRouterEnrollmentWithHttpInfo
 
@@ -327,10 +327,10 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A response containing the edge routers new signed certificates (server chain, server cert, CAs). |  -  |
-| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
+| **200** | A response containing the edge routers new signed certificates (server chain, server cert, CAs). |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **400** | The supplied request contains invalid fields or could not be parsed (json and non-json bodies). The error&#39;s code, message, and cause fields can be inspected for further information |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## extendVerifyCurrentIdentityAuthenticator
@@ -410,8 +410,8 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## extendVerifyCurrentIdentityAuthenticatorWithHttpInfo
 
@@ -500,6 +500,6 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 

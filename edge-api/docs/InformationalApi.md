@@ -85,7 +85,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A single specification |  -  |
+| **200** | A single specification |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## detailSpecWithHttpInfo
 
@@ -161,7 +161,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A single specification |  -  |
+| **200** | A single specification |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## detailSpecBody
@@ -228,7 +228,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Returns the document that represents the specification |  -  |
+| **200** | Returns the document that represents the specification |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## detailSpecBodyWithHttpInfo
 
@@ -304,7 +304,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Returns the document that represents the specification |  -  |
+| **200** | Returns the document that represents the specification |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## listEnumeratedCapabilities
@@ -365,7 +365,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A typed and enumerated list of capabilities |  -  |
+| **200** | A typed and enumerated list of capabilities |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## listEnumeratedCapabilitiesWithHttpInfo
 
@@ -435,7 +435,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A typed and enumerated list of capabilities |  -  |
+| **200** | A typed and enumerated list of capabilities |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## listProtocols
@@ -496,9 +496,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A list of supported Edge protocols |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | A list of supported Edge protocols |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## listProtocolsWithHttpInfo
 
@@ -568,9 +568,9 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A list of supported Edge protocols |  -  |
-| **429** | The resource requested is rate limited and the rate limit has been exceeded |  -  |
-| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  -  |
+| **200** | A list of supported Edge protocols |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **429** | The resource requested is rate limited and the rate limit has been exceeded |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **503** | The request could not be completed due to the server being busy or in a temporarily bad state |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## listRoot
@@ -631,7 +631,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Version information for the controller |  -  |
+| **200** | Version information for the controller |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## listRootWithHttpInfo
 
@@ -701,7 +701,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Version information for the controller |  -  |
+| **200** | Version information for the controller |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## listSpecs
@@ -764,7 +764,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A list of specifications |  -  |
+| **200** | A list of specifications |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## listSpecsWithHttpInfo
 
@@ -836,7 +836,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A list of specifications |  -  |
+| **200** | A list of specifications |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## listVersion
@@ -897,7 +897,7 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Version information for the controller |  -  |
+| **200** | Version information for the controller |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## listVersionWithHttpInfo
 
@@ -967,5 +967,5 @@ No authorization required
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Version information for the controller |  -  |
+| **200** | Version information for the controller |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 

@@ -88,8 +88,8 @@ CompletableFuture<[**IdentityExtendEnrollmentEnvelope**](IdentityExtendEnrollmen
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A response containg the identity&#39;s new certificate |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | A response containg the identity&#39;s new certificate |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## extendCurrentIdentityAuthenticatorWithHttpInfo
 
@@ -178,8 +178,8 @@ CompletableFuture<ApiResponse<[**IdentityExtendEnrollmentEnvelope**](IdentityExt
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | A response containg the identity&#39;s new certificate |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | A response containg the identity&#39;s new certificate |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 
 ## extendVerifyCurrentIdentityAuthenticator
@@ -259,8 +259,8 @@ CompletableFuture<[**Empty**](Empty.md)>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 
 ## extendVerifyCurrentIdentityAuthenticatorWithHttpInfo
 
@@ -349,6 +349,6 @@ CompletableFuture<ApiResponse<[**Empty**](Empty.md)>>
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-| **200** | Base empty response |  -  |
-| **401** | The supplied session does not have the correct access rights to request this resource |  -  |
+| **200** | Base empty response |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
+| **401** | The supplied session does not have the correct access rights to request this resource |  * WWW-Authenticate - Denotes different type of security token related information <br>  |
 

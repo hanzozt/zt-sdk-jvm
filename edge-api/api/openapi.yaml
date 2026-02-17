@@ -9,14 +9,12 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
   title: Ziti Edge Client
-  version: 0.26.51
+  version: 0.26.53
 servers:
 - url: https://demo.ziti.dev/edge/client/v1
 paths:
   /:
     get:
-      x-accepts:
-      - application/json
       operationId: listRoot
       responses:
         "200":
@@ -25,18 +23,25 @@ paths:
               schema:
                 $ref: "#/components/schemas/listVersionEnvelope"
           description: Version information for the controller
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security: []
       summary: Returns version information
       tags:
       - Informational
+      x-accepts:
+      - application/json
   /.well-known/est/cacerts:
     get:
       description: |
         This endpoint is used during enrollments to bootstrap trust between enrolling clients and the Ziti Edge API.
         This endpoint returns a base64 encoded PKCS7 store. The content can be base64 decoded and parsed by any library
         that supports parsing PKCS7 stores.
-      x-accepts:
-      - application/pkcs7-mime
       operationId: listWellKnownCas
       responses:
         "200":
@@ -116,15 +121,12 @@ paths:
       summary: Get CA Cert Store
       tags:
       - Well Known
+      x-accepts:
+      - application/pkcs7-mime
   /authenticate:
     post:
       description: |
         Allowed authentication methods include "password", "cert", and "ext-jwt"
-      x-codegen-request-body-name: auth
-      x-content-type: application/json
-      x-accepts:
-      - application/json
-      - default
       operationId: authenticate
       parameters:
       - in: query
@@ -166,13 +168,20 @@ paths:
                     name: Default Admin
                     urlName: identities
                   tags:
-                  - userField1: 123
+                  - userField1: 123.0
                   - userField2: asdf
                   token: 28bb0ed2-0577-4632-ae70-d17106b92871
                   updatedAt: 2020-03-09T19:04:21.5600897Z
                 meta: {}
           description: The API session associated with the session used to issue the
             request
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -203,6 +212,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -222,6 +238,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The authentication request could not be processed as the credentials
             are invalid
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -241,18 +264,26 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security: []
       summary: Authenticate via a method supplied via a query string parameter
       tags:
       - Authentication
+      x-codegen-request-body-name: auth
+      x-content-type: application/json
+      x-accepts:
+      - application/json
+      - default
   /authenticate/mfa:
     post:
       description: Completes MFA authentication by submitting a MFA time based one
         time token or backup code.
-      x-codegen-request-body-name: mfaAuth
-      x-content-type: application/json
-      x-accepts:
-      - application/json
       operationId: authenticateMfa
       requestBody:
         content:
@@ -268,12 +299,26 @@ paths:
               schema:
                 $ref: "#/components/schemas/empty"
           description: Base empty response
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
               schema:
                 $ref: "#/components/schemas/empty"
           description: Base empty response
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -293,6 +338,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -301,11 +353,13 @@ paths:
       tags:
       - Authentication
       - MFA
+      x-codegen-request-body-name: mfaAuth
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /controllers:
     get:
       description: Retrieves a list of controllers
-      x-accepts:
-      - application/json
       operationId: listControllers
       parameters:
       - in: query
@@ -327,6 +381,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/listControllersEnvelope"
           description: A list of controllers
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -357,6 +418,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -377,6 +445,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -396,6 +471,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -403,11 +485,11 @@ paths:
       summary: List controllers
       tags:
       - Controllers
+      x-accepts:
+      - application/json
   /current-api-session:
     delete:
       description: Terminates the current API session
-      x-accepts:
-      - application/json
       responses:
         "200":
           content:
@@ -415,6 +497,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/empty"
           description: Base empty response
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -435,6 +524,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -442,11 +538,10 @@ paths:
       summary: Logout
       tags:
       - Current API Session
-    get:
-      description: Retrieves the API session that was used to issue the current request
       x-accepts:
       - application/json
-      - default
+    get:
+      description: Retrieves the API session that was used to issue the current request
       operationId: getCurrentAPISession
       responses:
         "200":
@@ -472,13 +567,20 @@ paths:
                     name: Default Admin
                     urlName: identities
                   tags:
-                  - userField1: 123
+                  - userField1: 123.0
                   - userField2: asdf
                   token: 28bb0ed2-0577-4632-ae70-d17106b92871
                   updatedAt: 2020-03-09T19:04:21.5600897Z
                 meta: {}
           description: The API session associated with the session used to issue the
             request
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -499,6 +601,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -506,12 +615,13 @@ paths:
       summary: Return the current API session
       tags:
       - Current API Session
+      x-accepts:
+      - application/json
+      - default
   /current-api-session/certificates:
     get:
       description: "Retrieves a list of certificate resources for the current API\
         \ session; supports filtering, sorting, and pagination"
-      x-accepts:
-      - application/json
       operationId: listCurrentApiSessionCertificates
       parameters:
       - in: query
@@ -533,6 +643,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/listCurrentApiSessionCertificatesEnvelope"
           description: A list of the current API Session's certificate
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -563,6 +680,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -583,6 +707,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -602,6 +733,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -609,6 +747,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -616,15 +761,13 @@ paths:
       summary: List the ephemeral certificates available for the current API Session
       tags:
       - Current API Session
+      x-accepts:
+      - application/json
     post:
       description: Creates an ephemeral certificate for the current API Session. This
         endpoint expects a PEM encoded CSRs to be provided for fulfillment as a property
         of a JSON payload. It is up to the client to manage the private key backing
         the CSR request.
-      x-codegen-request-body-name: sessionCertificate
-      x-content-type: application/json
-      x-accepts:
-      - application/json
       operationId: createCurrentApiSessionCertificate
       requestBody:
         content:
@@ -640,6 +783,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/createCurrentApiSessionCertificateEnvelope"
           description: A response of a create API Session certificate
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -670,6 +820,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -690,6 +847,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -709,6 +873,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -716,6 +887,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -723,12 +901,14 @@ paths:
       summary: Creates an ephemeral certificate for the current API Session
       tags:
       - Current API Session
+      x-codegen-request-body-name: sessionCertificate
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /current-api-session/certificates/{id}:
     delete:
       description: |
         Delete an ephemeral certificateby id
-      x-accepts:
-      - application/json
       operationId: deleteCurrentApiSessionCertificate
       parameters:
       - description: The id of the requested resource
@@ -745,6 +925,13 @@ paths:
                 $ref: "#/components/schemas/empty"
           description: The delete request was successful and the resource has been
             removed
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -775,6 +962,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -795,6 +989,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -814,6 +1015,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -821,6 +1029,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -828,10 +1043,10 @@ paths:
       summary: Delete an ephemeral certificate
       tags:
       - Current API Session
-    get:
-      description: Retrieves a single ephemeral certificate by id
       x-accepts:
       - application/json
+    get:
+      description: Retrieves a single ephemeral certificate by id
       operationId: detailCurrentApiSessionCertificate
       parameters:
       - description: The id of the requested resource
@@ -847,6 +1062,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/detailCurrentApiSessionCertificateEnvelope"
           description: A response containing a single API Session certificate
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -867,6 +1089,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -885,6 +1114,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -904,6 +1140,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -911,6 +1154,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -918,13 +1168,13 @@ paths:
       summary: Retrieves an ephemeral certificate
       tags:
       - Current API Session
+      x-accepts:
+      - application/json
   /current-api-session/service-updates:
     get:
       description: |
         Retrieves data indicating the last time data relevant to this API Session was altered that would necessitate
         service refreshes.
-      x-accepts:
-      - application/json
       operationId: listServiceUpdates
       responses:
         "200":
@@ -933,6 +1183,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/listCurrentApiSessionServiceUpdatesEnvelope"
           description: Data indicating necessary service updates
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -953,6 +1210,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -972,6 +1236,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -979,6 +1250,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -988,14 +1266,12 @@ paths:
       tags:
       - Current API Session
       - Services
+      x-accepts:
+      - application/json
   /current-api-session/totp-token:
     post:
       description: |
         Creates a TOTP token that proves TOTP validation occurred at a specific time. Used in posture response for posture checks.
-      x-codegen-request-body-name: mfaValidation
-      x-content-type: application/json
-      x-accepts:
-      - application/json
       operationId: createTotpToken
       requestBody:
         content:
@@ -1012,6 +1288,13 @@ paths:
                 $ref: "#/components/schemas/totpTokenEnvelope"
           description: "A TOTP token create response, contains a token used to satisfy\
             \ posture checks"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -1032,6 +1315,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -1050,6 +1340,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -1059,13 +1356,14 @@ paths:
       tags:
       - Current API Session
       - MFA
+      x-codegen-request-body-name: mfaValidation
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /current-identity:
     get:
       description: Returns the identity associated with the API sessions used to issue
         the current request
-      x-accepts:
-      - application/json
-      - default
       operationId: getCurrentIdentity
       responses:
         "200":
@@ -1105,6 +1403,13 @@ paths:
                 meta: {}
           description: The identity associated with the API Session used to issue
             the request
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -1125,6 +1430,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -1132,12 +1444,13 @@ paths:
       summary: Return the current identity
       tags:
       - Current Identity
+      x-accepts:
+      - application/json
+      - default
   /current-identity/authenticators:
     get:
       description: "Retrieves a list of authenticators assigned to the current API\
         \ session's identity; supports filtering, sorting, and pagination."
-      x-accepts:
-      - application/json
       operationId: listCurrentIdentityAuthenticators
       parameters:
       - in: query
@@ -1159,6 +1472,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/listAuthenticatorsEnvelope"
           description: A list of authenticators
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -1189,6 +1509,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -1209,6 +1536,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -1216,12 +1550,12 @@ paths:
       summary: List authenticators for the current identity
       tags:
       - Current API Session
+      x-accepts:
+      - application/json
   /current-identity/authenticators/{id}:
     get:
       description: Retrieves a single authenticator by id. Will only show authenticators
         assigned to the API session's identity.
-      x-accepts:
-      - application/json
       operationId: detailCurrentIdentityAuthenticator
       parameters:
       - description: The id of the requested resource
@@ -1237,6 +1571,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/detailAuthenticatorEnvelope"
           description: A singular authenticator resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -1257,6 +1598,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -1275,6 +1623,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -1282,14 +1637,12 @@ paths:
       summary: Retrieve an authenticator for the current identity
       tags:
       - Current API Session
+      x-accepts:
+      - application/json
     patch:
       description: |
         Update the supplied fields on an authenticator by id. Will only update authenticators assigned to the API
         session's identity.
-      x-codegen-request-body-name: authenticator
-      x-content-type: application/json
-      x-accepts:
-      - application/json
       operationId: patchCurrentIdentityAuthenticator
       parameters:
       - description: The id of the requested resource
@@ -1313,6 +1666,13 @@ paths:
                 $ref: "#/components/schemas/empty"
           description: The patch request was successful and the resource has been
             altered
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -1343,6 +1703,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -1363,6 +1730,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -1381,6 +1755,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -1388,14 +1769,14 @@ paths:
       summary: Update the supplied fields on an authenticator of this identity
       tags:
       - Current API Session
-    put:
-      description: |
-        Update all fields on an authenticator by id.  Will only update authenticators assigned to the API session's
-        identity.
       x-codegen-request-body-name: authenticator
       x-content-type: application/json
       x-accepts:
       - application/json
+    put:
+      description: |
+        Update all fields on an authenticator by id.  Will only update authenticators assigned to the API session's
+        identity.
       operationId: updateCurrentIdentityAuthenticator
       parameters:
       - description: The id of the requested resource
@@ -1419,6 +1800,13 @@ paths:
                 $ref: "#/components/schemas/empty"
           description: The update request was successful and the resource has been
             altered
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -1449,6 +1837,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -1469,6 +1864,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -1487,6 +1889,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -1494,6 +1903,10 @@ paths:
       summary: Update all fields on an authenticator of this identity
       tags:
       - Current API Session
+      x-codegen-request-body-name: authenticator
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /current-identity/authenticators/{id}/extend:
     post:
       description: |-
@@ -1501,10 +1914,6 @@ paths:
         Allows an identity to extend its certificate's expiration date by using its current and valid client certificate to submit a CSR. This CSR may be passed in using a new private key, thus allowing private key rotation.
         The response from this endpoint is a new client certificate which the client must  be verified via the /authenticators/{id}/extend-verify endpoint.
         After verification is completion any new connections must be made with new certificate. Prior to verification the old client certificate remains active.
-      x-codegen-request-body-name: extend
-      x-content-type: application/json
-      x-accepts:
-      - application/json
       operationId: extendCurrentIdentityAuthenticator
       parameters:
       - description: The id of the requested resource
@@ -1526,6 +1935,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/identityExtendEnrollmentEnvelope"
           description: A response containg the identity's new certificate
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -1546,6 +1962,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -1556,15 +1979,15 @@ paths:
       - Current API Session
       - Enroll
       - Extend Enrollment
+      x-codegen-request-body-name: extend
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /current-identity/authenticators/{id}/extend-verify:
     post:
       description: |-
         After submitting a CSR for a new client certificate the resulting public certificate must be re-submitted to this endpoint to verify receipt.
         After receipt, the new client certificate must be used for new authentication requests.
-      x-codegen-request-body-name: extend
-      x-content-type: application/json
-      x-accepts:
-      - application/json
       operationId: extendVerifyCurrentIdentityAuthenticator
       parameters:
       - description: The id of the requested resource
@@ -1586,6 +2009,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/empty"
           description: Base empty response
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -1606,6 +2036,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -1615,13 +2052,15 @@ paths:
       - Current API Session
       - Enroll
       - Extend Enrollment
+      x-codegen-request-body-name: extend
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /current-identity/edge-routers:
     get:
       description: |
         Lists the Edge Routers that the current identity has access to via policies. The data returned
         includes their address and online status
-      x-accepts:
-      - application/json
       operationId: getCurrentIdentityEdgeRouters
       responses:
         "200":
@@ -1630,6 +2069,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/listCurrentIdentityEdgeRoutersEnvelope"
           description: A list of edge routers
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -1650,6 +2096,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -1669,6 +2122,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -1676,6 +2136,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -1684,12 +2151,12 @@ paths:
       tags:
       - Current Identity
       - Edge Router
+      x-accepts:
+      - application/json
   /current-identity/mfa:
     delete:
       description: |
         Disable MFA for the current identity. Requires a current valid time based one time password if MFA enrollment has been completed. If not, code should be an empty string. If one time passwords are not available and admin account can be used to remove MFA from the identity via `DELETE /identities/<id>/mfa`.
-      x-accepts:
-      - application/json
       operationId: deleteMfa
       parameters:
       - in: header
@@ -1703,6 +2170,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/empty"
           description: Base empty response
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -1723,6 +2197,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -1741,6 +2222,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -1749,11 +2237,11 @@ paths:
       tags:
       - Current Identity
       - MFA
+      x-accepts:
+      - application/json
     get:
       description: |
         Returns details about the current MFA enrollment. If enrollment has not been completed it will return the current MFA configuration details necessary to complete a `POST /current-identity/mfa/verify`.
-      x-accepts:
-      - application/json
       operationId: detailMfa
       responses:
         "200":
@@ -1762,6 +2250,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/detailMfaEnvelope"
           description: The details of an MFA enrollment
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -1782,6 +2277,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -1800,6 +2302,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -1808,11 +2317,11 @@ paths:
       tags:
       - Current Identity
       - MFA
+      x-accepts:
+      - application/json
     post:
       description: |
         Allows authenticator based MFA enrollment. If enrollment has already been completed, it must be disabled before attempting to re-enroll. Subsequent enrollment request is completed via `POST /current-identity/mfa/verify`
-      x-accepts:
-      - application/json
       operationId: enrollMfa
       responses:
         "201":
@@ -1822,6 +2331,13 @@ paths:
                 $ref: "#/components/schemas/createEnvelope"
           description: The create request was successful and the resource has been
             added at the following location
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -1842,6 +2358,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "409":
           content:
             application/json:
@@ -1857,6 +2380,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The identity is already enrolled in MFA
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -1865,12 +2395,12 @@ paths:
       tags:
       - Current Identity
       - MFA
+      x-accepts:
+      - application/json
   /current-identity/mfa/qr-code:
     get:
       description: |
         Shows an QR code image for unverified MFA enrollments. 404s if the MFA enrollment has been completed or not started.
-      x-accepts:
-      - application/json
       operationId: detailMfaQrCode
       responses:
         "200":
@@ -1887,14 +2417,12 @@ paths:
       tags:
       - Current Identity
       - MFA
+      x-accepts:
+      - application/json
   /current-identity/mfa/recovery-codes:
     get:
       description: |
         Allows the viewing of recovery codes of an MFA enrollment. Requires a current valid time based one time password to interact with. Available after a completed MFA enrollment.
-      x-codegen-request-body-name: mfaValidation
-      x-content-type: application/json
-      x-accepts:
-      - application/json
       operationId: detailMfaRecoveryCodes
       parameters:
       - in: header
@@ -1915,6 +2443,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/detailMfaRecoveryCodesEnvelope"
           description: The recovery codes of an MFA enrollment
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -1935,6 +2470,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -1953,6 +2495,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -1961,13 +2510,13 @@ paths:
       tags:
       - Current Identity
       - MFA
-    post:
-      description: |
-        Allows regeneration of recovery codes of an MFA enrollment. Requires a current valid time based one time password to interact with. Available after a completed MFA enrollment. This replaces all existing recovery codes.
       x-codegen-request-body-name: mfaValidation
       x-content-type: application/json
       x-accepts:
       - application/json
+    post:
+      description: |
+        Allows regeneration of recovery codes of an MFA enrollment. Requires a current valid time based one time password to interact with. Available after a completed MFA enrollment. This replaces all existing recovery codes.
       operationId: createMfaRecoveryCodes
       requestBody:
         content:
@@ -1983,6 +2532,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/empty"
           description: Base empty response
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -2003,6 +2559,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -2021,6 +2584,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -2029,14 +2599,14 @@ paths:
       tags:
       - Current Identity
       - MFA
-  /current-identity/mfa/verify:
-    post:
-      description: |
-        Completes MFA enrollment by accepting a time based one time password as verification. Called after MFA enrollment has been initiated via `POST /current-identity/mfa`.
       x-codegen-request-body-name: mfaValidation
       x-content-type: application/json
       x-accepts:
       - application/json
+  /current-identity/mfa/verify:
+    post:
+      description: |
+        Completes MFA enrollment by accepting a time based one time password as verification. Called after MFA enrollment has been initiated via `POST /current-identity/mfa`.
       operationId: verifyMfa
       requestBody:
         content:
@@ -2052,6 +2622,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/empty"
           description: Base empty response
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -2072,6 +2649,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -2090,6 +2674,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -2098,13 +2689,13 @@ paths:
       tags:
       - Current Identity
       - MFA
+      x-codegen-request-body-name: mfaValidation
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /enroll:
     post:
       description: present a OTT and CSR to receive a long-lived client certificate
-      x-codegen-request-body-name: body
-      x-content-type: application/pkcs7
-      x-accepts:
-      - application/json
       operationId: enroll
       parameters:
       - in: query
@@ -2138,6 +2729,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/enrollmentCertsEnvelope"
           description: A response containing and identities client certificate chains
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -2168,6 +2766,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -2186,6 +2791,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "409":
           content:
             application/json:
@@ -2193,6 +2805,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to a conflict of configuration
             or state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "410":
           content:
             application/json:
@@ -2200,6 +2819,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed as the resource is no longer
             available
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -2219,6 +2845,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -2226,9 +2859,20 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       summary: Enroll an identity via one-time-token
       tags:
       - Enroll
+      x-codegen-request-body-name: body
+      x-content-type: application/pkcs7
+      x-accepts:
+      - application/json
   /enroll/ca:
     post:
       description: |
@@ -2237,8 +2881,6 @@ paths:
         Certificate Authority that has been added and verified (See POST /cas and POST /cas/{id}/verify).
 
         During this process no CSRs are requires as the client should already be in possession of a valid certificate.
-      x-accepts:
-      - application/json
       operationId: enrollCa
       responses:
         "200":
@@ -2247,6 +2889,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/empty"
           description: Base empty response
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -2277,6 +2926,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -2295,6 +2951,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -2314,6 +2977,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -2321,19 +2991,24 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       summary: Enroll an identity with a pre-exchanged certificate
       tags:
       - Enroll
+      x-accepts:
+      - application/json
   /enroll/challenge:
     post:
       description: |
         A caller may submit a nonce and a key id (kid) from the enrollment JWKS endpoint or enrollment JWT that will
         be used to sign the nonce. The resulting signature may be validated with the associated public key in order
         to verify a networks identity during enrollment. The nonce must be a valid formatted UUID.
-      x-codegen-request-body-name: nonce
-      x-content-type: application/json
-      x-accepts:
-      - application/json
       operationId: enrollmentChallenge
       requestBody:
         content:
@@ -2349,6 +3024,13 @@ paths:
                 $ref: "#/components/schemas/nonceSignature"
           description: "A nonce challenge response. The contents will be the signature\
             \ of the nonce, the key id used, and algorithm used to produce the signature."
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -2379,6 +3061,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -2398,18 +3087,25 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       summary: Allows verification of a controller or cluster of controllers as being
         the valid target for enrollment.
       tags:
       - Enroll
+      x-codegen-request-body-name: nonce
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /enroll/erott:
     post:
       description: |
         Enrolls an edge-router via a one-time-token to establish a certificate based identity.
-      x-codegen-request-body-name: erOttEnrollmentRequest
-      x-content-type: application/json
-      x-accepts:
-      - application/json
       operationId: enrollErOtt
       requestBody:
         content:
@@ -2426,6 +3122,13 @@ paths:
                 $ref: "#/components/schemas/enrollmentCertsEnvelope"
           description: "A response containing the edge routers signed certificates\
             \ (server chain, server cert, CAs)."
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -2456,6 +3159,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -2475,6 +3185,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -2482,9 +3199,20 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       summary: Enroll an edge-router
       tags:
       - Enroll
+      x-codegen-request-body-name: erOttEnrollmentRequest
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /enroll/extend/router:
     post:
       description: |
@@ -2497,10 +3225,6 @@ paths:
         has not expired.
 
         This request must be made using the existing, valid, client certificate.
-      x-codegen-request-body-name: routerExtendEnrollmentRequest
-      x-content-type: application/json
-      x-accepts:
-      - application/json
       operationId: extendRouterEnrollment
       requestBody:
         content:
@@ -2516,6 +3240,13 @@ paths:
                 $ref: "#/components/schemas/enrollmentCertsEnvelope"
           description: "A response containing the edge routers new signed certificates\
             \ (server chain, server cert, CAs)."
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -2546,6 +3277,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -2566,6 +3304,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -2585,18 +3330,27 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       summary: Extend the life of a currently enrolled router's certificates
       tags:
       - Enroll
       - Extend Enrollment
+      x-codegen-request-body-name: routerExtendEnrollmentRequest
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /enroll/jwks:
     get:
       description: |
         Returns a list of JSON Web Keys (JWKS) that are used for enrollment signing. The keys listed here are used
         to sign and co-sign enrollment JWTs. They can be verified through a challenge endpoint, using the public keys
         from this endpoint to verify the target machine has possession of the related private key.
-      x-accepts:
-      - application/json
       operationId: getEnrollmentJwks
       responses:
         "200":
@@ -2605,19 +3359,24 @@ paths:
               schema:
                 $ref: "#/components/schemas/jwks"
           description: A JWKS response for enrollment.
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       summary: List JSON Web Keys associated with enrollment
       tags:
       - Enroll
+      x-accepts:
+      - application/json
   /enroll/ott:
     post:
       description: |
         Enroll an identity via a one-time-token which is supplied via a query string parameter. This enrollment method
         expects a PEM encoded CSRs to be provided for fulfillment. It is up to the enrolling identity to manage the
         private key backing the CSR request.
-      x-codegen-request-body-name: ottEnrollmentRequest
-      x-content-type: application/json
-      x-accepts:
-      - application/json
       operationId: enrollOtt
       requestBody:
         content:
@@ -2633,6 +3392,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/enrollmentCertsEnvelope"
           description: A response containing and identities client certificate chains
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -2663,6 +3429,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -2681,6 +3454,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -2700,6 +3480,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -2707,9 +3494,20 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       summary: Enroll an identity via one-time-token
       tags:
       - Enroll
+      x-codegen-request-body-name: ottEnrollmentRequest
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /enroll/ottca:
     post:
       description: |
@@ -2719,10 +3517,6 @@ paths:
         CA auto enrollment except that is required the identity to be pre-created.
 
         As the client certificate has been pre-exchanged there is no CSR input to this enrollment method.
-      x-codegen-request-body-name: ottEnrollmentRequest
-      x-content-type: application/json
-      x-accepts:
-      - application/json
       operationId: enrollOttCa
       requestBody:
         content:
@@ -2738,6 +3532,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/empty"
           description: Base empty response
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -2768,6 +3569,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -2787,6 +3595,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -2794,15 +3609,22 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       summary: Enroll an identity via one-time-token with a pre-exchanged client certificate
       tags:
       - Enroll
-  /enroll/token:
-    post:
-      x-codegen-request-body-name: tokenEnrollmentRequest
+      x-codegen-request-body-name: ottEnrollmentRequest
       x-content-type: application/json
       x-accepts:
       - application/json
+  /enroll/token:
+    post:
       operationId: enrollToken
       parameters:
       - description: "The id of the token issuer to use for enrollment, optional as\
@@ -2834,6 +3656,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/enrollmentCertsEnvelope"
           description: A response containing and identities client certificate chains
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -2864,6 +3693,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -2882,6 +3718,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "409":
           content:
             application/json:
@@ -2889,6 +3732,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to a conflict of configuration
             or state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "410":
           content:
             application/json:
@@ -2896,6 +3746,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed as the resource is no longer
             available
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -2915,6 +3772,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -2922,16 +3786,23 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       tags:
       - Enroll
+      x-codegen-request-body-name: tokenEnrollmentRequest
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /enroll/updb:
     post:
       description: |
         Enrolls an identity via a one-time-token to establish an initial username and password combination
-      x-codegen-request-body-name: updbCredentials
-      x-content-type: application/json
-      x-accepts:
-      - application/json
       operationId: enrollUpdb
       parameters:
       - in: query
@@ -2953,6 +3824,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/empty"
           description: Base empty response
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -2983,6 +3861,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -3001,6 +3886,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -3020,6 +3912,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -3027,13 +3926,22 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       summary: Enroll an identity via one-time-token
       tags:
       - Enroll
-  /enumerated-capabilities:
-    get:
+      x-codegen-request-body-name: updbCredentials
+      x-content-type: application/json
       x-accepts:
       - application/json
+  /enumerated-capabilities:
+    get:
       operationId: listEnumeratedCapabilities
       responses:
         "200":
@@ -3042,16 +3950,23 @@ paths:
               schema:
                 $ref: "#/components/schemas/listEnumeratedCapabilitiesEnvelope"
           description: A typed and enumerated list of capabilities
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security: []
       summary: "Returns all capabilities this version of the controller is aware of,\
         \ enabled or not."
       tags:
       - Informational
+      x-accepts:
+      - application/json
   /external-jwt-signers:
     get:
       description: Retrieves a list of external JWT signers for authentication
-      x-accepts:
-      - application/json
       operationId: listExternalJwtSigners
       parameters:
       - in: query
@@ -3073,6 +3988,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/listClientExternalJwtSignersEnvelope"
           description: A list of External JWT Signers
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -3103,6 +4025,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -3123,6 +4052,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -3142,6 +4078,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -3149,14 +4092,21 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       summary: List Client Authentication External JWT
       tags:
       - External JWT Signer
+      x-accepts:
+      - application/json
   /network-jwts:
     get:
       description: Returns a list of JWTs for trusting a network
-      x-accepts:
-      - application/json
       operationId: listNetworkJWTs
       responses:
         "200":
@@ -3165,6 +4115,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/listNetworkJWTsEnvelope"
           description: A list of network JWTs
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -3195,6 +4152,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -3214,16 +4178,21 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       summary: Returns a list of JWTs suitable for bootstrapping network trust.
       tags:
       - Enrollment
+      x-accepts:
+      - application/json
   /posture-response:
     post:
       description: Submits posture responses
-      x-codegen-request-body-name: postureResponse
-      x-content-type: application/json
-      x-accepts:
-      - application/json
       operationId: createPostureResponse
       requestBody:
         content:
@@ -3239,6 +4208,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/postureResponseEnvelope"
           description: Contains a list of services that have had their timers altered
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -3269,6 +4245,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -3289,6 +4272,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -3308,6 +4298,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -3315,6 +4312,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -3322,13 +4326,13 @@ paths:
       summary: Submit a posture response to a posture query
       tags:
       - Posture Checks
-  /posture-response-bulk:
-    post:
-      description: Submits posture responses
       x-codegen-request-body-name: postureResponse
       x-content-type: application/json
       x-accepts:
       - application/json
+  /posture-response-bulk:
+    post:
+      description: Submits posture responses
       operationId: createPostureResponseBulk
       requestBody:
         content:
@@ -3346,6 +4350,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/postureResponseEnvelope"
           description: Contains a list of services that have had their timers altered
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -3376,6 +4387,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -3396,6 +4414,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -3415,6 +4440,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -3422,6 +4454,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -3429,10 +4468,12 @@ paths:
       summary: Submit multiple posture responses
       tags:
       - Posture Checks
-  /protocols:
-    get:
+      x-codegen-request-body-name: postureResponse
+      x-content-type: application/json
       x-accepts:
       - application/json
+  /protocols:
+    get:
       operationId: listProtocols
       responses:
         "200":
@@ -3441,6 +4482,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/listProtocolsEnvelope"
           description: A list of supported Edge protocols
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -3460,6 +4508,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -3467,16 +4522,23 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security: []
       summary: Return a list of the listening Edge protocols
       tags:
       - Informational
+      x-accepts:
+      - application/json
   /services:
     get:
       description: |
         Retrieves a list of config resources; supports filtering, sorting, and pagination. Requires admin access.
-      x-accepts:
-      - application/json
       operationId: listServices
       parameters:
       - in: query
@@ -3518,6 +4580,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/listServicesEnvelope"
           description: A list of services
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -3548,6 +4617,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -3568,6 +4644,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -3587,6 +4670,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -3594,6 +4684,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -3601,11 +4698,11 @@ paths:
       summary: List services
       tags:
       - Service
+      x-accepts:
+      - application/json
   /services/{id}:
     delete:
       description: Delete a service by id. Requires admin access.
-      x-accepts:
-      - application/json
       operationId: deleteService
       parameters:
       - description: The id of the requested resource
@@ -3622,6 +4719,13 @@ paths:
                 $ref: "#/components/schemas/empty"
           description: The delete request was successful and the resource has been
             removed
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -3652,6 +4756,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -3672,6 +4783,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -3690,6 +4808,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "409":
           content:
             application/json:
@@ -3710,6 +4835,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested to be removed/altered cannot be as it
             is referenced by another object.
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -3729,6 +4861,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -3736,6 +4875,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -3743,10 +4889,10 @@ paths:
       summary: Delete a service
       tags:
       - Service
-    get:
-      description: Retrieves a single service by id. Requires admin access.
       x-accepts:
       - application/json
+    get:
+      description: Retrieves a single service by id. Requires admin access.
       operationId: detailService
       parameters:
       - description: The id of the requested resource
@@ -3762,6 +4908,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/detailServiceEnvelope"
           description: A single service
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -3782,6 +4935,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -3800,6 +4960,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -3819,6 +4986,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -3826,6 +5000,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -3833,12 +5014,10 @@ paths:
       summary: Retrieves a single service
       tags:
       - Service
-    patch:
-      description: Update the supplied fields on a service. Requires admin access.
-      x-codegen-request-body-name: service
-      x-content-type: application/json
       x-accepts:
       - application/json
+    patch:
+      description: Update the supplied fields on a service. Requires admin access.
       operationId: patchService
       parameters:
       - description: The id of the requested resource
@@ -3862,6 +5041,13 @@ paths:
                 $ref: "#/components/schemas/empty"
           description: The patch request was successful and the resource has been
             altered
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -3892,6 +5078,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -3912,6 +5105,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -3930,6 +5130,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -3949,6 +5156,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -3956,6 +5170,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -3963,12 +5184,12 @@ paths:
       summary: Update the supplied fields on a service
       tags:
       - Service
-    put:
-      description: Update all fields on a service by id. Requires admin access.
       x-codegen-request-body-name: service
       x-content-type: application/json
       x-accepts:
       - application/json
+    put:
+      description: Update all fields on a service by id. Requires admin access.
       operationId: updateService
       parameters:
       - description: The id of the requested resource
@@ -3992,6 +5213,13 @@ paths:
                 $ref: "#/components/schemas/empty"
           description: The update request was successful and the resource has been
             altered
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -4022,6 +5250,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -4042,6 +5277,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -4060,6 +5302,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -4079,6 +5328,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -4086,6 +5342,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -4093,12 +5356,14 @@ paths:
       summary: Update all fields on a service
       tags:
       - Service
+      x-codegen-request-body-name: service
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /services/{id}/edge-routers:
     get:
       description: |
         Retrieves the list of edge routers permitted to handle traffic for the specified service
-      x-accepts:
-      - application/json
       operationId: listServiceEdgeRouters
       parameters:
       - description: The id of the requested resource
@@ -4133,6 +5398,13 @@ paths:
                 $ref: "#/components/schemas/listServiceEdgeRoutersEnvelope"
           description: A list of edge routers suitable for dialing or binding the
             specified service by the authenticated identity
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -4163,6 +5435,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -4183,6 +5462,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -4201,6 +5487,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -4220,6 +5513,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -4228,12 +5528,12 @@ paths:
         service
       tags:
       - Service
+      x-accepts:
+      - application/json
   /services/{id}/terminators:
     get:
       description: |
         Retrieves a list of terminator resources that are assigned specific service; supports filtering, sorting, and pagination.
-      x-accepts:
-      - application/json
       operationId: listServiceTerminators
       parameters:
       - description: The id of the requested resource
@@ -4261,6 +5561,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/listClientTerminatorsEnvelope"
           description: A list of terminators
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -4291,6 +5598,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -4311,6 +5625,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -4330,6 +5651,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -4337,6 +5665,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -4344,6 +5679,8 @@ paths:
       summary: List of terminators assigned to a service
       tags:
       - Service
+      x-accepts:
+      - application/json
   /sessions:
     get:
       description: |
@@ -4351,8 +5688,6 @@ paths:
 
         Sessions are tied to an API session and are moved when an API session times out or logs out. Active sessions
         (i.e. Ziti SDK connected to an edge router) will keep the session and API session marked as active.
-      x-accepts:
-      - application/json
       operationId: listSessions
       parameters:
       - in: query
@@ -4374,6 +5709,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/listSessionsEnvelope"
           description: A list of sessions
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -4404,6 +5746,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -4424,6 +5773,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -4443,6 +5799,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -4450,6 +5813,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -4457,12 +5827,10 @@ paths:
       summary: List sessions
       tags:
       - Session
-    post:
-      description: Create a session resource.
-      x-codegen-request-body-name: session
-      x-content-type: application/json
       x-accepts:
       - application/json
+    post:
+      description: Create a session resource.
       operationId: createSession
       requestBody:
         content:
@@ -4479,6 +5847,13 @@ paths:
                 $ref: "#/components/schemas/sessionCreateEnvelope"
           description: The create request was successful and the resource has been
             added at the following location
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -4509,6 +5884,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -4529,6 +5911,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -4547,6 +5936,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -4566,6 +5962,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -4573,6 +5976,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -4580,11 +5990,13 @@ paths:
       summary: Create a session resource
       tags:
       - Session
+      x-codegen-request-body-name: session
+      x-content-type: application/json
+      x-accepts:
+      - application/json
   /sessions/{id}:
     delete:
       description: Delete a session by id.
-      x-accepts:
-      - application/json
       operationId: deleteSession
       parameters:
       - description: The id of the requested resource
@@ -4601,6 +6013,13 @@ paths:
                 $ref: "#/components/schemas/empty"
           description: The delete request was successful and the resource has been
             removed
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "400":
           content:
             application/json:
@@ -4631,6 +6050,13 @@ paths:
           description: "The supplied request contains invalid fields or could not\
             \ be parsed (json and non-json bodies). The error's code, message, and\
             \ cause fields can be inspected for further information"
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -4651,6 +6077,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "409":
           content:
             application/json:
@@ -4671,6 +6104,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested to be removed/altered cannot be as it
             is referenced by another object.
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "429":
           content:
             application/json:
@@ -4690,6 +6130,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The resource requested is rate limited and the rate limit has
             been exceeded
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "503":
           content:
             application/json:
@@ -4697,6 +6144,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The request could not be completed due to the server being
             busy or in a temporarily bad state
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -4704,10 +6158,10 @@ paths:
       summary: Delete a session
       tags:
       - Session
-    get:
-      description: Retrieves a single session by id.
       x-accepts:
       - application/json
+    get:
+      description: Retrieves a single session by id.
       operationId: detailSession
       parameters:
       - description: The id of the requested resource
@@ -4723,6 +6177,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/detailSessionEnvelope"
           description: A single session
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "401":
           content:
             application/json:
@@ -4743,6 +6204,13 @@ paths:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The supplied session does not have the correct access rights
             to request this resource
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
         "404":
           content:
             application/json:
@@ -4761,6 +6229,13 @@ paths:
               schema:
                 $ref: "#/components/schemas/apiErrorEnvelope"
           description: The requested resource does not exist
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security:
       - ztSession: []
       - oauth2:
@@ -4768,12 +6243,12 @@ paths:
       summary: Retrieves a single session
       tags:
       - Session
+      x-accepts:
+      - application/json
   /specs:
     get:
       description: Returns a list of spec files embedded within the controller for
         consumption/documentation/code geneartion
-      x-accepts:
-      - application/json
       operationId: listSpecs
       responses:
         "200":
@@ -4782,16 +6257,23 @@ paths:
               schema:
                 $ref: "#/components/schemas/listSpecsEnvelope"
           description: A list of specifications
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security: []
       summary: Returns a list of API specs
       tags:
       - Informational
+      x-accepts:
+      - application/json
   /specs/{id}:
     get:
       description: Returns single spec resource embedded within the controller for
         consumption/documentation/code geneartion
-      x-accepts:
-      - application/json
       operationId: detailSpec
       parameters:
       - description: The id of the requested resource
@@ -4807,17 +6289,23 @@ paths:
               schema:
                 $ref: "#/components/schemas/detailSpecEnvelope"
           description: A single specification
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security: []
       summary: Return a single spec resource
       tags:
       - Informational
+      x-accepts:
+      - application/json
   /specs/{id}/spec:
     get:
       description: "Return the body of the specification (i.e. Swagger, OpenAPI 2.0,\
         \ 3.0, etc)."
-      x-accepts:
-      - application/json
-      - text/yaml
       operationId: detailSpecBody
       parameters:
       - description: The id of the requested resource
@@ -4836,14 +6324,22 @@ paths:
               schema:
                 $ref: "#/components/schemas/detailSpecBodyEnvelope"
           description: Returns the document that represents the specification
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security: []
       summary: Returns the spec's file
       tags:
       - Informational
-  /version:
-    get:
       x-accepts:
       - application/json
+      - text/yaml
+  /version:
+    get:
       operationId: listVersion
       responses:
         "200":
@@ -4852,10 +6348,19 @@ paths:
               schema:
                 $ref: "#/components/schemas/listVersionEnvelope"
           description: Version information for the controller
+          headers:
+            WWW-Authenticate:
+              description: Denotes different type of security token related information
+              schema:
+                items:
+                  type: string
+                type: array
       security: []
       summary: Returns version information
       tags:
       - Informational
+      x-accepts:
+      - application/json
 components:
   schemas:
     apiAddress:
@@ -5069,13 +6574,13 @@ components:
       - path
       type: object
     attributes:
-      description: A set of strings used to loosly couple this resource to policies
-      x-nullable: true
-      x-omitempty: true
+      description: A set of strings used to loosely couple this resource to policies
       items:
         type: string
       nullable: true
       type: array
+      x-nullable: true
+      x-omitempty: true
     authQueryDetail:
       example:
         clientId: clientId
@@ -5226,19 +6731,19 @@ components:
       description: All of the fields on an authenticator that may be updated
       properties:
         password:
-          x-nullable: true
           maxLength: 100
           minLength: 5
           nullable: true
           type: string
+          x-nullable: true
         tags:
           $ref: "#/components/schemas/tags"
         username:
-          x-nullable: true
           maxLength: 100
           minLength: 4
           nullable: true
           type: string
+          x-nullable: true
       type: object
     authenticatorPatchWithCurrent:
       allOf:
@@ -5284,8 +6789,8 @@ components:
           additionalProperties:
             $ref: "#/components/schemas/link"
           description: A map of named links
-          x-omitempty: false
           type: object
+          x-omitempty: false
         createdAt:
           format: date-time
           type: string
@@ -5536,8 +7041,8 @@ components:
           additionalProperties:
             $ref: "#/components/schemas/link"
           description: A map of named links
-          x-omitempty: false
           type: object
+          x-omitempty: false
         id:
           type: string
       type: object
@@ -5824,6 +7329,9 @@ components:
           - null
           edgeRouterConnectionStatus: online
           hasEdgeRouterConnection: true
+          permissions:
+          - admin_readonly
+          - admin_readonly
           serviceHostingPrecedences: null
           envInfo:
             hostname: hostname
@@ -6543,8 +8051,8 @@ components:
           additionalProperties:
             $ref: "#/components/schemas/link"
           description: A map of named links
-          x-omitempty: false
           type: object
+          x-omitempty: false
         entity:
           type: string
         id:
@@ -6678,6 +8186,8 @@ components:
             type: boolean
           name:
             type: string
+          permissions:
+            $ref: "#/components/schemas/permissions"
           roleAttributes:
             $ref: "#/components/schemas/attributes"
           sdkInfo:
@@ -6706,6 +8216,7 @@ components:
         - isDefaultAdmin
         - isMfaEnabled
         - name
+        - permissions
         - roleAttributes
         - sdkInfo
         - serviceHostingCosts
@@ -6755,6 +8266,9 @@ components:
         - null
         edgeRouterConnectionStatus: online
         hasEdgeRouterConnection: true
+        permissions:
+        - admin_readonly
+        - admin_readonly
         serviceHostingPrecedences: null
         envInfo:
           hostname: hostname
@@ -7168,8 +8682,8 @@ components:
       additionalProperties:
         $ref: "#/components/schemas/link"
       description: A map of named links
-      x-omitempty: false
       type: object
+      x-omitempty: false
     listAuthenticatorsEnvelope:
       example:
         data:
@@ -8232,10 +9746,10 @@ components:
         apiVersion:
           type: string
         filterableFields:
-          x-omitempty: true
           items:
             type: string
           type: array
+          x-omitempty: true
         pagination:
           $ref: "#/components/schemas/pagination"
       type: object
@@ -8366,11 +9880,96 @@ components:
       minLength: 5
       type: string
     passwordNullable:
-      x-nullable: true
       maxLength: 100
       minLength: 5
       nullable: true
       type: string
+      x-nullable: true
+    permissions:
+      description: A set of strings used to define which types of resources this resource
+        can acccess
+      items:
+        enum:
+        - admin_readonly
+        - auth-policy
+        - auth-policy.read
+        - auth-policy.create
+        - auth-policy.update
+        - auth-policy.delete
+        - ca
+        - ca.read
+        - ca.create
+        - ca.update
+        - ca.delete
+        - config
+        - config.read
+        - config.create
+        - config.update
+        - config.delete
+        - config-type
+        - config-type.read
+        - config-type.create
+        - config-type.update
+        - config-type.delete
+        - edge-router-policy
+        - edge-router-policy.read
+        - edge-router-policy.create
+        - edge-router-policy.update
+        - edge-router-policy.delete
+        - enrollment
+        - enrollment.read
+        - enrollment.create
+        - enrollment.update
+        - enrollment.delete
+        - external-jwt-signer
+        - external-jwt-signer.read
+        - external-jwt-signer.create
+        - external-jwt-signer.update
+        - external-jwt-signer.delete
+        - identity
+        - identity.read
+        - identity.create
+        - identity.update
+        - identity.delete
+        - ops
+        - ops.read
+        - ops.update
+        - ops.delete
+        - posture-check
+        - posture-check.read
+        - posture-check.create
+        - posture-check.update
+        - posture-check.delete
+        - router
+        - router.read
+        - router.create
+        - router.update
+        - router.delete
+        - service
+        - service.read
+        - service.create
+        - service.update
+        - service.delete
+        - service-edge-router-policy
+        - service-edge-router-policy.read
+        - service-edge-router-policy.create
+        - service-edge-router-policy.update
+        - service-edge-router-policy.delete
+        - service-policy
+        - service-policy.read
+        - service-policy.create
+        - service-policy.update
+        - service-policy.delete
+        - terminator
+        - terminator.read
+        - terminator.create
+        - terminator.update
+        - terminator.delete
+        type: string
+      nullable: true
+      type: array
+      x-nullable: true
+      x-omitempty: true
     postureCheckType:
       enum:
       - OS
@@ -9231,9 +10830,9 @@ components:
       enum:
       - ACCESS
       - ID
-      x-nullable: true
       nullable: true
       type: string
+      x-nullable: true
     terminatorClientDetail:
       allOf:
       - $ref: "#/components/schemas/baseEntity"
@@ -9344,11 +10943,11 @@ components:
       minLength: 4
       type: string
     usernameNullable:
-      x-nullable: true
       maxLength: 100
       minLength: 4
       nullable: true
       type: string
+      x-nullable: true
     version:
       example:
         runtimeVersion: go1.13.5

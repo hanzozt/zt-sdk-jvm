@@ -14,7 +14,7 @@ An edge router create object
 |**isTunnelerEnabled** | **Boolean** |  |  [optional] |
 |**name** | **String** |  |  |
 |**noTraversal** | **Boolean** |  |  [optional] |
-|**roleAttributes** | **List&lt;String&gt;** | A set of strings used to loosly couple this resource to policies |  [optional] |
+|**roleAttributes** | **List&lt;String&gt;** | A set of strings used to loosely couple this resource to policies |  [optional] |
 |**tags** | [**Tags**](Tags.md) |  |  [optional] |
 
 

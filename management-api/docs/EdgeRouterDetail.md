@@ -31,7 +31,7 @@ A detail edge router resource
 |**interfaces** | [**List&lt;ModelInterface&gt;**](ModelInterface.md) |  |  [optional] |
 |**isTunnelerEnabled** | **Boolean** |  |  |
 |**isVerified** | **Boolean** |  |  |
-|**roleAttributes** | **List&lt;String&gt;** | A set of strings used to loosly couple this resource to policies |  |
+|**roleAttributes** | **List&lt;String&gt;** | A set of strings used to loosely couple this resource to policies |  |
 |**unverifiedCertPem** | **String** |  |  [optional] |
 |**unverifiedFingerprint** | **String** |  |  [optional] |
 |**versionInfo** | [**VersionInfo**](VersionInfo.md) |  |  [optional] |

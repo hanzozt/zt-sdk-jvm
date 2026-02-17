@@ -2,11 +2,11 @@
 
 Ziti Edge Management
 
-- API version: 0.26.51
+- API version: 0.26.53
 
-- Build date: 2025-11-03T20:11:50.447141027-05:00[America/New_York]
+- Build date: 2026-02-17T13:51:23.777813-05:00[America/New_York]
 
-- Generator version: 7.14.0
+- Generator version: 7.20.0
 
 OpenZiti Edge Management API
 
@@ -45,7 +45,7 @@ Add this dependency to your project's POM:
 <dependency>
   <groupId>org.openziti</groupId>
   <artifactId>management-api</artifactId>
-  <version>0.30.3-SNAPSHOT</version>
+  <version>0.31.2-bump-edge-api-10.bb4980a-dirty-SNAPSHOT</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -55,7 +55,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "org.openziti:management-api:0.30.3-SNAPSHOT"
+compile "org.openziti:management-api:0.31.2-bump-edge-api-10.bb4980a-dirty-SNAPSHOT"
 ```
 
 ### Others
@@ -68,7 +68,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-- `target/management-api-0.30.3-SNAPSHOT.jar`
+- `target/management-api-0.31.2-bump-edge-api-10.bb4980a-dirty-SNAPSHOT.jar`
 - `target/lib/*.jar`
 
 ## Getting Started
