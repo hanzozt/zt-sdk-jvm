@@ -24,6 +24,7 @@ import kotlinx.coroutines.selects.select
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
 import org.openziti.api.ApiSession
+import org.openziti.api.ZitiAuthenticator
 import org.openziti.net.*
 import org.openziti.net.Channel
 import org.openziti.net.Transport
@@ -38,6 +39,7 @@ import javax.net.ssl.SSLContext
 import kotlin.coroutines.CoroutineContext
 import kotlin.math.min
 import kotlin.random.Random
+import kotlin.text.Charsets.UTF_8
 
 internal class ChannelImpl(val addr: String, val sslContext: SSLContext, val apiSession: () -> ApiSession?) : Channel,
     CoroutineScope, Logged by ZitiLog("Channel[$addr]") {
@@ -304,6 +306,30 @@ internal class ChannelImpl(val addr: String, val sslContext: SSLContext, val api
             d{"latency check cancelled"}
         } catch (ex: Exception) {
             e(ex){"latency check"}
+        }
+    }
+
+    override suspend fun updateToken(token: ZitiAuthenticator.ZitiAccessToken) {
+        if (state !is Channel.State.Connected) return
+
+        if (token.type == ZitiAuthenticator.TokenType.BEARER) {
+            d{"updating token"}
+            val update = Message(ZitiProtocol.ContentType.TokenUpdate,
+                body = token.token.toByteArray()
+            )
+
+            runCatching {
+                val resp = SendAndWait(update)
+                when (resp.content) {
+                    ZitiProtocol.ContentType.TokenUpdateSuccess -> d { "token updated" }
+                    ZitiProtocol.ContentType.TokenUpdateFailure ->
+                        w { "token update failure: ${resp.body.toString(UTF_8)}" }
+
+                    else -> {
+                        w { "unexpected response ${resp}" }
+                    }
+                }
+            }.onFailure { w{"token update failure: $it"} }
         }
     }
 

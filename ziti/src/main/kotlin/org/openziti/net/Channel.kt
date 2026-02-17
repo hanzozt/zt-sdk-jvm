@@ -18,6 +18,7 @@ package org.openziti.net
 
 import kotlinx.coroutines.Deferred
 import org.openziti.api.ApiSession
+import org.openziti.api.ZitiAuthenticator
 import org.openziti.impl.ChannelImpl
 import java.io.Closeable
 import javax.net.ssl.SSLContext
@@ -53,6 +54,5 @@ internal interface Channel: Closeable {
     suspend fun SendAndWait(msg: Message): Message
 
     fun getCurrentLatency(): Long
-
-
+    suspend fun updateToken(token: ZitiAuthenticator.ZitiAccessToken)
 }
