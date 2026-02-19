@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.openziti.net
+package org.hanzozt.net
 
 import kotlinx.coroutines.*
-import org.openziti.net.internal.SSLEngineWrapper
-import org.openziti.net.nio.readSuspend
-import org.openziti.net.nio.writeCompletely
+import org.hanzozt.net.internal.SSLEngineWrapper
+import org.hanzozt.net.nio.readSuspend
+import org.hanzozt.net.nio.writeCompletely
 import tlschannel.ClientTlsChannel
 import tlschannel.HeapBufferAllocator
 import tlschannel.async.AsynchronousTlsChannel

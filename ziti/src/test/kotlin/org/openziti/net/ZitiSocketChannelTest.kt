@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.net
+package org.hanzozt.net
 
 import org.hamcrest.CoreMatchers.startsWith
 import org.hamcrest.MatcherAssert.assertThat
@@ -22,9 +22,9 @@ import org.junit.Assert.assertEquals
 import org.junit.Assume
 import org.junit.Before
 import org.junit.Test
-import org.openziti.Ziti
-import org.openziti.ZitiAddress
-import org.openziti.ZitiContext
+import org.hanzozt.Ziti
+import org.hanzozt.ZitiAddress
+import org.hanzozt.ZitiContext
 import java.nio.ByteBuffer
 import java.nio.channels.CompletionHandler
 import java.util.concurrent.CompletableFuture

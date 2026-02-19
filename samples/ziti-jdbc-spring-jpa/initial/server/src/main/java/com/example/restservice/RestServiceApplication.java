@@ -1,6 +1,6 @@
 package com.example.restservice;
 
-import org.openziti.springboot.ZitiTomcatCustomizer;
+import org.hanzozt.springboot.ZitiTomcatCustomizer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

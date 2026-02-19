@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.util
+package org.hanzozt.util
 
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.runBlocking

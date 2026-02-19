@@ -27,12 +27,12 @@ Retrieves a list of role attributes in use by edge routers; supports filtering, 
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.RoleAttributesApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.RoleAttributesApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -112,13 +112,13 @@ Retrieves a list of role attributes in use by edge routers; supports filtering, 
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.RoleAttributesApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.RoleAttributesApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -208,12 +208,12 @@ Retrieves a list of role attributes in use by identities; supports filtering, so
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.RoleAttributesApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.RoleAttributesApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -293,13 +293,13 @@ Retrieves a list of role attributes in use by identities; supports filtering, so
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.RoleAttributesApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.RoleAttributesApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -389,12 +389,12 @@ Retrieves a list of role attributes in use by posture checks; supports filtering
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.RoleAttributesApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.RoleAttributesApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -474,13 +474,13 @@ Retrieves a list of role attributes in use by posture checks; supports filtering
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.RoleAttributesApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.RoleAttributesApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -570,12 +570,12 @@ Retrieves a list of role attributes in use by services; supports filtering, sort
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.RoleAttributesApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.RoleAttributesApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -655,13 +655,13 @@ Retrieves a list of role attributes in use by services; supports filtering, sort
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.RoleAttributesApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.RoleAttributesApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {

@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.openziti.sample.http;
+package org.hanzozt.sample.http;
 
-import org.openziti.Ziti;
+import org.hanzozt.Ziti;
 
 import java.io.ByteArrayOutputStream;
 import java.net.HttpURLConnection;

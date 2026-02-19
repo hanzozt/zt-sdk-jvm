@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.openziti.net
+package org.hanzozt.net
 
-import org.openziti.net.dns.ZitiDNSManager
-import org.openziti.net.internal.ZitiSSLSocket
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.net.dns.ZitiDNSManager
+import org.hanzozt.net.internal.ZitiSSLSocket
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 import java.net.InetAddress
 import java.net.Socket
 import java.security.KeyStore

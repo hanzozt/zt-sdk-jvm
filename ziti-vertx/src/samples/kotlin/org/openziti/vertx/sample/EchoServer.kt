@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.openziti.vertx.sample
+package org.hanzozt.vertx.sample
 
 import io.vertx.core.Vertx
-import org.openziti.Ziti
-import org.openziti.vertx.ZitiSocketAddress
-import org.openziti.vertx.ZitiTransport
+import org.hanzozt.Ziti
+import org.hanzozt.vertx.ZitiSocketAddress
+import org.hanzozt.vertx.ZitiTransport
 
 object EchoServer {
 

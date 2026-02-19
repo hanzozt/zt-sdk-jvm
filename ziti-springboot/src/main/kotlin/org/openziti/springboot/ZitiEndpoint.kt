@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.openziti.springboot
+package org.hanzozt.springboot
 
 import org.apache.tomcat.util.ExceptionUtils
 import org.apache.tomcat.util.net.*
-import org.openziti.ZitiAddress
+import org.hanzozt.ZitiAddress
 import java.nio.channels.AsynchronousServerSocketChannel
 import java.nio.channels.AsynchronousSocketChannel
 import java.nio.channels.CompletionHandler

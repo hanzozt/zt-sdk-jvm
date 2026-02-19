@@ -27,12 +27,12 @@ Starts a data integrity scan on the datastore. Requires admin access. Only once 
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.DatabaseApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.DatabaseApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -102,13 +102,13 @@ Starts a data integrity scan on the datastore. Requires admin access. Only once 
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.DatabaseApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.DatabaseApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -188,12 +188,12 @@ Create a new database snapshot. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.DatabaseApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.DatabaseApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -263,13 +263,13 @@ Create a new database snapshot. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.DatabaseApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.DatabaseApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -349,12 +349,12 @@ Returns any results found from in-progress integrity checks. Requires admin acce
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.DatabaseApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.DatabaseApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -425,13 +425,13 @@ Returns any results found from in-progress integrity checks. Requires admin acce
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.DatabaseApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.DatabaseApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -512,12 +512,12 @@ Runs a data integrity scan on the datastore, attempts to fix any issues it can, 
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.DatabaseApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.DatabaseApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -587,13 +587,13 @@ Runs a data integrity scan on the datastore, attempts to fix any issues it can, 
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.DatabaseApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.DatabaseApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.net.internal
+package org.hanzozt.net.internal
 
 import java.nio.ByteBuffer
 import java.util.function.BiFunction

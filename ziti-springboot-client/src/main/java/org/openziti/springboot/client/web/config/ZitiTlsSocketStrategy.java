@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.springboot.client.web.config;
+package org.hanzozt.springboot.client.web.config;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -32,7 +32,7 @@ import org.apache.hc.core5.http.ssl.TLS;
 import org.apache.hc.core5.http.ssl.TlsCiphers;
 import org.apache.hc.core5.io.Closer;
 import org.apache.hc.core5.util.Timeout;
-import org.openziti.Ziti;
+import org.hanzozt.Ziti;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

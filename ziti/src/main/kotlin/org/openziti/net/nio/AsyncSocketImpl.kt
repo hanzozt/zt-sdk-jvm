@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.openziti.net.nio
+package org.hanzozt.net.nio
 
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
-import org.openziti.net.internal.Sockets
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.net.internal.Sockets
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 import java.io.IOException
 import java.io.InputStream
 import java.io.OutputStream

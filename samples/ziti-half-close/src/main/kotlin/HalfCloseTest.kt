@@ -15,11 +15,11 @@
  */
 
 import kotlinx.coroutines.*
-import org.openziti.Ziti
-import org.openziti.ZitiAddress
-import org.openziti.net.nio.connectSuspend
-import org.openziti.net.nio.readSuspend
-import org.openziti.net.nio.writeCompletely
+import org.hanzozt.Ziti
+import org.hanzozt.ZitiAddress
+import org.hanzozt.net.nio.connectSuspend
+import org.hanzozt.net.nio.readSuspend
+import org.hanzozt.net.nio.writeCompletely
 import java.net.SocketAddress
 import java.nio.ByteBuffer
 import java.nio.channels.AsynchronousServerSocketChannel

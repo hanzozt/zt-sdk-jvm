@@ -31,12 +31,12 @@ Creates an Auth Policy. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.AuthPolicyApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.AuthPolicyApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -112,13 +112,13 @@ Creates an Auth Policy. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.AuthPolicyApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.AuthPolicyApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -204,12 +204,12 @@ Delete an Auth Policy by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.AuthPolicyApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.AuthPolicyApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -286,13 +286,13 @@ Delete an Auth Policy by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.AuthPolicyApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.AuthPolicyApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -379,12 +379,12 @@ Retrieves a single Auth Policy by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.AuthPolicyApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.AuthPolicyApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -460,13 +460,13 @@ Retrieves a single Auth Policy by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.AuthPolicyApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.AuthPolicyApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -552,12 +552,12 @@ Retrieves a list of Auth Policies
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.AuthPolicyApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.AuthPolicyApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -637,13 +637,13 @@ Retrieves a list of Auth Policies
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.AuthPolicyApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.AuthPolicyApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -733,12 +733,12 @@ Update only the supplied fields on an Auth Policy by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.AuthPolicyApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.AuthPolicyApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -817,13 +817,13 @@ Update only the supplied fields on an Auth Policy by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.AuthPolicyApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.AuthPolicyApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -912,12 +912,12 @@ Update all fields on an Auth Policy by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.AuthPolicyApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.AuthPolicyApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -996,13 +996,13 @@ Update all fields on an Auth Policy by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.AuthPolicyApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.AuthPolicyApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {

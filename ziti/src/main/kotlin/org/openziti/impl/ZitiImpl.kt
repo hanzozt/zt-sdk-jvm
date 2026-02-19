@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.openziti.impl
+package org.hanzozt.impl
 
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import org.openziti.*
-import org.openziti.api.Service
-import org.openziti.identity.KeyStoreIdentity
-import org.openziti.identity.findIdentityAlias
-import org.openziti.identity.loadKeystore
-import org.openziti.net.dns.ZitiDNSManager
-import org.openziti.net.internal.Sockets
-import org.openziti.util.Logged
-import org.openziti.util.Version
-import org.openziti.util.ZitiLog
+import org.hanzozt.*
+import org.hanzozt.api.Service
+import org.hanzozt.identity.KeyStoreIdentity
+import org.hanzozt.identity.findIdentityAlias
+import org.hanzozt.identity.loadKeystore
+import org.hanzozt.net.dns.ZitiDNSManager
+import org.hanzozt.net.internal.Sockets
+import org.hanzozt.util.Logged
+import org.hanzozt.util.Version
+import org.hanzozt.util.ZitiLog
 import java.io.File
 import java.io.InputStream
 import java.net.InetSocketAddress

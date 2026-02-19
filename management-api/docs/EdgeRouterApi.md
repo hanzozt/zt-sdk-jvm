@@ -41,12 +41,12 @@ Create a edge router resource. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -122,13 +122,13 @@ Create a edge router resource. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -214,12 +214,12 @@ Delete an edge router by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -297,13 +297,13 @@ Delete an edge router by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -391,12 +391,12 @@ Retrieves a single edge router by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -472,13 +472,13 @@ Retrieves a single edge router by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -564,12 +564,12 @@ Retrieves a list of edge router policies that apply to the specified edge router
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -645,13 +645,13 @@ Retrieves a list of edge router policies that apply to the specified edge router
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -737,12 +737,12 @@ Retrieves a list of identities that may access services via the given edge route
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -818,13 +818,13 @@ Retrieves a list of identities that may access services via the given edge route
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -910,12 +910,12 @@ Retrieves a list of service policies policies that apply to the specified edge r
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -991,13 +991,13 @@ Retrieves a list of service policies policies that apply to the specified edge r
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1083,12 +1083,12 @@ Retrieves a list of services that may be accessed via the given edge router. Sup
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1164,13 +1164,13 @@ Retrieves a list of services that may be accessed via the given edge router. Sup
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1256,12 +1256,12 @@ Retrieves a list of edge router resources; supports filtering, sorting, and pagi
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1345,13 +1345,13 @@ Retrieves a list of edge router resources; supports filtering, sorting, and pagi
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1445,12 +1445,12 @@ Update the supplied fields on an edge router. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1529,13 +1529,13 @@ Update the supplied fields on an edge router. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1624,12 +1624,12 @@ Removes current certificate based authentication mechanisms and reverts the edge
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1705,13 +1705,13 @@ Removes current certificate based authentication mechanisms and reverts the edge
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1797,12 +1797,12 @@ Update all fields on an edge router by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1881,13 +1881,13 @@ Update all fields on an edge router by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.EdgeRouterApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.EdgeRouterApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {

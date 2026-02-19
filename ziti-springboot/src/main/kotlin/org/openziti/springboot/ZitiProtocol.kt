@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.openziti.springboot
+package org.hanzozt.springboot
 
 import org.apache.coyote.http11.AbstractHttp11JsseProtocol
 import org.apache.juli.logging.Log
 import org.apache.juli.logging.LogFactory
 import org.apache.tomcat.util.net.Nio2Channel
-import org.openziti.ZitiAddress
-import org.openziti.ZitiContext
+import org.hanzozt.ZitiAddress
+import org.hanzozt.ZitiContext
 
 class ZitiProtocol: AbstractHttp11JsseProtocol<Nio2Channel>(ZitiEndpoint()) {
     private val log = LogFactory.getLog(ZitiProtocol::class.java)

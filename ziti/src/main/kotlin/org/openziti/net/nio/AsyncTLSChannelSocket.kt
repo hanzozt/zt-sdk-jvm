@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.net.nio
+package org.hanzozt.net.nio
 
 import kotlinx.coroutines.future.asCompletableFuture
 import kotlinx.coroutines.runBlocking

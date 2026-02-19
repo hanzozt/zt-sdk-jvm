@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.identity
+package org.hanzozt.identity
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asExecutor
@@ -22,16 +22,16 @@ import kotlinx.coroutines.runBlocking
 import org.bouncycastle.asn1.x500.X500Name
 import org.bouncycastle.pkcs.PKCS10CertificationRequest
 import org.bouncycastle.pkcs.jcajce.JcaPKCS10CertificationRequestBuilder
-import org.openziti.Enrollment
-import org.openziti.IdentityConfig
-import org.openziti.edge.ApiClient
-import org.openziti.edge.ApiException
-import org.openziti.edge.api.AuthenticationApi
-import org.openziti.edge.api.ControllersApi
-import org.openziti.edge.api.InformationalApi
-import org.openziti.edge.model.ApiErrorEnvelope
-import org.openziti.edge.model.EnrollmentCertsEnvelope
-import org.openziti.util.*
+import org.hanzozt.Enrollment
+import org.hanzozt.IdentityConfig
+import org.hanzozt.edge.ApiClient
+import org.hanzozt.edge.ApiException
+import org.hanzozt.edge.api.AuthenticationApi
+import org.hanzozt.edge.api.ControllersApi
+import org.hanzozt.edge.api.InformationalApi
+import org.hanzozt.edge.model.ApiErrorEnvelope
+import org.hanzozt.edge.model.EnrollmentCertsEnvelope
+import org.hanzozt.util.*
 import java.io.File
 import java.net.URI
 import java.net.http.HttpClient
@@ -122,7 +122,7 @@ internal class Enroller(
         val csr = createCsr(token, kp)
 
         // TODO use generated enrollment API when it is fixed
-        // https://github.com/openziti/ziti/issues/2796
+        // https://github.com/hanzozt/ziti/issues/2796
         val uri = URI.create(api.baseUri + "/enroll?method=${jwt.method}&token=$token")
 
         val req = HttpRequest.newBuilder(uri)
@@ -163,7 +163,7 @@ internal class Enroller(
         http.sslContext(ssl)
 
         // TODO use generated enrollment API when it is fixed
-        // https://github.com/openziti/ziti/issues/2796
+        // https://github.com/hanzozt/ziti/issues/2796
         val uri = URI.create(api.baseUri + "/enroll?method=${jwt.method}&token=$token")
 
         val req = HttpRequest.newBuilder(uri)

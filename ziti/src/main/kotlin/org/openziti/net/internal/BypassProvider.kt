@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.net.internal
+package org.hanzozt.net.internal
 
 import javax.net.SocketFactory
 import javax.net.ssl.SSLContext

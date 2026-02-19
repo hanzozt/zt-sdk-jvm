@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.sample.netcat
+package org.hanzozt.sample.netcat
 
 import kotlinx.coroutines.CompletableDeferred
 import java.nio.ByteBuffer

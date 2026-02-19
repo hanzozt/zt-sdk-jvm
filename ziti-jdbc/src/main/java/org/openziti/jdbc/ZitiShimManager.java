@@ -1,14 +1,14 @@
-package org.openziti.jdbc;
+package org.hanzozt.jdbc;
 
 import java.util.EnumSet;
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 import java.util.logging.Logger;
-import org.openziti.jdbc.ZitiDriver.ZitiFeature;
-import org.openziti.jdbc.shim.Mysql;
-import org.openziti.jdbc.shim.Oracle;
-import org.openziti.jdbc.shim.Postgresql;
+import org.hanzozt.jdbc.ZitiDriver.ZitiFeature;
+import org.hanzozt.jdbc.shim.Mysql;
+import org.hanzozt.jdbc.shim.Oracle;
+import org.hanzozt.jdbc.shim.Postgresql;
 
 public class ZitiShimManager {
   private static final Logger log = Logger.getLogger(ZitiShimManager.class.getName());

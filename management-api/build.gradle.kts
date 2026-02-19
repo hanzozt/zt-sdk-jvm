@@ -44,7 +44,7 @@ val jacksonVersion = libs.versions.jackson.get()
 val jakartaAnnotationVersion = libs.versions.jakarta.annotation.get()
 
 ext {
-    description = "OpenZiti Management API client"
+    description = "Hanzo ZT Management API client"
 }
 
 dependencies {
@@ -59,21 +59,21 @@ dependencies {
 
 
 // generate Ziti Management API client
-// only needed if new version was published in github.com/openziti/edge-api
+// only needed if new version was published in github.com/hanzozt/edge-api
 // run `./gradlew :openApiGenerate`, check build, commit, push
 val edgeApiVersion = libs.versions.ziti.api.get()
 
 openApiGenerate {
     applyDefaults()
 
-    remoteInputSpec.set("https://raw.githubusercontent.com/openziti/edge-api/v${edgeApiVersion}/management.yml")
+    remoteInputSpec.set("https://raw.githubusercontent.com/hanzozt/edge-api/v${edgeApiVersion}/management.yml")
     version.set(project.version.toString())
     outputDir.set("$projectDir")
     generatorName.set("java")
-    groupId.set("org.openziti")
+    groupId.set("org.hanzozt")
     id.set("management-api")
-    modelPackage.set("org.openziti.management.model")
-    apiPackage.set("org.openziti.management.api")
+    modelPackage.set("org.hanzozt.management.model")
+    apiPackage.set("org.hanzozt.management.api")
     generateModelTests.set(false)
     generateApiTests.set(false)
     configOptions = mapOf(

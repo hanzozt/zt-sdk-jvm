@@ -1,5 +1,5 @@
 # Microsoft SQL Server Example
-This project contains a simple java application that uses the [OpenZiti](https://openziti.github.io/ziti/overview.html) Java SDK to connect to a Microsoft SQL Server (MSSQL) database and read the contents of a table.
+This project contains a simple java application that uses the [Hanzo ZT](https://hanzozt.github.io/ziti/overview.html) Java SDK to connect to a Microsoft SQL Server (MSSQL) database and read the contents of a table.
 
 # What you will need
 * (Maven) [https://maven.apache.org/] to build the sample
@@ -13,7 +13,7 @@ Compilation is done using the Maven build tooling.
 
 # Running the example
 Running the example is done using the gradle run facility. 
-It's assumed you already have the OpenZiti network running and the ziti services configured.
+It's assumed you already have the Hanzo ZT network running and the ziti services configured.
 
 Your services must have as intercept configuration the host `mssql_host` with the port `1433`; if different you may change the connection string in the `MSSQLExample.java` file.
 
@@ -29,11 +29,11 @@ You can run the example from the sample directory using:
 ## Example Output
 ```
 > Task :ziti-jdbc-mssql:runWithJavaExec
-[main] INFO org.openziti.impl.ZitiImpl - ZitiSDK version 0.25.1 @344b49b()
-Feb 22, 2024 5:32:02 PM org.openziti.jdbc.ZitiDriver setupZiti
+[main] INFO org.hanzozt.impl.ZitiImpl - ZitiSDK version 0.25.1 @344b49b()
+Feb 22, 2024 5:32:02 PM org.hanzozt.jdbc.ZitiDriver setupZiti
 INFO: Ziti JDBC wrapper is configuring Ziti identities. Production applications should manage Ziti identities directly
-[DefaultDispatcher-worker-2] INFO org.openziti.api.Controller - controller[https://ziti-edge-controller/] version(v0.28.1/f9a62c0baf1c)
-[DefaultDispatcher-worker-1] INFO org.openziti.api.Controller - controller[https://ziti-edge-controller/] version(v0.28.1/f9a62c0baf1c)
+[DefaultDispatcher-worker-2] INFO org.hanzozt.api.Controller - controller[https://ziti-edge-controller/] version(v0.28.1/f9a62c0baf1c)
+[DefaultDispatcher-worker-1] INFO org.hanzozt.api.Controller - controller[https://ziti-edge-controller/] version(v0.28.1/f9a62c0baf1c)
 Column_1: AAA0000 - Column_2: 10.10.10.0
 Column_1: AAA0001 - Column_2: 10.10.10.1
 Column_1: AAA0002 - Column_2: 10.10.10.2

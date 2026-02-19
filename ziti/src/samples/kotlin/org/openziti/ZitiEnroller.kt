@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti
+package org.hanzozt
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands

@@ -11,9 +11,9 @@ services:
         aliases:
           - ziti-edge-controller
     volumes:
-      - ziti-fs:/openziti
+      - ziti-fs:/hanzozt
     entrypoint:
-      - "/openziti/scripts/run-controller.sh"
+      - "/hanzozt/scripts/run-controller.sh"
 
   ziti-edge-router:
     image: "${ZITI_IMAGE}:${ZITI_VERSION}"
@@ -31,9 +31,9 @@ services:
         aliases:
           - ziti-edge-router
     volumes:
-      - ziti-fs:/openziti
+      - ziti-fs:/hanzozt
     entrypoint: /bin/bash
-    command: "/openziti/scripts/run-router.sh edge"
+    command: "/hanzozt/scripts/run-router.sh edge"
 
   postgres-db:
     image: postgres

@@ -1,4 +1,4 @@
-package org.openziti
+package org.hanzozt
 
 import org.junit.Test
 

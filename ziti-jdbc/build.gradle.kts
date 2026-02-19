@@ -48,7 +48,7 @@ tasks.named<ShadowJar>("shadowJar") {
 
 tasks.named<Jar>("jar") {
     manifest {
-        attributes("Main-Class" to "org.openziti.jdbc.CommandLine")
+        attributes("Main-Class" to "org.hanzozt.jdbc.CommandLine")
     }
 }
 

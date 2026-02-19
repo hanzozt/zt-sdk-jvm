@@ -47,12 +47,12 @@ Creates an ephemeral certificate for the current API Session. This endpoint expe
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -128,13 +128,13 @@ Creates an ephemeral certificate for the current API Session. This endpoint expe
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -220,12 +220,12 @@ Creates a TOTP token that proves TOTP validation occurred at a specific time. Us
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -299,13 +299,13 @@ Creates a TOTP token that proves TOTP validation occurred at a specific time. Us
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -389,12 +389,12 @@ Terminates the current API session
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -463,13 +463,13 @@ Terminates the current API session
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -548,12 +548,12 @@ Delete an ephemeral certificateby id
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -629,13 +629,13 @@ Delete an ephemeral certificateby id
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -721,12 +721,12 @@ Retrieves a single ephemeral certificate by id
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -802,13 +802,13 @@ Retrieves a single ephemeral certificate by id
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -894,12 +894,12 @@ Retrieves a single authenticator by id. Will only show authenticators assigned t
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -973,13 +973,13 @@ Retrieves a single authenticator by id. Will only show authenticators assigned t
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1063,12 +1063,12 @@ This endpoint only functions for certificates issued by the controller. 3rd part
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1143,13 +1143,13 @@ This endpoint only functions for certificates issued by the controller. 3rd part
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1234,12 +1234,12 @@ After submitting a CSR for a new client certificate the resulting public certifi
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1314,13 +1314,13 @@ After submitting a CSR for a new client certificate the resulting public certifi
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1405,12 +1405,12 @@ Retrieves the API session that was used to issue the current request
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1479,13 +1479,13 @@ Retrieves the API session that was used to issue the current request
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1564,12 +1564,12 @@ Retrieves a list of certificate resources for the current API session; supports 
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1649,13 +1649,13 @@ Retrieves a list of certificate resources for the current API session; supports 
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1745,12 +1745,12 @@ Retrieves a list of authenticators assigned to the current API session&#39;s ide
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1828,13 +1828,13 @@ Retrieves a list of authenticators assigned to the current API session&#39;s ide
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1922,12 +1922,12 @@ Retrieves data indicating the last time data relevant to this API Session was al
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1998,13 +1998,13 @@ Retrieves data indicating the last time data relevant to this API Session was al
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -2085,12 +2085,12 @@ Update the supplied fields on an authenticator by id. Will only update authentic
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -2167,13 +2167,13 @@ Update the supplied fields on an authenticator by id. Will only update authentic
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -2260,12 +2260,12 @@ Update all fields on an authenticator by id.  Will only update authenticators as
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -2342,13 +2342,13 @@ Update all fields on an authenticator by id.  Will only update authenticators as
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentApiSessionApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentApiSessionApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {

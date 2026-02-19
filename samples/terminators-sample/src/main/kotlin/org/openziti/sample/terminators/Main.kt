@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.openziti.sample.terminators
+package org.hanzozt.sample.terminators
 
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
-import org.openziti.Ziti
-import org.openziti.ZitiAddress
-import org.openziti.ZitiContext
-import org.openziti.api.Service
-import org.openziti.net.nio.*
+import org.hanzozt.Ziti
+import org.hanzozt.ZitiAddress
+import org.hanzozt.ZitiContext
+import org.hanzozt.api.Service
+import org.hanzozt.net.nio.*
 import java.nio.ByteBuffer
 import java.nio.channels.AsynchronousServerSocketChannel
 import java.nio.channels.AsynchronousSocketChannel

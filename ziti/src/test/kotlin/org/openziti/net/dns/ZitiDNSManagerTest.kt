@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.openziti.net.dns
+package org.hanzozt.net.dns
 
 import org.junit.After
 import org.junit.Assert.*
 import org.junit.Test
-import org.openziti.api.asInterceptAddr
+import org.hanzozt.api.asInterceptAddr
 
 class ZitiDNSManagerTest {
 

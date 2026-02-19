@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.sample.springboot
+package org.hanzozt.sample.springboot
 
 import org.springframework.boot.runApplication
 

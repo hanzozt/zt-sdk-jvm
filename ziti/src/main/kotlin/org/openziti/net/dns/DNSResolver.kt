@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.net.dns
+package org.hanzozt.net.dns
 
 import java.io.Writer
 import java.net.InetAddress

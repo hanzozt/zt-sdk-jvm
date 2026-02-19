@@ -4,16 +4,16 @@ Ziti Module for Vert.x
 This module allows using Ziti with vert.x.
 
 It provides a Transport implementation to connect or bind over
-OpenZiti overlay network.
+Hanzo ZT overlay network.
 
 ## How to use it
 - add dependency
 ```groovy
 dependencies {
-    implementation "org.openziti:ziti-vertx:+" // use latest version
+    implementation "org.hanzozt:ziti-vertx:+" // use latest version
 }
 ```
-- configure vertx instance with [ZitiTransport](src/main/kotlin/org/openziti/vertx/ZitiTransport.kt) 
+- configure vertx instance with [ZitiTransport](src/main/kotlin/org/hanzozt/vertx/ZitiTransport.kt) 
 then use vertx instance as usual
 ```kotlin
 val ztx = Ziti.newContext(identityFile, charArrayOf())
@@ -25,4 +25,4 @@ val vertx = VertxBuilder()
     .vertx()
 ```
 
-See sample [server](src/samples/kotlin/org/openziti/vertx/sample/EchoServer.kt)
+See sample [server](src/samples/kotlin/org/hanzozt/vertx/sample/EchoServer.kt)

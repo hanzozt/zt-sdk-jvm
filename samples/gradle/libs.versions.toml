@@ -1,6 +1,6 @@
 [versions]
 kotlin = "2.1.0"
-openziti = "0.27.2"
+hanzozt = "0.27.2"
 springboot = "3.3.3"
 clikt = "2.8.0"
 slf4j = "2.0.5"
@@ -15,11 +15,11 @@ httpcomponentscore5h2 = "org.apache.httpcomponents.core5:httpcore5-h2:5.3.6"
 log4j = "org.apache.logging.log4j:log4j-core:2.17.1"
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 kotlinx-coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1"
-ziti = { module = "org.openziti:ziti", version.ref = "openziti" }
-ziti-jdbc = { module = "org.openziti:ziti-jdbc", version.ref = "openziti" }
-ziti-netty = { module = "org.openziti:ziti-netty", version.ref = "openziti" }
-ziti-springboot = { module = "org.openziti:ziti-springboot", version.ref = "openziti" }
-ziti-springboot-client = { module = "org.openziti:ziti-springboot-client", version.ref = "openziti" }
+ziti = { module = "org.hanzozt:ziti", version.ref = "hanzozt" }
+ziti-jdbc = { module = "org.hanzozt:ziti-jdbc", version.ref = "hanzozt" }
+ziti-netty = { module = "org.hanzozt:ziti-netty", version.ref = "hanzozt" }
+ziti-springboot = { module = "org.hanzozt:ziti-springboot", version.ref = "hanzozt" }
+ziti-springboot-client = { module = "org.hanzozt:ziti-springboot-client", version.ref = "hanzozt" }
 slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
 slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
 

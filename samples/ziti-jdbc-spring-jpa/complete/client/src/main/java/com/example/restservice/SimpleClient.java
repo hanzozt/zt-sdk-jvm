@@ -1,8 +1,8 @@
 package com.example.restservice;
 
 import okhttp3.*;
-import org.openziti.Ziti;
-import org.openziti.ZitiContext;
+import org.hanzozt.Ziti;
+import org.hanzozt.ZitiContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -71,7 +71,7 @@ public class SimpleClient {
 
       var svc = zitiContext.getService(serviceName,10000);
       if (svc == null) {
-        throw new IllegalArgumentException(String.format("Service %s is not available on the OpenZiti network",serviceName));
+        throw new IllegalArgumentException(String.format("Service %s is not available on the Hanzo ZT network",serviceName));
       }
 
       OkHttpClient clt = newHttpClient();

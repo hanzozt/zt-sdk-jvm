@@ -1,7 +1,7 @@
 
 logging:
   level:
-    org.openziti: WARN
+    org.hanzozt: WARN
 server:
   port: 0
 

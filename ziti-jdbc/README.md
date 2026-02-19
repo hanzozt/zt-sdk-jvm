@@ -18,7 +18,7 @@ Each JDBC driver needs specific ziti features in order to work. This table attem
 | oracle.jdbc.OracleDriver |       Y       | init with seamless mode | <ul><li>The current Oracle shim does not support NIO or OOB. As such, the shim will set the following property values <ul><li>oracle.jdbc.javaNetNio=false</li><li>oracle.net.disableOob=false</li></ul></li><li>Tested with public and private autonomous databases</li><li>Requires the database host to be resolvable (1)</li></ul> |
 | com.mysql.jdbc.Driver |       Y       | init with seamless mode |                                                                                                                                                                                                                                                                                                                                        |
 | org.h2.Driver |       N       | init with seamless mode | Requires the database host to be resolvable (1)                                                                                                                                                                                                                                                                                        |
-| com.microsoft.sqlserver.jdbc.SQLServerDriver|       N       | Socket Factory | <ul><li>Requires MSSQL jdbc property <b>socketFactoryClass</b> set as: `org.openziti.net.ZitiSocketFactory`</li><li>Requires Custom URL pattern, set as: `^zdbc:sqlserver:.*`</li><li>Connection string set as: `zdbc:sqlserver://<host>:<port>;databaseName=<database>`</li></ul>                                                             |
+| com.microsoft.sqlserver.jdbc.SQLServerDriver|       N       | Socket Factory | <ul><li>Requires MSSQL jdbc property <b>socketFactoryClass</b> set as: `org.hanzozt.net.ZitiSocketFactory`</li><li>Requires Custom URL pattern, set as: `^zdbc:sqlserver:.*`</li><li>Connection string set as: `zdbc:sqlserver://<host>:<port>;databaseName=<database>`</li></ul>                                                             |
 | com.amazon.redshift.jdbc.Driver |       N       | init with seamless mode | <ul><li>Requires Custom URL pattern, set as: `^zdbc:redshift:.*`</li><li>Connection string set as: `zdbc:redshift://<host>:<port>/<database>`</li></ul>                                                                                                                                                                                |
 
 (1) These drivers attempt to resolve the name of the database host via a DNS request before connecting to them. The database hostname must be resolvable until something like <https://openjdk.java.net/jeps/418> is adopted. No connection attempt will be made to this host, it is simply required to satisfy the driver DNS resolution.
@@ -34,13 +34,13 @@ The zdbc driver needs your ziti network identity to connect. There are three way
 
 # Example of integrating into developer tools
 ## Requirements
-1. A Ziti network and database: (https://github.com/openziti/ziti-sdk-jvm/blob/main/samples/jdbc-postgres/cheatsheet.md) 
+1. A Ziti network and database: (https://github.com/hanzozt/ziti-sdk-jvm/blob/main/samples/jdbc-postgres/cheatsheet.md) 
 1. Squirrel-Sql client: (http://squirrel-sql.sourceforge.net/#installation)
 1. Postgresql JDBC driver: (https://search.maven.org/artifact/org.postgresql/postgresql)
-1. Ziti ZDBC wrapper full jar: (this project): (https://search.maven.org/search?q=g:org.openziti&a=ziti-jdbc&l:full)
+1. Ziti ZDBC wrapper full jar: (this project): (https://search.maven.org/search?q=g:org.hanzozt&a=ziti-jdbc&l:full)
 
 ## Step by Step
-1. Configure a ziti network and postgres database following the cheatsheet <https://github.com/openziti/ziti-sdk-jvm/blob/main/samples/jdbc-postgres/cheatsheet.md> 
+1. Configure a ziti network and postgres database following the cheatsheet <https://github.com/hanzozt/ziti-sdk-jvm/blob/main/samples/jdbc-postgres/cheatsheet.md> 
 1. Copy the Ziti all-in-one jar into the Squirrel-Sql `lib` folder
 
 > ls $SQUIRREL_HOME\lib | grep ziti <br/>
@@ -51,7 +51,7 @@ The zdbc driver needs your ziti network identity to connect. There are three way
 1. Start Squirrel-Sql
 1. Configure the Squirrel-Sql PostgreSQL driver
     1. Add the PostgreSQL jar file to the driver's `Extra Class Path`
-    1. Click 'List Drivers' and select `org.openziti.jdbc.ZitiDriver` in the `Class Name` field
+    1. Click 'List Drivers' and select `org.hanzozt.jdbc.ZitiDriver` in the `Class Name` field
     <br>![Edit Driver](images/Driver-Edit.png)
     <br>![Configure Driver](images/Driver-Details.png)
 1. Create a PostgreSQL alias with the following values
@@ -69,5 +69,5 @@ The zdbc driver needs your ziti network identity to connect. There are three way
 
 # Example of integrating into a Java application
 This repository includes a coupld of examples using Java to connect to a dark database.
-* [samples/postgresql/README.md](https://github.com/openziti/ziti-sdk-jvm/blob/main/samples/jdbc-postgres/cheatsheet.md): Postgresql example using the JDBC DriverManager to connect to a dark database.
-* [samples/spring-jpa/README.md](https://github.com/openziti/ziti-sdk-jvm/tree/main/samples/ziti-jdbc-spring-jpa): A learning exercise adding spring-data-jpa and spring-data-rest to host a dark http server that connects to a dark postgres database
+* [samples/postgresql/README.md](https://github.com/hanzozt/ziti-sdk-jvm/blob/main/samples/jdbc-postgres/cheatsheet.md): Postgresql example using the JDBC DriverManager to connect to a dark database.
+* [samples/spring-jpa/README.md](https://github.com/hanzozt/ziti-sdk-jvm/tree/main/samples/ziti-jdbc-spring-jpa): A learning exercise adding spring-data-jpa and spring-data-rest to host a dark http server that connects to a dark postgres database

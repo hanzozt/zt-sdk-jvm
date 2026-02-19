@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.impl
+package org.hanzozt.impl
 
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.BufferOverflow
@@ -22,22 +22,22 @@ import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.future.asCompletableFuture
 import kotlinx.coroutines.selects.select
-import org.openziti.*
-import org.openziti.Identity
-import org.openziti.ZitiException.Errors
-import org.openziti.api.*
-import org.openziti.edge.model.*
-import org.openziti.net.*
-import org.openziti.net.Protocol
-import org.openziti.net.dns.ZitiDNSManager
-import org.openziti.net.nio.AsychChannelSocket
-import org.openziti.net.nio.connectSuspend
-import org.openziti.net.routing.RouteManager
-import org.openziti.posture.PostureService
-import org.openziti.util.IPUtil
-import org.openziti.util.Logged
-import org.openziti.util.Retry
-import org.openziti.util.ZitiLog
+import org.hanzozt.*
+import org.hanzozt.Identity
+import org.hanzozt.ZitiException.Errors
+import org.hanzozt.api.*
+import org.hanzozt.edge.model.*
+import org.hanzozt.net.*
+import org.hanzozt.net.Protocol
+import org.hanzozt.net.dns.ZitiDNSManager
+import org.hanzozt.net.nio.AsychChannelSocket
+import org.hanzozt.net.nio.connectSuspend
+import org.hanzozt.net.routing.RouteManager
+import org.hanzozt.posture.PostureService
+import org.hanzozt.util.IPUtil
+import org.hanzozt.util.Logged
+import org.hanzozt.util.Retry
+import org.hanzozt.util.ZitiLog
 import java.io.Writer
 import java.net.*
 import java.nio.channels.AsynchronousServerSocketChannel

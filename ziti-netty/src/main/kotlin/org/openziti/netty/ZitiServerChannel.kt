@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.openziti.netty
+package org.hanzozt.netty
 
 import io.netty.channel.AbstractServerChannel
 import io.netty.channel.ChannelConfig
 import io.netty.channel.DefaultChannelConfig
 import io.netty.channel.EventLoop
-import org.openziti.ZitiAddress
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.ZitiAddress
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 import java.net.InetSocketAddress
 import java.net.SocketAddress
 import java.nio.channels.AsynchronousServerSocketChannel

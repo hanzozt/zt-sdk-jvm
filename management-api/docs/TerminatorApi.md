@@ -31,12 +31,12 @@ Create a terminator resource. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.TerminatorApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.TerminatorApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -112,13 +112,13 @@ Create a terminator resource. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.TerminatorApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.TerminatorApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -204,12 +204,12 @@ Delete a terminator by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.TerminatorApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.TerminatorApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -287,13 +287,13 @@ Delete a terminator by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.TerminatorApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.TerminatorApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -381,12 +381,12 @@ Retrieves a single terminator by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.TerminatorApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.TerminatorApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -462,13 +462,13 @@ Retrieves a single terminator by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.TerminatorApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.TerminatorApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -554,12 +554,12 @@ Retrieves a list of terminator resources; supports filtering, sorting, and pagin
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.TerminatorApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.TerminatorApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -639,13 +639,13 @@ Retrieves a list of terminator resources; supports filtering, sorting, and pagin
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.TerminatorApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.TerminatorApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -735,12 +735,12 @@ Update the supplied fields on a terminator. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.TerminatorApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.TerminatorApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -819,13 +819,13 @@ Update the supplied fields on a terminator. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.TerminatorApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.TerminatorApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -914,12 +914,12 @@ Update all fields on a terminator by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.TerminatorApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.TerminatorApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -998,13 +998,13 @@ Update all fields on a terminator by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.auth.*;
-import org.openziti.management.models.*;
-import org.openziti.management.api.TerminatorApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.auth.*;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.TerminatorApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {

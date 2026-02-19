@@ -9,7 +9,7 @@ function waitForController {
 
 
 # Start everything except the tunneler.  The tunneler needs the identity file created during 
-# the OpenZiti initialization, so needs to be started later
+# the Hanzo ZT initialization, so needs to be started later
 docker-compose -p pg up -d ziti-controller ziti-edge-router postgres-db
 
 waitForController

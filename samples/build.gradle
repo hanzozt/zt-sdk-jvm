@@ -24,9 +24,9 @@ repositories {
     google()
 }
 
-group = "org.openziti.sample"
+group = "org.hanzozt.sample"
 version = "0.0.1-SNAPSHOT"
-println("ziti-version = ${libs.versions.openziti.get()}")
+println("ziti-version = ${libs.versions.hanzozt.get()}")
 
 subprojects {
     apply plugin: "java"

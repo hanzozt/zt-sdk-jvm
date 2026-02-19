@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.crypto
+package org.hanzozt.crypto
 
 import com.goterl.lazysodium.LazySodium
 import com.goterl.lazysodium.LazySodiumJava

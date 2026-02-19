@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.openziti
+package org.hanzozt
 
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
-import org.openziti.api.MFAEnrollment
-import org.openziti.api.Service
-import org.openziti.edge.model.AuthQueryType
-import org.openziti.edge.model.IdentityDetail
-import org.openziti.edge.model.TerminatorClientDetail
+import org.hanzozt.api.MFAEnrollment
+import org.hanzozt.api.Service
+import org.hanzozt.edge.model.AuthQueryType
+import org.hanzozt.edge.model.IdentityDetail
+import org.hanzozt.edge.model.TerminatorClientDetail
 import java.io.Closeable
 import java.io.Writer
 import java.net.InetSocketAddress

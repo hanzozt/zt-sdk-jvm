@@ -1,4 +1,4 @@
-package org.openziti.jdbc;
+package org.hanzozt.jdbc;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;

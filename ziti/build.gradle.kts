@@ -69,7 +69,7 @@ val gitCommit = rootProject.ext["gitCommit"]
 val gitBranch = rootProject.ext["gitBranch"]
 
 tasks.register<WriteProperties>("versionProps") {
-    destinationFile = file("${generatedResourcesDir}/org/openziti/util/ziti-version.properties")
+    destinationFile = file("${generatedResourcesDir}/org/hanzozt/util/ziti-version.properties")
 
     property("version", "${project.version}")
     property("revision", "$gitCommit")
@@ -99,7 +99,7 @@ tasks.register<Exec>("updateProtobuf") {
     description = "updates generated protobuf sources in src/main/java. requires `protoc` on your path"
     val protoDir = layout.buildDirectory.dir("proto")
     download.run {
-        src("https://raw.githubusercontent.com/openziti/sdk-golang/refs/heads/main/pb/edge_client_pb/edge_client.proto")
+        src("https://raw.githubusercontent.com/hanzozt/sdk-golang/refs/heads/main/pb/edge_client_pb/edge_client.proto")
         dest(protoDir)
     }
 

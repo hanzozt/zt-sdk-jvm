@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-org.openziti.util.ZtxInfoProvider
-org.openziti.util.DnsInfoProvider
-org.openziti.util.ThreadDumpProvider
+org.hanzozt.util.ZtxInfoProvider
+org.hanzozt.util.DnsInfoProvider
+org.hanzozt.util.ThreadDumpProvider

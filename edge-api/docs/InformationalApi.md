@@ -33,11 +33,11 @@ Returns single spec resource embedded within the controller for consumption/docu
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.InformationalApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.InformationalApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -99,12 +99,12 @@ Returns single spec resource embedded within the controller for consumption/docu
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.InformationalApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.InformationalApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -176,11 +176,11 @@ Return the body of the specification (i.e. Swagger, OpenAPI 2.0, 3.0, etc).
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.InformationalApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.InformationalApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -242,12 +242,12 @@ Return the body of the specification (i.e. Swagger, OpenAPI 2.0, 3.0, etc).
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.InformationalApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.InformationalApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -317,11 +317,11 @@ Returns all capabilities this version of the controller is aware of, enabled or 
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.InformationalApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.InformationalApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -377,12 +377,12 @@ Returns all capabilities this version of the controller is aware of, enabled or 
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.InformationalApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.InformationalApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -448,11 +448,11 @@ Return a list of the listening Edge protocols
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.InformationalApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.InformationalApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -510,12 +510,12 @@ Return a list of the listening Edge protocols
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.InformationalApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.InformationalApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -583,11 +583,11 @@ Returns version information
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.InformationalApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.InformationalApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -643,12 +643,12 @@ Returns version information
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.InformationalApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.InformationalApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -716,11 +716,11 @@ Returns a list of spec files embedded within the controller for consumption/docu
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.InformationalApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.InformationalApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -778,12 +778,12 @@ Returns a list of spec files embedded within the controller for consumption/docu
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.InformationalApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.InformationalApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -849,11 +849,11 @@ Returns version information
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.InformationalApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.InformationalApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -909,12 +909,12 @@ Returns version information
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.InformationalApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.InformationalApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {

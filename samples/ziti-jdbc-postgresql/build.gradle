@@ -15,7 +15,7 @@
  */
 
 ext {
-   javaMainClass = "org.openziti.sample.jdbc.PostgresqlExample"
+   javaMainClass = "org.hanzozt.sample.jdbc.PostgresqlExample"
 }
 
 dependencies {

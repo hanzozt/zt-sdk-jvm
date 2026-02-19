@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.openziti.posture
+package org.hanzozt.posture
 
 import org.junit.Before
 import org.junit.Test
-import org.openziti.edge.model.PostureCheckType
-import org.openziti.edge.model.PostureQuery
-import org.openziti.edge.model.PostureResponseOperatingSystemCreate
+import org.hanzozt.edge.model.PostureCheckType
+import org.hanzozt.edge.model.PostureQuery
+import org.hanzozt.edge.model.PostureResponseOperatingSystemCreate
 import kotlin.test.assertEquals
 
 class DefaultPostureServiceTest {

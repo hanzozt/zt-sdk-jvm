@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.openziti.identity
+package org.hanzozt.identity
 
 import io.jsonwebtoken.Claims
 import io.jsonwebtoken.JwsHeader
 import io.jsonwebtoken.Jwts
 import io.jsonwebtoken.SigningKeyResolver
-import org.openziti.Enrollment
+import org.hanzozt.Enrollment
 import java.net.URI
 import java.net.URL
 import java.security.Key

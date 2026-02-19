@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.netty
+package org.hanzozt.netty
 
 import io.netty.resolver.AddressResolver
 import io.netty.resolver.AddressResolverGroup
@@ -22,8 +22,8 @@ import io.netty.util.concurrent.DefaultPromise
 import io.netty.util.concurrent.EventExecutor
 import io.netty.util.concurrent.Future
 import io.netty.util.concurrent.Promise
-import org.openziti.ZitiAddress
-import org.openziti.ZitiContext
+import org.hanzozt.ZitiAddress
+import org.hanzozt.ZitiContext
 import java.net.InetSocketAddress
 import java.net.SocketAddress
 import java.nio.channels.UnresolvedAddressException

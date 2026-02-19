@@ -1,4 +1,4 @@
-package org.openziti.jdbc;
+package org.hanzozt.jdbc;
 
 import java.sql.Driver;
 import java.util.EnumSet;
@@ -6,7 +6,7 @@ import java.util.Objects;
 import java.util.Properties;
 import java.util.logging.Logger;
 import java.util.regex.Pattern;
-import org.openziti.jdbc.ZitiDriver.ZitiFeature;
+import org.hanzozt.jdbc.ZitiDriver.ZitiFeature;
 
 public class BaseZitiDriverShim {
   private static final Logger log = Logger.getLogger(BaseZitiDriverShim.class.getName());

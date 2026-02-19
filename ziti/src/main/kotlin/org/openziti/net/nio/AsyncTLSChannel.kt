@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.net.nio
+package org.hanzozt.net.nio
 
 import kotlinx.coroutines.*
 import kotlinx.coroutines.CancellationException
@@ -25,10 +25,10 @@ import kotlinx.coroutines.future.asCompletableFuture
 import kotlinx.coroutines.future.await
 import kotlinx.coroutines.selects.onTimeout
 import kotlinx.coroutines.selects.select
-import org.openziti.util.EMPTY
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
-import org.openziti.util.transferTo
+import org.hanzozt.util.EMPTY
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
+import org.hanzozt.util.transferTo
 import java.io.EOFException
 import java.io.IOException
 import java.net.InetSocketAddress

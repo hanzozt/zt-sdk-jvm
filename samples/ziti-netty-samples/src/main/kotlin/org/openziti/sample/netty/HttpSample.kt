@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.sample.netty
+package org.hanzozt.sample.netty
 
 import com.github.ajalt.clikt.core.CliktCommand
 import com.github.ajalt.clikt.core.subcommands
@@ -27,12 +27,12 @@ import io.netty.bootstrap.ServerBootstrap
 import io.netty.channel.*
 import io.netty.handler.codec.http.*
 import io.netty.handler.ssl.SslHandler
-import org.openziti.Ziti
-import org.openziti.ZitiAddress
-import org.openziti.ZitiContext
-import org.openziti.netty.ZitiChannelFactory
-import org.openziti.netty.ZitiResolverGroup
-import org.openziti.netty.ZitiServerChannelFactory
+import org.hanzozt.Ziti
+import org.hanzozt.ZitiAddress
+import org.hanzozt.ZitiContext
+import org.hanzozt.netty.ZitiChannelFactory
+import org.hanzozt.netty.ZitiResolverGroup
+import org.hanzozt.netty.ZitiServerChannelFactory
 import java.net.URI
 import java.net.URL
 import java.nio.charset.StandardCharsets

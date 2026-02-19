@@ -21,11 +21,11 @@ This endpoint is used during enrollments to bootstrap trust between enrolling cl
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.Configuration;
-import org.openziti.management.models.*;
-import org.openziti.management.api.WellKnownApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.WellKnownApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -83,12 +83,12 @@ This endpoint is used during enrollments to bootstrap trust between enrolling cl
 
 ```java
 // Import classes:
-import org.openziti.management.ApiClient;
-import org.openziti.management.ApiException;
-import org.openziti.management.ApiResponse;
-import org.openziti.management.Configuration;
-import org.openziti.management.models.*;
-import org.openziti.management.api.WellKnownApi;
+import org.hanzozt.management.ApiClient;
+import org.hanzozt.management.ApiException;
+import org.hanzozt.management.ApiResponse;
+import org.hanzozt.management.Configuration;
+import org.hanzozt.management.models.*;
+import org.hanzozt.management.api.WellKnownApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {

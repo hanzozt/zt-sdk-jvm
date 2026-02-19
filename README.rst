@@ -1,11 +1,11 @@
-.. image:: https://raw.githubusercontent.com/openziti/branding/main/images/banners/Java.jpg
+.. image:: https://raw.githubusercontent.com/hanzozt/branding/main/images/banners/Java.jpg
     :alt: Ziggy using the ziti-sdk-jvm
     
-.. image:: https://github.com/openziti/ziti-sdk-jvm/workflows/CI%20build/badge.svg
-    :target: https://github.com/openziti/ziti-sdk-jvm/actions?query=workflow%3A%22CI+build%22
+.. image:: https://github.com/hanzozt/ziti-sdk-jvm/workflows/CI%20build/badge.svg
+    :target: https://github.com/hanzozt/ziti-sdk-jvm/actions?query=workflow%3A%22CI+build%22
 
-.. image:: http://maven-badges.herokuapp.com/maven-central/org.openziti/ziti/badge.svg
-    :target: http://maven-badges.herokuapp.com/maven-central/org.openziti/ziti
+.. image:: http://maven-badges.herokuapp.com/maven-central/org.hanzozt/ziti/badge.svg
+    :target: http://maven-badges.herokuapp.com/maven-central/org.hanzozt/ziti
 
 Ziti SDK for JVM
 =================
@@ -21,7 +21,7 @@ Release Notes
 
 Obtaining SDK
 ------------
-The recommended way to use the OpenZiti SDK for Java in your project is to add the dependency
+The recommended way to use the Hanzo ZT SDK for Java in your project is to add the dependency
 using your favorite build tool.
 Our artifacts are hosted on Maven Central, so add repo(if needed) and dependency to your project.
 Make sure to use latest version from the top of this page.
@@ -47,7 +47,7 @@ _____
      <dependencies>
         ...
         <dependency>
-           <groupId>org.openziti</groupId>
+           <groupId>org.hanzozt</groupId>
            <artifactId>ziti</artifactId>
            <version>[0,)</version>
         </dependency>
@@ -66,7 +66,7 @@ ______
    ...
    dependencies {
       ...
-      implementation 'org.openziti:ziti:+' // TODO fix version
+      implementation 'org.hanzozt:ziti:+' // TODO fix version
    }
 
 Building from Source
@@ -92,7 +92,7 @@ Features
 
 Enrollment
 __________
-See background `here <https://openziti.github.io/ziti/identities/enrolling.html>`_
+See background `here <https://hanzozt.github.io/ziti/identities/enrolling.html>`_
 
 Java SDK provides a way to enroll and generate *identity file*.
 The default identity format for Java SDK is Java KeyStore stored as ``.p12/.pfx`` files,
@@ -105,8 +105,8 @@ private key entry
    ``ziti://<controller_addr>/<id>`` alias (pkcs#12 - friendly name)
 
 rootCA
-   root CA certificates used to validate `Ziti controller <https://openziti.github.io/ziti/manage/controller.html>`_ and
-   `routers <https://openziti.github.io/ziti/manage/router-overview.html>`_
+   root CA certificates used to validate `Ziti controller <https://hanzozt.github.io/ziti/manage/controller.html>`_ and
+   `routers <https://hanzozt.github.io/ziti/manage/router-overview.html>`_
 
 Note:
 
@@ -126,6 +126,6 @@ to address them.
 
 
 .. _Developer Community: https://ziti.dev
-.. _docs: https://openziti.github.io/ziti/overview.html
-.. _Discourse: https://openziti.discourse.group/
-.. _issues: https://github.com/openziti/ziti-sdk-jvm/issues
+.. _docs: https://hanzozt.github.io/ziti/overview.html
+.. _Discourse: https://hanzozt.discourse.group/
+.. _issues: https://github.com/hanzozt/ziti-sdk-jvm/issues

@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.openziti.net.internal
+package org.hanzozt.net.internal
 
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 import java.io.InputStream
 import java.io.OutputStream
 import java.net.InetAddress

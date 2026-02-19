@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.openziti.vertx
+package org.hanzozt.vertx
 
 import io.netty.channel.*
 import io.netty.channel.socket.DatagramChannel
 import io.netty.channel.socket.InternetProtocolFamily
 import io.vertx.core.transport.Transport
-import org.openziti.ZitiAddress
-import org.openziti.ZitiContext
-import org.openziti.netty.ZitiChannelFactory
-import org.openziti.netty.ZitiServerChannelFactory
+import org.hanzozt.ZitiAddress
+import org.hanzozt.ZitiContext
+import org.hanzozt.netty.ZitiChannelFactory
+import org.hanzozt.netty.ZitiServerChannelFactory
 import java.net.SocketAddress
 import java.util.concurrent.ThreadFactory
 

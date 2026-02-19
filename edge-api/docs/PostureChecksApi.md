@@ -23,12 +23,12 @@ Submits posture responses
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.PostureChecksApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.PostureChecksApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -104,13 +104,13 @@ Submits posture responses
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.PostureChecksApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.PostureChecksApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -196,12 +196,12 @@ Submits posture responses
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.PostureChecksApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.PostureChecksApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -277,13 +277,13 @@ Submits posture responses
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.PostureChecksApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.PostureChecksApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {

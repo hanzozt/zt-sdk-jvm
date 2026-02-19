@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.openziti.netty
+package org.hanzozt.netty
 
 import io.netty.buffer.ByteBuf
 import io.netty.buffer.Unpooled
 import io.netty.channel.*
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 import java.net.SocketAddress
 import java.nio.ByteBuffer
 import java.nio.channels.AsynchronousSocketChannel

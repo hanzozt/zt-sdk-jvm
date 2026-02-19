@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.openziti.sample.springboot
+package org.hanzozt.sample.springboot
 
 import jakarta.servlet.http.HttpServletRequest
-import org.openziti.springboot.ZitiTomcatCustomizer
+import org.hanzozt.springboot.ZitiTomcatCustomizer
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RestController

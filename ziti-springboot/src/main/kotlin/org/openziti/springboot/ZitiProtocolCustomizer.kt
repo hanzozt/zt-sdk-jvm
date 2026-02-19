@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.openziti.springboot
+package org.hanzozt.springboot
 
-import org.openziti.Ziti
+import org.hanzozt.Ziti
 import org.springframework.boot.web.embedded.tomcat.TomcatProtocolHandlerCustomizer
 import org.springframework.stereotype.Component
 

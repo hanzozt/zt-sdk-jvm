@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.openziti.net.dns
+package org.hanzozt.net.dns
 
-import org.openziti.util.IPUtil
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.util.IPUtil
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 import java.io.Writer
 import java.net.Inet4Address
 import java.net.Inet6Address

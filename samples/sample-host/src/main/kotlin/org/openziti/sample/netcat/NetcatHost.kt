@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.openziti.sample.netcat
+package org.hanzozt.sample.netcat
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.takeWhile
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import org.openziti.Ziti
-import org.openziti.ZitiAddress
-import org.openziti.ZitiContext
+import org.hanzozt.Ziti
+import org.hanzozt.ZitiAddress
+import org.hanzozt.ZitiContext
 import java.lang.System.exit
 import java.nio.ByteBuffer
 import java.nio.channels.AsynchronousServerSocketChannel
@@ -41,7 +41,7 @@ object NetcatHost {
         val cfg = args[0]
         val service = args[1]
 
-        Ziti.setApplicationInfo("org.openziti.sample.NetCatHost", "v1.0")
+        Ziti.setApplicationInfo("org.hanzozt.sample.NetCatHost", "v1.0")
         val ziti = Ziti.newContext(cfg, charArrayOf())
 
         runBlocking {

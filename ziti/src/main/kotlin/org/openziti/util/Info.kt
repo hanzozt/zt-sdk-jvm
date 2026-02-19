@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.openziti.util
+package org.hanzozt.util
 
-import org.openziti.Ziti
+import org.hanzozt.Ziti
 import java.io.Writer
 
 class ZtxInfoProvider: DebugInfoProvider {

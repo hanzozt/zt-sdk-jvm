@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.net
+package org.hanzozt.net
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -24,20 +24,20 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.test.runTest
 import kotlinx.coroutines.withContext
 import org.junit.jupiter.api.*
-import org.openziti.IdentityConfig
-import org.openziti.Ziti
-import org.openziti.ZitiAddress
-import org.openziti.ZitiContext
-import org.openziti.api.DNSName
-import org.openziti.api.InterceptConfig
-import org.openziti.api.InterceptV1Cfg
-import org.openziti.api.PortRange
-import org.openziti.edge.model.DialBind
-import org.openziti.integ.BaseTest
-import org.openziti.integ.ManagementHelper
-import org.openziti.net.nio.acceptSuspend
-import org.openziti.net.nio.readSuspend
-import org.openziti.net.nio.writeSuspend
+import org.hanzozt.IdentityConfig
+import org.hanzozt.Ziti
+import org.hanzozt.ZitiAddress
+import org.hanzozt.ZitiContext
+import org.hanzozt.api.DNSName
+import org.hanzozt.api.InterceptConfig
+import org.hanzozt.api.InterceptV1Cfg
+import org.hanzozt.api.PortRange
+import org.hanzozt.edge.model.DialBind
+import org.hanzozt.integ.BaseTest
+import org.hanzozt.integ.ManagementHelper
+import org.hanzozt.net.nio.acceptSuspend
+import org.hanzozt.net.nio.readSuspend
+import org.hanzozt.net.nio.writeSuspend
 import java.net.ConnectException
 import java.net.InetSocketAddress
 import java.net.SocketTimeoutException

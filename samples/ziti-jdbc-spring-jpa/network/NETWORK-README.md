@@ -1,5 +1,5 @@
 # Overview
-This document describes the steps necessary to configure an OpenZiti (https://github.com/openziti) network for the code samples contained in this project.
+This document describes the steps necessary to configure an Hanzo ZT (https://github.com/hanzozt) network for the code samples contained in this project.
 
 # Requirements
 * docker-compose
@@ -11,28 +11,28 @@ This document describes the steps necessary to configure an OpenZiti (https://gi
 * **docker-compose.yml** Compose file with the dark postgres server and an edge router to access it
 * **startup.sh:** Starts the docker-compose environment
 * **teardown.sh:** Stops and cleans up the docker-compose environment
-* **network-setup.sh** Bootstrap file for the OpenZiti network.  Creates identities and access policies for the sample
+* **network-setup.sh** Bootstrap file for the Hanzo ZT network.  Creates identities and access policies for the sample
 * **postgres-bootstrap.sh:** Bootstrap file for the postgres server. It creates the database used by the sample
 * **NETWORK-README.md:** This file
 
-# Start the OpenZiti network
-## Get the OpenZiti quickstart simplified docker-compose and environment files
-OpenZiti provides a quickstart docker-compose file that will run a network that has one controller and one edge router.
+# Start the Hanzo ZT network
+## Get the Hanzo ZT quickstart simplified docker-compose and environment files
+Hanzo ZT provides a quickstart docker-compose file that will run a network that has one controller and one edge router.
 
 Open a terminal window to the `spring-jpa/network` folder.  Leave this terminal open, you'll need it to manage the 
 network too.
 
 ```shell
 # Pull the docker compose file
-curl -o simplified-docker-compose.yml https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/simplified-docker-compose.yml
+curl -o simplified-docker-compose.yml https://raw.githubusercontent.com/hanzozt/ziti/release-next/quickstart/docker/simplified-docker-compose.yml
 
 #Pull the docker environment file
-curl -o .env https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/.env
+curl -o .env https://raw.githubusercontent.com/hanzozt/ziti/release-next/quickstart/docker/.env
 ```
 
 ## Launch the network
-The startup script will launch the OpenZiti quickstart network then add in the postgresql database and all 
-OpenZiti network configuration for the demo.
+The startup script will launch the Hanzo ZT quickstart network then add in the postgresql database and all 
+Hanzo ZT network configuration for the demo.
 
 Run the startup script from the `samples/spring-jpa/network` directory:
 
@@ -40,10 +40,10 @@ Run the startup script from the `samples/spring-jpa/network` directory:
 ./startup.sh
 ```
 
-This will start the OpenZiti network in the background.  It will take some time to start the network.  Everything is
+This will start the Hanzo ZT network in the background.  It will take some time to start the network.  Everything is
 ready when the identity files appear in the network directory.
 
-# Stop the OpenZiti network
+# Stop the Hanzo ZT network
 The `teardown.sh` script will stop the docker environment and clean it up by removing volumes and networks created for 
 the demo.
 
@@ -56,37 +56,37 @@ To run the teardown script from the `samples/spring-jpa/network` directory:
 # What's going on in network-setup.sh
 This section is for folks that want to know what's required to set up a network for this sample.
 
-This demo makes use of a few OpenZiti features:
-* **Identities:** An OpenZiti identity grants access to the network. Each person or application connecting to the 
-OpenZiti network requires a unique identity
-* **Services:** Services are endpoints that can be invoked over the OpenZiti network. This example includes two 
+This demo makes use of a few Hanzo ZT features:
+* **Identities:** An Hanzo ZT identity grants access to the network. Each person or application connecting to the 
+Hanzo ZT network requires a unique identity
+* **Services:** Services are endpoints that can be invoked over the Hanzo ZT network. This example includes two 
 services - the HTTP server and Postgresql database
 * **Service Access Policies:** The identity grants connection rights. Service Access Policies grant service rights
-* **Identity Edge Router Policies:** An OpenZiti edge router policy lets an identity connect to one or more edge 
-routers. Edge routers allow data in and out of the OpenZiti network overlay
-* **Service Edge Router Policies:** These policies tell OpenZiti which edge routers can be used to handle data for a 
-service. Restricting edge routers via this policy can restrict data for a service to a sub-section of the OpenZiti overlay mesh
+* **Identity Edge Router Policies:** An Hanzo ZT edge router policy lets an identity connect to one or more edge 
+routers. Edge routers allow data in and out of the Hanzo ZT network overlay
+* **Service Edge Router Policies:** These policies tell Hanzo ZT which edge routers can be used to handle data for a 
+service. Restricting edge routers via this policy can restrict data for a service to a sub-section of the Hanzo ZT overlay mesh
 
 ## Create and enroll identities
-This example uses three OpenZiti identities:
+This example uses three Hanzo ZT identities:
 * **private-service:** Hosts the web application. In Ziti terms this identity will bind the HTTP service and 
 dial the database service
 * **client** Used by the client to make web requests to the http server
 * **database** Hosts the postgres database service.
 
 ```shell
-ziti edge create identity device private-service -o /openziti/network-setup/private-service.jwt -a "services"
-ziti edge create identity device client -o /openziti/network-setup/client.jwt -a "clients"
-ziti edge create identity device database -o /openziti/network-setup/database.jwt -a "databases"
+ziti edge create identity device private-service -o /hanzozt/network-setup/private-service.jwt -a "services"
+ziti edge create identity device client -o /hanzozt/network-setup/client.jwt -a "clients"
+ziti edge create identity device database -o /hanzozt/network-setup/database.jwt -a "databases"
 ```
 
 The identities need to be enrolled before they can be used. Enrolling the identities creates files that contain
-private encryption keys required to connect to the OpenZiti network overlay.
+private encryption keys required to connect to the Hanzo ZT network overlay.
 
 ```shell
-ziti edge enroll -j /openziti/network-setup/private-service.jwt
-ziti edge enroll -j /openziti/network-setup/client.jwt
-ziti edge enroll -j /openziti/network-setup/database.jwt
+ziti edge enroll -j /hanzozt/network-setup/private-service.jwt
+ziti edge enroll -j /hanzozt/network-setup/client.jwt
+ziti edge enroll -j /hanzozt/network-setup/database.jwt
 ```
 
 The network directory will contain three identity files after enrollment is complete:

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.util
+package org.hanzozt.util
 
 import org.junit.jupiter.api.Assertions.assertArrayEquals
 import org.junit.jupiter.api.Test

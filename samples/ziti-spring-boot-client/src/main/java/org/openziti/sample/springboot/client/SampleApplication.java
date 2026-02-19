@@ -13,9 +13,9 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.openziti.sample.springboot.client;
+package org.hanzozt.sample.springboot.client;
 
-import org.openziti.springboot.client.web.config.EnableZitiHttpClient;
+import org.hanzozt.springboot.client.web.config.EnableZitiHttpClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;

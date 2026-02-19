@@ -26,7 +26,7 @@ dependencies {
 
 task runWithJavaExec(type: JavaExec) {
     group = "Execution"
-    description = "Run the OpenZiti demo client"
+    description = "Run the Hanzo ZT demo client"
     classpath = sourceSets.main.runtimeClasspath
     mainClass = javaMainClass
 }

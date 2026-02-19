@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.api
+package org.hanzozt.api
 
 import com.fasterxml.jackson.databind.JsonNode
 import com.fasterxml.jackson.databind.ObjectMapper
@@ -22,17 +22,17 @@ import com.fasterxml.jackson.module.kotlin.kotlinModule
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asExecutor
 import kotlinx.coroutines.future.await
-import org.openziti.edge.ApiClient
-import org.openziti.edge.api.AuthenticationApi
-import org.openziti.edge.api.CurrentApiSessionApi
-import org.openziti.edge.model.Authenticate
-import org.openziti.edge.model.EnvInfo
-import org.openziti.edge.model.SdkInfo
-import org.openziti.impl.ZitiImpl
-import org.openziti.util.Logged
-import org.openziti.util.SystemInfoProvider
-import org.openziti.util.Version
-import org.openziti.util.ZitiLog
+import org.hanzozt.edge.ApiClient
+import org.hanzozt.edge.api.AuthenticationApi
+import org.hanzozt.edge.api.CurrentApiSessionApi
+import org.hanzozt.edge.model.Authenticate
+import org.hanzozt.edge.model.EnvInfo
+import org.hanzozt.edge.model.SdkInfo
+import org.hanzozt.impl.ZitiImpl
+import org.hanzozt.util.Logged
+import org.hanzozt.util.SystemInfoProvider
+import org.hanzozt.util.Version
+import org.hanzozt.util.ZitiLog
 import java.net.URI
 import java.net.URLEncoder
 import java.net.http.HttpClient
@@ -122,7 +122,7 @@ class LegacyAuth(val ep: String, val ssl: SSLContext) : ZitiAuthenticator, Logge
 class InternalOIDC(val ep: String, ssl: SSLContext): ZitiAuthenticator, Logged by ZitiLog() {
 
     companion object {
-        const val CLIENT_ID = "openziti"
+        const val CLIENT_ID = "hanzozt"
         const val internalRedirect = "http://localhost:8080/auth/callback"
         val Encoder: Base64.Encoder = Base64.getUrlEncoder().withoutPadding()
         const val DISCOVERY = "/oidc/.well-known/openid-configuration"

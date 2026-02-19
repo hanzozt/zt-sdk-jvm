@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.openziti.sample.netcat
+package org.hanzozt.sample.netcat
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import org.openziti.Ziti
-import org.openziti.ZitiAddress
+import org.hanzozt.Ziti
+import org.hanzozt.ZitiAddress
 import java.lang.System.exit
 import java.nio.ByteBuffer
 import kotlin.text.Charsets.UTF_8

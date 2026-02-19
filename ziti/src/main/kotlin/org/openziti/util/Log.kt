@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.util
+package org.hanzozt.util
 
 import org.slf4j.LoggerFactory
 import org.slf4j.MarkerFactory

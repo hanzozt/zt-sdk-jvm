@@ -37,12 +37,12 @@ Allows regeneration of recovery codes of an MFA enrollment. Requires a current v
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -116,13 +116,13 @@ Allows regeneration of recovery codes of an MFA enrollment. Requires a current v
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -206,12 +206,12 @@ Disable MFA for the current identity. Requires a current valid time based one ti
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -285,13 +285,13 @@ Disable MFA for the current identity. Requires a current valid time based one ti
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -375,12 +375,12 @@ Returns details about the current MFA enrollment. If enrollment has not been com
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -450,13 +450,13 @@ Returns details about the current MFA enrollment. If enrollment has not been com
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -536,12 +536,12 @@ Shows an QR code image for unverified MFA enrollments. 404s if the MFA enrollmen
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -609,13 +609,13 @@ Shows an QR code image for unverified MFA enrollments. 404s if the MFA enrollmen
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -693,12 +693,12 @@ Allows the viewing of recovery codes of an MFA enrollment. Requires a current va
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -774,13 +774,13 @@ Allows the viewing of recovery codes of an MFA enrollment. Requires a current va
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -866,12 +866,12 @@ Allows authenticator based MFA enrollment. If enrollment has already been comple
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -941,13 +941,13 @@ Allows authenticator based MFA enrollment. If enrollment has already been comple
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1027,12 +1027,12 @@ Returns the identity associated with the API sessions used to issue the current 
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1101,13 +1101,13 @@ Returns the identity associated with the API sessions used to issue the current 
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1186,12 +1186,12 @@ Lists the Edge Routers that the current identity has access to via policies. The
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1262,13 +1262,13 @@ Lists the Edge Routers that the current identity has access to via policies. The
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1349,12 +1349,12 @@ Completes MFA enrollment by accepting a time based one time password as verifica
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1428,13 +1428,13 @@ Completes MFA enrollment by accepting a time based one time password as verifica
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.CurrentIdentityApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.CurrentIdentityApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {

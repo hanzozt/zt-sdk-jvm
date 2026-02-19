@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.openziti.samples.enrollment;
+package org.hanzozt.samples.enrollment;
 
-import org.openziti.IdentityConfig;
-import org.openziti.Ziti;
+import org.hanzozt.IdentityConfig;
+import org.hanzozt.Ziti;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

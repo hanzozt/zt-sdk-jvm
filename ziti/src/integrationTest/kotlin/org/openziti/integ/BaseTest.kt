@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.openziti.integ
+package org.hanzozt.integ
 
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.TestInfo
-import org.openziti.Enrollment
-import org.openziti.IdentityConfig
-import org.openziti.Ziti
+import org.hanzozt.Enrollment
+import org.hanzozt.IdentityConfig
+import org.hanzozt.Ziti
 
 abstract class BaseTest {
     protected lateinit var info: TestInfo

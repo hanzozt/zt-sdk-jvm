@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.openziti.net
+package org.hanzozt.net
 
 import kotlinx.coroutines.Deferred
-import org.openziti.api.ApiSession
-import org.openziti.api.ZitiAuthenticator
-import org.openziti.impl.ChannelImpl
+import org.hanzozt.api.ApiSession
+import org.hanzozt.api.ZitiAuthenticator
+import org.hanzozt.impl.ChannelImpl
 import java.io.Closeable
 import javax.net.ssl.SSLContext
 

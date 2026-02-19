@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package org.openziti.integ
+package org.hanzozt.integ
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asExecutor
-import org.openziti.management.ApiClient
-import org.openziti.management.JSON
-import org.openziti.management.api.AuthenticationApi
-import org.openziti.management.api.ConfigApi
-import org.openziti.management.api.EnrollmentApi
-import org.openziti.management.api.IdentityApi
-import org.openziti.management.api.InformationalApi
-import org.openziti.management.api.ServiceApi
-import org.openziti.management.api.ServicePolicyApi
-import org.openziti.management.model.*
-import org.openziti.util.fingerprint
-import org.openziti.util.parsePKCS7
+import org.hanzozt.management.ApiClient
+import org.hanzozt.management.JSON
+import org.hanzozt.management.api.AuthenticationApi
+import org.hanzozt.management.api.ConfigApi
+import org.hanzozt.management.api.EnrollmentApi
+import org.hanzozt.management.api.IdentityApi
+import org.hanzozt.management.api.InformationalApi
+import org.hanzozt.management.api.ServiceApi
+import org.hanzozt.management.api.ServicePolicyApi
+import org.hanzozt.management.model.*
+import org.hanzozt.util.fingerprint
+import org.hanzozt.util.parsePKCS7
 import java.net.InetAddress
 import java.net.URI
 import java.net.http.HttpClient

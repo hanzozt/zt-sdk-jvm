@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.openziti.netty
+package org.hanzozt.netty
 
 import io.netty.channel.Channel
 import io.netty.channel.ChannelFactory
-import org.openziti.ZitiContext
+import org.hanzozt.ZitiContext
 
 class ZitiChannelFactory(internal val ztx: ZitiContext): ChannelFactory<Channel> {
     override fun newChannel(): Channel = ZitiChannel(null, ztx.open())

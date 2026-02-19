@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package org.openziti.api
+package org.hanzozt.api
 
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.asExecutor
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.future.await
-import org.openziti.ZitiException
-import org.openziti.ZitiException.Errors
-import org.openziti.edge.ApiClient
-import org.openziti.edge.ApiException
-import org.openziti.edge.api.*
-import org.openziti.edge.model.*
-import org.openziti.impl.ZitiImpl
-import org.openziti.util.*
+import org.hanzozt.ZitiException
+import org.hanzozt.ZitiException.Errors
+import org.hanzozt.edge.ApiClient
+import org.hanzozt.edge.ApiException
+import org.hanzozt.edge.api.*
+import org.hanzozt.edge.model.*
+import org.hanzozt.impl.ZitiImpl
+import org.hanzozt.util.*
 import java.io.IOException
 import java.net.http.HttpClient
 import java.net.http.HttpRequest
@@ -69,7 +69,7 @@ internal class Controller internal constructor(
         }
     }
 
-    suspend fun version(): org.openziti.edge.model.Version {
+    suspend fun version(): org.hanzozt.edge.model.Version {
         val version = infoClient.listVersion().await().data
         i { "controller[${edgeApi.baseUri}] version(${version.version}/${version.revision})"}
         val prefix = version.apiVersions?.run { get("edge-client") ?: get("edge") }?.get("v1")?.path

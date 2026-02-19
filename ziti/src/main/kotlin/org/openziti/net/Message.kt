@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.openziti.net
+package org.hanzozt.net
 
-import org.openziti.net.ZitiProtocol.ContentType
+import org.hanzozt.net.ZitiProtocol.ContentType
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import java.nio.charset.StandardCharsets

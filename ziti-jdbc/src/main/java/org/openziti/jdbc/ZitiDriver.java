@@ -1,8 +1,8 @@
 
-package org.openziti.jdbc;
+package org.hanzozt.jdbc;
 
-import static org.openziti.jdbc.ZitiDriver.ZitiFeature.nioProvider;
-import static org.openziti.jdbc.ZitiDriver.ZitiFeature.seamless;
+import static org.hanzozt.jdbc.ZitiDriver.ZitiFeature.nioProvider;
+import static org.hanzozt.jdbc.ZitiDriver.ZitiFeature.seamless;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -26,8 +26,8 @@ import java.util.Set;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.zip.GZIPInputStream;
-import org.openziti.Ziti;
-import org.openziti.ZitiContext;
+import org.hanzozt.Ziti;
+import org.hanzozt.ZitiContext;
 
 public class ZitiDriver implements java.sql.Driver {
   private static final Logger log = Logger.getLogger(ZitiDriver.class.getName());
@@ -248,9 +248,9 @@ public class ZitiDriver implements java.sql.Driver {
     // Check to see if NIO feature is required
     if (!configuredShims.contains(shim) && requiresFeature(shim, nioProvider)) {
       log.info(
-          "Ziti JDBC wrapper is setting the system property 'java.nio.channels.spi.SelectorProvider' to 'org.openziti.net.nio.ZitiSelectorProvider'");
+          "Ziti JDBC wrapper is setting the system property 'java.nio.channels.spi.SelectorProvider' to 'org.hanzozt.net.nio.ZitiSelectorProvider'");
       System.setProperty("java.nio.channels.spi.SelectorProvider",
-          "org.openziti.net.nio.ZitiSelectorProvider");
+          "org.hanzozt.net.nio.ZitiSelectorProvider");
     }
 
     if (info.containsKey(ZITI_JSON)) {

@@ -15,12 +15,12 @@ ziti.serviceName = <ziti service to bind to>
 ## Application code change
 Add `ziti-springboot` dependency
 ```groovy
-implementation "org.openziti:ziti-springboot:+"
+implementation "org.hanzozt:ziti-springboot:+"
 ```
 
 Add Ziti customizer class to your application.
 `ZitiTomcatCustomizer` bootstraps Tomcat configuration and 
-binds to [ziti service](https://openziti.github.io/ziti/services/overview.html#service-termination).
+binds to [ziti service](https://hanzozt.github.io/ziti/services/overview.html#service-termination).
 
 ```kotlin
 @SpringBootApplication(

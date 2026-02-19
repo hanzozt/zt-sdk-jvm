@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.springboot
+package org.hanzozt.springboot
 
 import org.springframework.boot.autoconfigure.web.ServerProperties
 import org.springframework.boot.autoconfigure.web.servlet.TomcatServletWebServerFactoryCustomizer

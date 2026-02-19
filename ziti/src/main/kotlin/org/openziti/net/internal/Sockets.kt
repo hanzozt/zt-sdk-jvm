@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.openziti.net.internal
+package org.hanzozt.net.internal
 
-import org.openziti.impl.ZitiImpl
-import org.openziti.net.ZitiSocketFactory
-import org.openziti.net.nio.AsyncSocketImpl
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.impl.ZitiImpl
+import org.hanzozt.net.ZitiSocketFactory
+import org.hanzozt.net.nio.AsyncSocketImpl
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 import java.net.InetAddress
 import java.net.InetSocketAddress
 import java.net.Socket

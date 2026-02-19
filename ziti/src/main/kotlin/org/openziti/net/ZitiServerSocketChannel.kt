@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.net
+package org.hanzozt.net
 
 import com.goterl.lazysodium.utils.Key
 import com.goterl.lazysodium.utils.KeyPair
@@ -23,15 +23,15 @@ import kotlinx.coroutines.channels.ClosedReceiveChannelException
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import org.openziti.ZitiAddress
-import org.openziti.api.Service
-import org.openziti.api.SessionType
-import org.openziti.crypto.Crypto
-import org.openziti.impl.ZitiContextImpl
-import org.openziti.net.ZitiProtocol.Header
-import org.openziti.net.nio.FutureHandler
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.ZitiAddress
+import org.hanzozt.api.Service
+import org.hanzozt.api.SessionType
+import org.hanzozt.crypto.Crypto
+import org.hanzozt.impl.ZitiContextImpl
+import org.hanzozt.net.ZitiProtocol.Header
+import org.hanzozt.net.nio.FutureHandler
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 import java.io.IOException
 import java.lang.Math.min
 import java.net.BindException

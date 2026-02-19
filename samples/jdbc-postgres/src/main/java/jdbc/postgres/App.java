@@ -23,7 +23,7 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Properties;
 
-import org.openziti.Ziti;
+import org.hanzozt.Ziti;
 
 public class App {
 	public static void main(String[] args) throws Exception {
@@ -45,7 +45,7 @@ public class App {
 		Properties props = new Properties();
 		props.setProperty("user", "postgres");
 		props.setProperty("password", "postgres");
-		props.setProperty("socketFactory", "org.openziti.net.ZitiSocketFactory");
+		props.setProperty("socketFactory", "org.hanzozt.net.ZitiSocketFactory");
 
 		try {
 			try (Connection conn = DriverManager.getConnection(url, props)) {

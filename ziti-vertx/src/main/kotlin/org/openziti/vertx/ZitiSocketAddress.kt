@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.openziti.vertx
+package org.hanzozt.vertx
 
 import io.vertx.core.net.SocketAddress
-import org.openziti.ZitiAddress
+import org.hanzozt.ZitiAddress
 
 class ZitiSocketAddress @JvmOverloads constructor(val service: String,
                                                   val identity: String? = null,

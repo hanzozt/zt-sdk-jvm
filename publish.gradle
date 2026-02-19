@@ -31,7 +31,7 @@ project.plugins.withType(MavenPublishPlugin).configureEach {
 
         pub.pom {
             name = project.getName()
-            url = "https://openziti.org"
+            url = "https://hanzozt.org"
             description = project.getProperty('description')
 
             licenses {
@@ -51,9 +51,9 @@ project.plugins.withType(MavenPublishPlugin).configureEach {
             }
 
             scm {
-                connection = "scm:git:https://github.com/openziti/ziti-jvm-sdk"
-                developerConnection = "scm:git:ssh://github.com/openziti/ziti-jvm-sdk.git"
-                url = "https://github.com/openziti/ziti-sdk-jvm"
+                connection = "scm:git:https://github.com/hanzozt/ziti-jvm-sdk"
+                developerConnection = "scm:git:ssh://github.com/hanzozt/ziti-jvm-sdk.git"
+                url = "https://github.com/hanzozt/ziti-sdk-jvm"
             }
         }
     }

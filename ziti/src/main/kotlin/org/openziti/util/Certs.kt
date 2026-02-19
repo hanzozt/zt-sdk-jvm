@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.util
+package org.hanzozt.util
 
 import org.bouncycastle.asn1.pkcs.PrivateKeyInfo
 import org.bouncycastle.openssl.PEMKeyPair

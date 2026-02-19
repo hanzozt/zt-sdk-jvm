@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.springboot.client.web.config;
+package org.hanzozt.springboot.client.web.config;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;

@@ -21,11 +21,11 @@ Returns a list of JWTs for trusting a network
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.EnrollmentApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.EnrollmentApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -85,12 +85,12 @@ Returns a list of JWTs for trusting a network
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.EnrollmentApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.EnrollmentApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {

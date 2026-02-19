@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.net.nio
+package org.hanzozt.net.nio
 
 import java.io.*
 import java.net.InetAddress

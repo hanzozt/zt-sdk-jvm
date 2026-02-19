@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.openziti.posture
+package org.hanzozt.posture
 
-import org.openziti.edge.model.PostureResponseCreate
+import org.hanzozt.edge.model.PostureResponseCreate
 import java.util.*
 
 internal object PostureLoader {
@@ -31,7 +31,7 @@ internal object PostureLoader {
 }
 
 interface PostureService {
-    fun registerServiceCheck(serviceId: String, query: org.openziti.edge.model.PostureQuery)
+    fun registerServiceCheck(serviceId: String, query: org.hanzozt.edge.model.PostureQuery)
     fun getPosture(): List<PostureResponseCreate>
 }
 

@@ -56,7 +56,7 @@ public class RestClientCaller {
 
 }
 ```
-To read more about ziti services please see [ziti service](https://openziti.github.io/ziti/services/overview.html).
+To read more about ziti services please see [ziti service](https://hanzozt.github.io/ziti/services/overview.html).
 
 ### Ziti identity from other sources
 To override the socket factory in order to provide your own identity you can do the following:
@@ -145,14 +145,14 @@ public class SampleConfiguration {
 ## Application code change
 Add `ziti-springboot-client` dependency
 ```groovy
-implementation "org.openziti:ziti-springboot-client:+"
+implementation "org.hanzozt:ziti-springboot-client:+"
 ```
 Autowire the 'zitiRestTemplate' into your application and use it to connect to ziti services.
 
 Try the [complete sample](../samples/ziti-spring-boot-client)
 
 ### Reference Documentation
-* [ziti service](https://openziti.github.io/ziti/services/overview.html)
+* [ziti service](https://hanzozt.github.io/ziti/services/overview.html)
 
 For further reference, please consider the following sections:
 * [REST Clients](https://docs.spring.io/spring-framework/reference/integration/rest-clients.html)

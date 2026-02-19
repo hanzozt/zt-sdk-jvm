@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti
+package org.hanzozt
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -22,13 +22,13 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
-import org.openziti.api.Service
-import org.openziti.identity.Enroller
-import org.openziti.impl.ZitiImpl
-import org.openziti.net.ZitiSocketFactory
-import org.openziti.net.dns.DNSResolver
-import org.openziti.net.dns.ZitiDNSManager
-import org.openziti.net.nio.AsyncTLSSocketFactory
+import org.hanzozt.api.Service
+import org.hanzozt.identity.Enroller
+import org.hanzozt.impl.ZitiImpl
+import org.hanzozt.net.ZitiSocketFactory
+import org.hanzozt.net.dns.DNSResolver
+import org.hanzozt.net.dns.ZitiDNSManager
+import org.hanzozt.net.nio.AsyncTLSSocketFactory
 import java.io.File
 import java.io.InputStream
 import java.net.InetSocketAddress

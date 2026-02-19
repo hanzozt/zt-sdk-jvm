@@ -1,9 +1,9 @@
-package org.openziti.jdbc.shim;
+package org.hanzozt.jdbc.shim;
 
 import java.util.EnumSet;
 import java.util.Properties;
-import org.openziti.jdbc.BaseZitiDriverShim;
-import org.openziti.jdbc.ZitiDriver.ZitiFeature;
+import org.hanzozt.jdbc.BaseZitiDriverShim;
+import org.hanzozt.jdbc.ZitiDriver.ZitiFeature;
 
 public class Postgresql extends BaseZitiDriverShim {
   public Postgresql() throws ReflectiveOperationException {
@@ -12,6 +12,6 @@ public class Postgresql extends BaseZitiDriverShim {
 
   @Override
   public void configureDriverProperties(Properties props) {
-    props.setProperty("socketFactory", "org.openziti.net.ZitiSocketFactory");
+    props.setProperty("socketFactory", "org.hanzozt.net.ZitiSocketFactory");
   }
 }

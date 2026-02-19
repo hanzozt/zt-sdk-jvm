@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.impl
+package org.hanzozt.impl
 
 import com.codahale.metrics.Timer
 import kotlinx.coroutines.*
@@ -23,13 +23,13 @@ import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.selects.select
 import kotlinx.coroutines.sync.Mutex
 import kotlinx.coroutines.sync.withLock
-import org.openziti.api.ApiSession
-import org.openziti.api.ZitiAuthenticator
-import org.openziti.net.*
-import org.openziti.net.Channel
-import org.openziti.net.Transport
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.api.ApiSession
+import org.hanzozt.api.ZitiAuthenticator
+import org.hanzozt.net.*
+import org.hanzozt.net.Channel
+import org.hanzozt.net.Transport
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 import java.time.Duration
 import java.time.Instant
 import java.util.concurrent.ConcurrentHashMap

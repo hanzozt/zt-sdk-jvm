@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.sample.netty
+package org.hanzozt.sample.netty
 
 import io.netty.channel.ChannelFutureListener
 import io.netty.channel.ChannelHandlerContext

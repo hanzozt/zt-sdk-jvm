@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.openziti.api
+package org.hanzozt.api
 
-import org.openziti.edge.model.DetailMfa
+import org.hanzozt.edge.model.DetailMfa
 
 enum class MFAType {
     MFA,

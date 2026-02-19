@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.netty
+package org.hanzozt.netty
 
 import com.google.gson.Gson
 import io.netty.bootstrap.ServerBootstrap
@@ -25,9 +25,9 @@ import io.netty.handler.codec.http.*
 import org.junit.Assume
 import org.junit.Before
 import org.junit.Test
-import org.openziti.Ziti
-import org.openziti.ZitiAddress
-import org.openziti.ZitiContext
+import org.hanzozt.Ziti
+import org.hanzozt.ZitiAddress
+import org.hanzozt.ZitiContext
 import java.nio.ByteBuffer
 import java.util.*
 import java.util.concurrent.TimeUnit

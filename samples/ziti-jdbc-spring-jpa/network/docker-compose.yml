@@ -32,12 +32,12 @@ services:
         aliases:
           - ziti-edge-controller-init-container
     volumes:
-      - ziti-fs:/openziti
-      - .:/openziti/network-setup
+      - ziti-fs:/hanzozt
+      - .:/hanzozt/network-setup
     entrypoint: 
-      - "/openziti/scripts/run-with-ziti-cli.sh"
+      - "/hanzozt/scripts/run-with-ziti-cli.sh"
     command: 
-      - "/openziti/network-setup/network-setup.sh"
+      - "/hanzozt/network-setup/network-setup.sh"
 
 volumes:
   postgres-fs:

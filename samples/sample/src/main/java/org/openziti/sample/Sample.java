@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.openziti.sample;
+package org.hanzozt.sample;
 
-import org.openziti.Ziti;
-import org.openziti.ZitiConnection;
-import org.openziti.ZitiContext;
+import org.hanzozt.Ziti;
+import org.hanzozt.ZitiConnection;
+import org.hanzozt.ZitiContext;
 
 import java.io.ByteArrayOutputStream;
 

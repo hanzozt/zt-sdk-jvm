@@ -56,7 +56,7 @@ ext {
     set("gitBranch", semver.info.branch.name)
 }
 
-group = "org.openziti"
+group = "org.hanzozt"
 version = "${semver.info}"
 
 println("${project.name}: ${project.version}")
@@ -94,8 +94,8 @@ subprojects {
                     "Created-By"     to "Gradle ${gradle.gradleVersion}",
                     "Build-Jdk"      to "${System.getProperty("java.version")} (${System.getProperty("java.vendor")} ${System.getProperty("java.vm.version")})",
                     "Build-OS"       to "${System.getProperty("os.name")} ${System.getProperty("os.arch")} ${System.getProperty("os.version")}",
-                    "Specification-Vendor" to "OpenZiti",
-                    "Implementation-Vendor" to "OpenZiti",
+                    "Specification-Vendor" to "Hanzo ZT",
+                    "Implementation-Vendor" to "Hanzo ZT",
             )
         }
     }

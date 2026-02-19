@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.openziti.samples;
+package org.hanzozt.samples;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import org.openziti.Ziti;
-import org.openziti.ZitiContext;
+import org.hanzozt.Ziti;
+import org.hanzozt.ZitiContext;
 
 import javax.net.ssl.TrustManagerFactory;
 import javax.net.ssl.X509TrustManager;

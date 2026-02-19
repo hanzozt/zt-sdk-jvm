@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-package org.openziti.identity
+package org.hanzozt.identity
 
-import org.openziti.Identity
-import org.openziti.util.AliasKeyManager
+import org.hanzozt.Identity
+import org.hanzozt.util.AliasKeyManager
 import java.net.URI
 import java.net.URLDecoder
 import java.security.KeyStore

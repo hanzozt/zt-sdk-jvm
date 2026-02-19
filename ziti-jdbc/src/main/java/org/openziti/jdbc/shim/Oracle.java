@@ -1,10 +1,10 @@
-package org.openziti.jdbc.shim;
+package org.hanzozt.jdbc.shim;
 
-import static org.openziti.jdbc.ZitiDriver.ZitiFeature.seamless;
+import static org.hanzozt.jdbc.ZitiDriver.ZitiFeature.seamless;
 import java.util.EnumSet;
 import java.util.Properties;
 
-import org.openziti.jdbc.BaseZitiDriverShim;
+import org.hanzozt.jdbc.BaseZitiDriverShim;
 
 public class Oracle extends BaseZitiDriverShim {
 

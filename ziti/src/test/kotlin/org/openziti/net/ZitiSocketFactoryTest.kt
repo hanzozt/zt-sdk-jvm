@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.openziti.net
+package org.hanzozt.net
 
 import kotlinx.coroutines.test.runTest
 import org.junit.Test
 import org.junit.jupiter.api.Assertions.assertTrue
-import org.openziti.Ziti
+import org.hanzozt.Ziti
 import kotlin.time.Duration.Companion.seconds
 
 

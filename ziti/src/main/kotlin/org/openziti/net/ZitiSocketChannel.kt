@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.net
+package org.hanzozt.net
 
 import com.google.gson.Gson
 import com.goterl.lazysodium.utils.Key
@@ -23,21 +23,21 @@ import com.goterl.lazysodium.utils.SessionPair
 import kotlinx.coroutines.*
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.sync.Mutex
-import org.openziti.ZitiException.Errors
-import org.openziti.ZitiAddress
-import org.openziti.ZitiConnection
-import org.openziti.ZitiException
-import org.openziti.api.Session
-import org.openziti.api.SessionType
-import org.openziti.crypto.Crypto
-import org.openziti.impl.ZitiContextImpl
-import org.openziti.net.ZitiProtocol.CryptoMethod
-import org.openziti.net.ZitiProtocol.Header
-import org.openziti.net.nio.FutureHandler
-import org.openziti.net.nio.readSuspend
-import org.openziti.net.nio.writeCompletely
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.ZitiException.Errors
+import org.hanzozt.ZitiAddress
+import org.hanzozt.ZitiConnection
+import org.hanzozt.ZitiException
+import org.hanzozt.api.Session
+import org.hanzozt.api.SessionType
+import org.hanzozt.crypto.Crypto
+import org.hanzozt.impl.ZitiContextImpl
+import org.hanzozt.net.ZitiProtocol.CryptoMethod
+import org.hanzozt.net.ZitiProtocol.Header
+import org.hanzozt.net.nio.FutureHandler
+import org.hanzozt.net.nio.readSuspend
+import org.hanzozt.net.nio.writeCompletely
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 import java.io.ByteArrayOutputStream
 import java.io.Externalizable
 import java.io.IOException

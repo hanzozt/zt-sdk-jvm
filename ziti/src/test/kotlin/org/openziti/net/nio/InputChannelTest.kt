@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti.net.nio
+package org.hanzozt.net.nio
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -23,9 +23,9 @@ import org.junit.Rule
 import org.junit.Test
 import org.junit.jupiter.api.assertDoesNotThrow
 import org.junit.jupiter.api.assertThrows
-import org.openziti.net.InputChannel
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.net.InputChannel
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 import java.nio.ByteBuffer
 import java.nio.channels.*
 import java.security.MessageDigest

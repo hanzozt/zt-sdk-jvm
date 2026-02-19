@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.openziti.net
+package org.hanzozt.net
 
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.ClosedReceiveChannelException
 import kotlinx.coroutines.channels.ReceiveChannel
 import kotlinx.coroutines.sync.Mutex
-import org.openziti.net.nio.FutureHandler
-import org.openziti.util.Logged
-import org.openziti.util.transferTo
+import org.hanzozt.net.nio.FutureHandler
+import org.hanzozt.util.Logged
+import org.hanzozt.util.transferTo
 import java.nio.ByteBuffer
 import java.nio.channels.*
 import java.nio.channels.CompletionHandler

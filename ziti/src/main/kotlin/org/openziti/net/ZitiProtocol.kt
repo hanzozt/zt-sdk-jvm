@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.openziti.net
+package org.hanzozt.net
 
-import org.openziti.edge.proto.EdgeClient.Flag
-import org.openziti.edge.proto.EdgeClient.HeaderId
-import org.openziti.edge.proto.EdgeClient.ContentType as CT
+import org.hanzozt.edge.proto.EdgeClient.Flag
+import org.hanzozt.edge.proto.EdgeClient.HeaderId
+import org.hanzozt.edge.proto.EdgeClient.ContentType as CT
 
 /**
  *

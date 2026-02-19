@@ -27,7 +27,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v5
 
-      - uses: openziti/ziti/setup-cli@main
+      - uses: hanzozt/ziti/setup-cli@main
 
       - name: Check
         run: |

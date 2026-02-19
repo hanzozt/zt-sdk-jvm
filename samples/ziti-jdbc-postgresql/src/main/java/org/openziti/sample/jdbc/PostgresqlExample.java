@@ -11,7 +11,7 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.openziti.sample.jdbc;
+package org.hanzozt.sample.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,9 +19,9 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Properties;
 
-import org.openziti.Ziti;
-import org.openziti.ZitiContext;
-import org.openziti.jdbc.ZitiDriver;
+import org.hanzozt.Ziti;
+import org.hanzozt.ZitiContext;
+import org.hanzozt.jdbc.ZitiDriver;
 
 public class PostgresqlExample {
     public static void main(String[] args) throws Exception {
@@ -30,7 +30,7 @@ public class PostgresqlExample {
             System.exit(1);
         }
 
-        // Initialize the OpenZiti Java SDK with our identity
+        // Initialize the Hanzo ZT Java SDK with our identity
         final ZitiContext zitiContext = Ziti.newContext(args[0], "".toCharArray());
 
         String url = "jdbc:ziti:postgresql://postgres-server.demo/simpledb";

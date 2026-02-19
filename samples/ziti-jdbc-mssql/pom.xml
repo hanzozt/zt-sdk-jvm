@@ -2,7 +2,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>org.openziti.jdbc.samples</groupId>
+	<groupId>org.hanzozt.jdbc.samples</groupId>
 	<artifactId>mssql</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
@@ -22,13 +22,13 @@
 
 		<!-- ZDBC wrapper jar -->
 		<dependency>
-			 <groupId>org.openziti</groupId>
+			 <groupId>org.hanzozt</groupId>
 			  <artifactId>zdbc</artifactId>
 		</dependency>
 
 		<!-- Ziti SDK -->
 		<dependency>
-			<groupId>org.openziti</groupId>
+			<groupId>org.hanzozt</groupId>
 			<artifactId>ziti</artifactId>
 		</dependency>
 
@@ -52,7 +52,7 @@
 				<artifactId>exec-maven-plugin</artifactId>
 				<version>3.0.0</version>
 				<configuration>
-					<mainClass>org.openziti.jdbc.MSSQLExample</mainClass>
+					<mainClass>org.hanzozt.jdbc.MSSQLExample</mainClass>
 					<arguments>
 						<argument>network/DBClient.json</argument>
 					</arguments>

@@ -30,7 +30,7 @@ jobs:
         with:
           dependency-graph: generate-and-submit
           
-      - uses: openziti/ziti/setup-cli@main
+      - uses: hanzozt/ziti/setup-cli@main
 
       - name: Build with Gradle
         run: ./gradlew build assemble

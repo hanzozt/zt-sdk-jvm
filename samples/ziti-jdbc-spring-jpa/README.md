@@ -1,5 +1,5 @@
 # Connecting to a dark database using ZDBC and Spring JPA
-In this example, we will take the dark web application you built in [Hosting an OpenZiti service using Spring boot](https://blogs.oracle.com/javamagazine/post/java-zero-trust-openziti) and extend it to store greetings in a dark postgres database.  
+In this example, we will take the dark web application you built in [Hosting an Hanzo ZT service using Spring boot](https://blogs.oracle.com/javamagazine/post/java-zero-trust-hanzozt) and extend it to store greetings in a dark postgres database.  
 
 You didn't do that example?   That's OK, this sample works as a stand-alone exercise too.
 
@@ -7,37 +7,37 @@ You didn't do that example?   That's OK, this sample works as a stand-alone exer
 * About 30 minutes
 * A favorite text editor or IDE
 * JDK 11 or later
-* Docker compose to run the OpenZiti network
+* Docker compose to run the Hanzo ZT network
 * Access to a Linux environment with Bash 
   * A VM or WSL2 works for Windows users 
 
 ## Get the code
-The code can be downloaded from [here](https://github.com/openziti-test-kitchen/zdbc) or clone it using Git:
+The code can be downloaded from [here](https://github.com/hanzozt-test-kitchen/zdbc) or clone it using Git:
 ```shell
- git clone https://github.com/openziti-test-kitchen/zdbc.git
+ git clone https://github.com/hanzozt-test-kitchen/zdbc.git
 ```
 
 Like most Spring guides, you can start from scratch and complete each step, or you can bypass basic 
 setup steps that are already familiar to you. Either way, you end up with working code.
 
-# Create the test OpenZiti network
-This example will use a very simple OpenZiti network.
+# Create the test Hanzo ZT network
+This example will use a very simple Hanzo ZT network.
 
 <p align="center">
-<img id="exampleNetworkImage" src="images/DemoNetwork.png" alt="Example OpenZiti Network" width="300"/>
+<img id="exampleNetworkImage" src="images/DemoNetwork.png" alt="Example Hanzo ZT Network" width="300"/>
 </p>
 
-It isn't important right now to understand all components of the OpenZiti network. The important things you need to know are:
-1. The controller manages the network. It is responsible for configuration, authentication, and authorization of components that connect to the OpenZiti network.
+It isn't important right now to understand all components of the Hanzo ZT network. The important things you need to know are:
+1. The controller manages the network. It is responsible for configuration, authentication, and authorization of components that connect to the Hanzo ZT network.
 2. The router delivers traffic from the client to the server and back again.
 3. The tunneler provides access to the Postgres database running in docker
 
-Want to know more about OpenZiti? Head over to https://openziti.github.io/ziti/overview.html#overview-of-a-ziti-network.
+Want to know more about Hanzo ZT? Head over to https://hanzozt.github.io/ziti/overview.html#overview-of-a-ziti-network.
 
 Let's get into it and create the test network!
 
-## Get the OpenZiti quickstart simplified docker compose file
-OpenZiti provides a minimal docker compose file that runs the controller and one edge router.
+## Get the Hanzo ZT quickstart simplified docker compose file
+Hanzo ZT provides a minimal docker compose file that runs the controller and one edge router.
 
 Open a terminal and change into the `<repository>/samples/spring-jpa/network` directory.
 
@@ -45,14 +45,14 @@ Leave this terminal window open when you're done. You'll be using it to start an
 
 ```shell
 # Pull the docker compose file
-curl -o simplified-docker-compose.yml https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/simplified-docker-compose.yml
+curl -o simplified-docker-compose.yml https://raw.githubusercontent.com/hanzozt/ziti/release-next/quickstart/docker/simplified-docker-compose.yml
 
 #Pull the docker environment file
-curl -o .env https://raw.githubusercontent.com/openziti/ziti/release-next/quickstart/docker/.env
+curl -o .env https://raw.githubusercontent.com/hanzozt/ziti/release-next/quickstart/docker/.env
 ```
 
-## Start the OpenZiti network
-Starting and configuring the OpenZiti network is done with a script.  From the `<repository>/samples/spring-jpa/network`
+## Start the Hanzo ZT network
+Starting and configuring the Hanzo ZT network is done with a script.  From the `<repository>/samples/spring-jpa/network`
 directory:
 
 ```shell
@@ -63,8 +63,8 @@ The docker compose environment will write out three identity files (client.json,
 
 This repository includes a file called [NETWORK-README.md](network/NETWORK-README.md) if you want to learn more about what the script is doing and why.
 
-# Resetting the OpenZiti demo network
-You may want to stop and clean up your OpenZiti demo network when you're done with this article or things have gone really off the rails.  
+# Resetting the Hanzo ZT demo network
+You may want to stop and clean up your Hanzo ZT demo network when you're done with this article or things have gone really off the rails.  
 From the `<repository>/samples/spring-jpa/network` directory:
 
 ```shell
@@ -72,29 +72,29 @@ From the `<repository>/samples/spring-jpa/network` directory:
 ```
 
 # Connect to a dark database
-There are a handful changes that need to be made to connect to a database over your OpenZiti network:
+There are a handful changes that need to be made to connect to a database over your Hanzo ZT network:
 
-1. Add the OpenZiti zdbc dependency
+1. Add the Hanzo ZT zdbc dependency
 2. Add Spring JPA dependencies
 3. Add a JPA repository to store Greeting content
 4. Add application properties to configure the JPA data provider
 
 The example code contains an initial/server project. Pull that up in your favorite editor and follow along.
 
-## Add the OpenZiti zdbc dependency
-ZDBC is a JDBC driver provided by the OpenZiti project. The driver wraps the JDBC driver for your favorite database, 
-automatically configuring it to connect over your OpenZiti network. 
-See the [ZDBC Readme](https://github.com/openziti-test-kitchen/zdbc) for more information and to see which JDBC drivers are supported and tested.
+## Add the Hanzo ZT zdbc dependency
+ZDBC is a JDBC driver provided by the Hanzo ZT project. The driver wraps the JDBC driver for your favorite database, 
+automatically configuring it to connect over your Hanzo ZT network. 
+See the [ZDBC Readme](https://github.com/hanzozt-test-kitchen/zdbc) for more information and to see which JDBC drivers are supported and tested.
 
 Add the following to build.gradle:
 ```kotlin
-implementation 'org.openziti:zdbc:0.1.12'
+implementation 'org.hanzozt:zdbc:0.1.12'
 ```
 
 If you prefer maven, add the following to pom.xml:
 ```xml
 <dependency>
-         <groupId>org.openziti</groupId>
+         <groupId>org.hanzozt</groupId>
          <artifactId>zdbc</artifactId>
          <version>0.1.12</version>
 </dependency>
@@ -179,8 +179,8 @@ Open the application properties file: `src/main/resources/application.properties
 
 JPA and ZDBC require a couple of properties to be added here
 ```properties
-# Tell spring to use the OpenZiti ZDBC driver
-spring.datasource.driverClassName=org.openziti.jdbc.ZitiDriver
+# Tell spring to use the Hanzo ZT ZDBC driver
+spring.datasource.driverClassName=org.hanzozt.jdbc.ZitiDriver
 
 # The ZDBC driver knows how to interpret a url that starts with jdbc:ziti
 spring.datasource.url=jdbc:ziti:postgresql://private-postgres-server.demo/simpledb
@@ -191,16 +191,16 @@ spring.jpa.hibernate.ddl-auto=update
 ```
 
 Most of these are standard JPA properties. Some interesting ones:
-* **spring.datasource.driverClassName:** This property tells Spring to use the OpenZiti ZDBC driver for making database
+* **spring.datasource.driverClassName:** This property tells Spring to use the Hanzo ZT ZDBC driver for making database
 connections
 * **spring.datasource.url:** This is the JDBC url for your database.  URLs that start with `zdbc` or `jdbc:ziti` are 
-recognized by the OpenZiti ZDBC driver. The ZDBC driver will remove the OpenZiti part of the URL before delegating.  So 
+recognized by the Hanzo ZT ZDBC driver. The ZDBC driver will remove the Hanzo ZT part of the URL before delegating.  So 
 `jdbc:ziti:postgresql://host:port/db` will become `jdbc:postgresql://host:port/db` when it is forwarded to the Postgresql
 JDBC driver
 
 ## Run the application
-That’s all you need to do!  The OpenZiti Java SDK will connect to the test network, authenticate, 
-and bind your service so that OpenZiti overlay network clients can connect to it. The OpenZiti ZDBC driver
+That’s all you need to do!  The Hanzo ZT Java SDK will connect to the test network, authenticate, 
+and bind your service so that Hanzo ZT overlay network clients can connect to it. The Hanzo ZT ZDBC driver
 will connect to the postgres database running in docker to store and retrieve greetings.
 
 To run the application, enter the following in a terminal window (in your project directory)
@@ -221,16 +221,16 @@ Go ahead - run `netstat` and find out for yourself!
 netstat -anp | grep 8080
 netstat -anp | grep 5432
 ```
-You should find nothing `LISTENING`. Now, the only way to access it is via the OpenZiti network!
+You should find nothing `LISTENING`. Now, the only way to access it is via the Hanzo ZT network!
 Let’s write a simple client to connect to it and check that everything is working correctly.
 
-## Connect to OpenZiti
-This example includes a client project that makes connections using the OpenZiti Java SDK. 
+## Connect to Hanzo ZT
+This example includes a client project that makes connections using the Hanzo ZT Java SDK. 
 Open the skeleton project `spring-jpa/initial/client` to follow along.
 
 If you want to skip building the client then you can skip ahead to [Run The Client](#run-the-client).
 
-The Java SDK needs to be initialized with an OpenZiti identity. It is polite to destroy the context 
+The Java SDK needs to be initialized with an Hanzo ZT identity. It is polite to destroy the context 
 once the code is done, so we’ll wrap it up in a `try/catch` with a `finally` block.
 
 ```java
@@ -239,27 +239,27 @@ try {
   zitiContext = Ziti.newContext(identityFile, "".toCharArray());
 
   if (null == zitiContext.getService(serviceName,10000)) {
-    throw new IllegalArgumentException(String.format("Service %s is not available on the OpenZiti network",serviceName));
+    throw new IllegalArgumentException(String.format("Service %s is not available on the Hanzo ZT network",serviceName));
   }
 
 } catch (Throwable t) {
-  log.error("OpenZiti network test failed", t);
+  log.error("Hanzo ZT network test failed", t);
 }
 finally {
   if( null != zitiContext ) zitiContext.destroy();
 }
 ```
-* **Ziti.newContext:** Loads the OpenZiti identity and starts the connection process.
-* **zitiContext.getService** It can take a little while to establish the connection with the OpenZiti 
+* **Ziti.newContext:** Loads the Hanzo ZT identity and starts the connection process.
+* **zitiContext.getService** It can take a little while to establish the connection with the Hanzo ZT 
 network fabric. For long-running applications this is typically not a problem, but for this little
 client we need to give the network some time to get everything ready.
 * **zitiContext.destroy():** Disposes of the context and cleans up resources locally and on the 
-OpenZiti network.
+Hanzo ZT network.
 
 ## Configure the HTTP client
 We'll use the [OkHttp](https://square.github.io/okhttp/) HTTP client to make requests to the service.
 
-This client needs some configuration to know how to use OpenZiti:
+This client needs some configuration to know how to use Hanzo ZT:
 
 ```java
  private static OkHttpClient newHttpClient() throws Exception {
@@ -286,13 +286,13 @@ This client needs some configuration to know how to use OpenZiti:
   }
 ```
 
-* **socketFactory:** The socketFactory teaches OkHttp how to create connections over the OpenZiti overlay network
-* **sslSocketFactory:** The sslSocketFactory teaches OkHttp how to create https connections over the OpenZiti network
-* **dns:** This setting teaches OkHttp how to resolve web requests using the OpenZiti DNS resolver
+* **socketFactory:** The socketFactory teaches OkHttp how to create connections over the Hanzo ZT overlay network
+* **sslSocketFactory:** The sslSocketFactory teaches OkHttp how to create https connections over the Hanzo ZT network
+* **dns:** This setting teaches OkHttp how to resolve web requests using the Hanzo ZT DNS resolver
 
 ## Send a request to the service
-The client has a connection to the test OpenZiti network and OkHttp knows how to connect using the OpenZiti overlay.
-Sending requests works just like any website that does not use OpenZiti.
+The client has a connection to the test Hanzo ZT network and OkHttp knows how to connect using the Hanzo ZT overlay.
+Sending requests works just like any website that does not use Hanzo ZT.
 
 ### Save a greeting
 Saving a greeting means sending an HTTP POST request to our service.
@@ -338,9 +338,9 @@ If you use maven, run the following in a terminal window (in the client project)
 ./mvnw package exec:java
 ```
 # Dig Deeper
-* **OpenZiti documentation:** https://openziti.github.io/ziti/overview.html
-* **OpenZiti ZDBC Driver: ** https://github.com/openziti-test-kitchen/zdbc
-* **OpenZiti Github project:** https://github.com/openziti
-* **NetFoundry hosted OpenZiti NaaS offering:** https://netfoundry.io
+* **Hanzo ZT documentation:** https://hanzozt.github.io/ziti/overview.html
+* **Hanzo ZT ZDBC Driver: ** https://github.com/hanzozt-test-kitchen/zdbc
+* **Hanzo ZT Github project:** https://github.com/hanzozt
+* **NetFoundry hosted Hanzo ZT NaaS offering:** https://netfoundry.io
 
 **Spring and Spring Boot are trademarks of Pivotal Software, Inc. in the U.S. and other countries.*

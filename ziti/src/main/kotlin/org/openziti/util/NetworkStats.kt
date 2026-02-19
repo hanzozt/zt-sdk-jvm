@@ -14,6 +14,6 @@
  * limitations under the License.
  */
 
-package org.openziti.util
+package org.hanzozt.util
 
 data class NetworkStats(val upRate: Double, val downRate: Double)

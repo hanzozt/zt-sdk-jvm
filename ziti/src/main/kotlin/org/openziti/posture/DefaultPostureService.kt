@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.openziti.posture
+package org.hanzozt.posture
 
-import org.openziti.edge.model.PostureCheckType
-import org.openziti.edge.model.PostureQuery
-import org.openziti.edge.model.PostureResponseCreate
-import org.openziti.edge.model.PostureResponseMacAddressCreate
-import org.openziti.edge.model.PostureResponseOperatingSystemCreate
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.edge.model.PostureCheckType
+import org.hanzozt.edge.model.PostureQuery
+import org.hanzozt.edge.model.PostureResponseCreate
+import org.hanzozt.edge.model.PostureResponseMacAddressCreate
+import org.hanzozt.edge.model.PostureResponseOperatingSystemCreate
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 import java.net.NetworkInterface
 
 internal class DefaultPostureService: PostureService, Logged by ZitiLog() {

@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.openziti.net.internal
+package org.hanzozt.net.internal
 
 import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaTypeOrNull
 import okhttp3.internal.http.HttpMethod
 import okio.BufferedSink
-import org.openziti.net.ZitiSocketFactory
-import org.openziti.net.dns.ZitiDNSManager
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.net.ZitiSocketFactory
+import org.hanzozt.net.dns.ZitiDNSManager
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 import java.io.ByteArrayOutputStream
 import java.io.InputStream
 import java.io.OutputStream

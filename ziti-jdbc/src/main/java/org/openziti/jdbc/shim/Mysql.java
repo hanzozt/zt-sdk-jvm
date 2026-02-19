@@ -1,8 +1,8 @@
-package org.openziti.jdbc.shim;
+package org.hanzozt.jdbc.shim;
 
 import java.util.EnumSet;
-import org.openziti.jdbc.BaseZitiDriverShim;
-import org.openziti.jdbc.ZitiDriver.ZitiFeature;
+import org.hanzozt.jdbc.BaseZitiDriverShim;
+import org.hanzozt.jdbc.ZitiDriver.ZitiFeature;
 
 public class Mysql extends BaseZitiDriverShim {
 

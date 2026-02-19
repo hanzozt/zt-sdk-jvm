@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.openziti.net.nio
+package org.hanzozt.net.nio
 
-import org.openziti.net.internal.ZitiSSLSocket
+import org.hanzozt.net.internal.ZitiSSLSocket
 import java.net.InetAddress
 import java.net.InetSocketAddress
 import java.net.Socket

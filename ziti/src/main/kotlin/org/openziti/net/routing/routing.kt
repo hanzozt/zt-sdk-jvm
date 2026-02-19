@@ -14,9 +14,9 @@
  * limitations under the License.
  */
 
-package org.openziti.net.routing
+package org.hanzozt.net.routing
 
-import org.openziti.api.CIDRBlock
+import org.hanzozt.api.CIDRBlock
 import java.util.*
 
 interface RouteManager {

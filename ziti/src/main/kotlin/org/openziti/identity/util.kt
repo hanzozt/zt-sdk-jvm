@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-package org.openziti.identity
+package org.hanzozt.identity
 
-import org.openziti.IdentityConfig
-import org.openziti.util.ZitiLog
-import org.openziti.util.fingerprint
-import org.openziti.util.readCerts
-import org.openziti.util.readKey
+import org.hanzozt.IdentityConfig
+import org.hanzozt.util.ZitiLog
+import org.hanzozt.util.fingerprint
+import org.hanzozt.util.readCerts
+import org.hanzozt.util.readKey
 import java.io.File
 import java.io.InputStream
 import java.net.URI

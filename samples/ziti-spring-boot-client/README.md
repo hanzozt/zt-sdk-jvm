@@ -23,6 +23,6 @@ For further reference, please consider the following sections:
 ### Additional Links
 
 These additional references should also help you:
-* [Ziti Edge Developer Sandbox](https://zeds.openziti.org/)
+* [Ziti Edge Developer Sandbox](https://zeds.hanzozt.org/)
 * Ziti Spring Server [sample](../ziti-spring-boot)
 

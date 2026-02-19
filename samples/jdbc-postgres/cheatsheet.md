@@ -8,8 +8,8 @@ This is the list of commands run to get a ziti environment setup running with do
 * This example uses the docker-compose environment. To replicate you need the compose file and docker/docker-compose 
   installed. Then, curl down the simplified compose file along with the default .env file
 
-      curl -s https://get.openziti.io/dock/simplified-docker-compose.yml > docker-compose.yml
-      curl -s https://get.openziti.io/dock/.env > .env
+      curl -s https://get.hanzozt.dev/dock/simplified-docker-compose.yml > docker-compose.yml
+      curl -s https://get.hanzozt.dev/dock/.env > .env
     
 * modify docker compose file and add postgres with a known user/password
 
@@ -70,11 +70,11 @@ This is the list of commands run to get a ziti environment setup running with do
 * get ziti onto your path however you like.
   * Linux/MacOS users can source a script (as always, we recommend you read the script first):
   
-        source /dev/stdin <<< "$(wget -qO- https://get.openziti.io/quick/ziti-cli-functions.sh)"; getZiti "yes"
+        source /dev/stdin <<< "$(wget -qO- https://get.hanzozt.dev/quick/ziti-cli-functions.sh)"; getZiti "yes"
   
   * Windows users can run this powershell command (as always, we recommend you read the script first):
         
-        iex(iwr -Uri https://get.openziti.io/quick/getZiti.ps1)
+        iex(iwr -Uri https://get.hanzozt.dev/quick/getZiti.ps1)
   
 * login to the local ziti instance
 
@@ -99,7 +99,7 @@ Not needed unless you want to try again without recreating docker
       
     # authorize the router to offload traffic towards postgres
     ziti edge update identity ziti-edge-router -a postgres-servers
-    # configure the OpenZiti overlay
+    # configure the Hanzo ZT overlay
     # create two configs, one for dialing/intercepting and one for binding
     ziti edge create config private-postgres-intercept.v1 intercept.v1 '{"protocols":["tcp"],"addresses":["zitified-postgres"], "portRanges":[{"low":5432, "high":5432}]}'
     ziti edge create config private-postgres-host.v1 host.v1 '{"protocol":"tcp", "address":"postgres-db","port":5432 }'

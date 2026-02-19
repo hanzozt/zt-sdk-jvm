@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package org.openziti
+package org.hanzozt
 
 import kotlinx.coroutines.runBlocking
 import java.io.Closeable

@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package org.openziti.api
+package org.hanzozt.api
 
 import kotlinx.coroutines.test.runTest
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.openziti.IdentityConfig
-import org.openziti.Ziti
-import org.openziti.integ.BaseTest
-import org.openziti.integ.ManagementHelper.getIdentity
-import org.openziti.util.Version
+import org.hanzozt.IdentityConfig
+import org.hanzozt.Ziti
+import org.hanzozt.integ.BaseTest
+import org.hanzozt.integ.ManagementHelper.getIdentity
+import org.hanzozt.util.Version
 
 
 class ControllerTests: BaseTest() {

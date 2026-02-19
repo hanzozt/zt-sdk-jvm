@@ -14,16 +14,16 @@
  * limitations under the License.
  */
 
-package org.openziti.impl
+package org.hanzozt.impl
 
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
-import org.openziti.IdentityConfig
-import org.openziti.Ziti
-import org.openziti.identity.keystoreFromConfig
-import org.openziti.integ.BaseTest
+import org.hanzozt.IdentityConfig
+import org.hanzozt.Ziti
+import org.hanzozt.identity.keystoreFromConfig
+import org.hanzozt.integ.BaseTest
 import java.io.ByteArrayOutputStream
 
 class LoadTests: BaseTest() {

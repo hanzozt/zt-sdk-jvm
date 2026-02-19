@@ -15,7 +15,7 @@
  */
 
 ext {
-   javaMainClass = "org.openziti.jdbc.MSSQLExample"
+   javaMainClass = "org.hanzozt.jdbc.MSSQLExample"
 }
 
 dependencies {

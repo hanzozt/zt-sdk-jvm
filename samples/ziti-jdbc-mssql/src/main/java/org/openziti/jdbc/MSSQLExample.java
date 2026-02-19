@@ -11,7 +11,7 @@
  * or implied. See the License for the specific language governing permissions and limitations under
  * the License.
  */
-package org.openziti.jdbc;
+package org.hanzozt.jdbc;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -19,8 +19,8 @@ import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.Properties;
 
-import org.openziti.Ziti;
-import org.openziti.ZitiContext;
+import org.hanzozt.Ziti;
+import org.hanzozt.ZitiContext;
 
 public class MSSQLExample {
     public static void main(String[] args) throws Exception {
@@ -29,7 +29,7 @@ public class MSSQLExample {
             System.exit(1);
         }
 
-        // Initialize the OpenZiti Java SDK with our identity
+        // Initialize the Hanzo ZT Java SDK with our identity
         final ZitiContext zitiContext = Ziti.newContext(args[0], "".toCharArray());
 
         String url = "zdbc:sqlserver://mssql_host:1433;databaseName=DBNAME";
@@ -43,7 +43,7 @@ public class MSSQLExample {
         props.setProperty("encrypt", "False");
 
         // To use MSSQL with zdbc driver we need to set the mssql driver's socketFactoryClass to ZitiSocketFactory
-        props.setProperty("socketFactoryClass", "org.openziti.net.ZitiSocketFactory");
+        props.setProperty("socketFactoryClass", "org.hanzozt.net.ZitiSocketFactory");
 
         // Ziti specific properties
         props.setProperty("zitiIdentityFile", "network\\DBClient.json");

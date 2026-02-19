@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# Removes all of the OpenZiti network artifacts created by network-setup.sh
+# Removes all of the Hanzo ZT network artifacts created by network-setup.sh
 #
 echo Deleting identities
 ziti edge delete identity private-service

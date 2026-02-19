@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package org.openziti.api
+package org.hanzozt.api
 
 import com.fasterxml.jackson.annotation.JsonCreator
 import com.fasterxml.jackson.core.JsonGenerator
 import com.fasterxml.jackson.databind.JsonSerializer
 import com.fasterxml.jackson.databind.SerializerProvider
 import com.fasterxml.jackson.databind.annotation.JsonSerialize
-import org.openziti.util.IPUtil
+import org.hanzozt.util.IPUtil
 import java.net.Inet4Address
 import java.net.Inet6Address
 import java.net.InetAddress

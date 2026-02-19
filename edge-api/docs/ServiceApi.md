@@ -33,12 +33,12 @@ Delete a service by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.ServiceApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.ServiceApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -116,13 +116,13 @@ Delete a service by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.ServiceApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.ServiceApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -210,12 +210,12 @@ Retrieves a single service by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.ServiceApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.ServiceApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -291,13 +291,13 @@ Retrieves a single service by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.ServiceApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.ServiceApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -383,12 +383,12 @@ Retrieves the list of edge routers permitted to handle traffic for the specified
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.ServiceApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.ServiceApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -472,13 +472,13 @@ Retrieves the list of edge routers permitted to handle traffic for the specified
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.ServiceApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.ServiceApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -572,12 +572,12 @@ Retrieves a list of terminator resources that are assigned specific service; sup
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.ServiceApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.ServiceApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -659,13 +659,13 @@ Retrieves a list of terminator resources that are assigned specific service; sup
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.ServiceApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.ServiceApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -757,12 +757,12 @@ Retrieves a list of config resources; supports filtering, sorting, and paginatio
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.ServiceApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.ServiceApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -848,13 +848,13 @@ Retrieves a list of config resources; supports filtering, sorting, and paginatio
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.ServiceApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.ServiceApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -950,12 +950,12 @@ Update the supplied fields on a service. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.ServiceApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.ServiceApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1034,13 +1034,13 @@ Update the supplied fields on a service. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.ServiceApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.ServiceApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1129,12 +1129,12 @@ Update all fields on a service by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.ServiceApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.ServiceApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {
@@ -1213,13 +1213,13 @@ Update all fields on a service by id. Requires admin access.
 
 ```java
 // Import classes:
-import org.openziti.edge.ApiClient;
-import org.openziti.edge.ApiException;
-import org.openziti.edge.ApiResponse;
-import org.openziti.edge.Configuration;
-import org.openziti.edge.auth.*;
-import org.openziti.edge.models.*;
-import org.openziti.edge.api.ServiceApi;
+import org.hanzozt.edge.ApiClient;
+import org.hanzozt.edge.ApiException;
+import org.hanzozt.edge.ApiResponse;
+import org.hanzozt.edge.Configuration;
+import org.hanzozt.edge.auth.*;
+import org.hanzozt.edge.models.*;
+import org.hanzozt.edge.api.ServiceApi;
 import java.util.concurrent.CompletableFuture;
 
 public class Example {

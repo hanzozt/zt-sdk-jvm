@@ -14,15 +14,15 @@
  * limitations under the License.
  */
 
-package org.openziti
+package org.hanzozt
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import com.fasterxml.jackson.annotation.JsonProperty
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.kotlinModule
-import org.openziti.identity.makeSSLContext
-import org.openziti.util.readCerts
-import org.openziti.util.readKey
+import org.hanzozt.identity.makeSSLContext
+import org.hanzozt.util.readCerts
+import org.hanzozt.util.readKey
 import java.io.File
 import java.io.InputStream
 import java.io.OutputStream
@@ -57,7 +57,7 @@ data class IdentityConfig (
         val key: String? = null,
         /** Identity X.509 certificate in PEM format */
         val cert: String? = null,
-        /** OpenZiti network CA bundle in PEM format */
+        /** Hanzo ZT network CA bundle in PEM format */
         val ca: String
     )
 

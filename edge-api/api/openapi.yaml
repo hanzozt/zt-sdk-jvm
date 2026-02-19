@@ -1,10 +1,10 @@
 openapi: 3.0.1
 info:
   contact:
-    email: help@openziti.org
-    name: OpenZiti
-    url: https://openziti.discourse.group
-  description: OpenZiti Edge Client API
+    email: help@hanzozt.dev
+    name: Hanzo ZT
+    url: https://hanzozt.discourse.group
+  description: Hanzo ZT Edge Client API
   license:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html

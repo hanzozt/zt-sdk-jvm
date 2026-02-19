@@ -14,20 +14,20 @@
  * limitations under the License.
  */
 
-package org.openziti.api
+package org.hanzozt.api
 
 import com.fasterxml.jackson.annotation.JsonInclude
 import com.fasterxml.jackson.databind.ObjectMapper
 import com.fasterxml.jackson.module.kotlin.kotlinModule
-import org.openziti.edge.model.CurrentApiSessionDetail
-import org.openziti.edge.model.PostureCheckType
-import org.openziti.edge.model.ServiceDetail
-import org.openziti.net.Protocol
+import org.hanzozt.edge.model.CurrentApiSessionDetail
+import org.hanzozt.edge.model.PostureCheckType
+import org.hanzozt.edge.model.ServiceDetail
+import org.hanzozt.net.Protocol
 import java.util.*
 
 internal const val ClientV1Cfg = "ziti-tunneler-client.v1"
 internal const val InterceptV1Cfg = "intercept.v1"
-typealias SessionType = org.openziti.edge.model.DialBind
+typealias SessionType = org.hanzozt.edge.model.DialBind
 
 internal class Login(val username: String, val password: String)
 typealias ApiSession = CurrentApiSessionDetail
@@ -98,7 +98,7 @@ fun Service.interceptConfig(): InterceptConfig? =
         )
     }
 
-typealias Session = org.openziti.edge.model.SessionDetail
+typealias Session = org.hanzozt.edge.model.SessionDetail
 
 internal class OneTimeToken(val token: String, val jwt: String, val issuedAt: Date)
 internal class Enrollment(val ott: OneTimeToken)

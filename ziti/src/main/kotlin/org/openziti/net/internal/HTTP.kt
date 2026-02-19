@@ -14,11 +14,11 @@
  * limitations under the License.
  */
 
-package org.openziti.net.internal
+package org.hanzozt.net.internal
 
-import org.openziti.Ziti
-import org.openziti.util.Logged
-import org.openziti.util.ZitiLog
+import org.hanzozt.Ziti
+import org.hanzozt.util.Logged
+import org.hanzozt.util.ZitiLog
 import java.lang.reflect.Field
 import java.net.*
 

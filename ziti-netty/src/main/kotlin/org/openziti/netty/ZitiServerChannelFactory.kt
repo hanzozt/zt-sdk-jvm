@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-package org.openziti.netty
+package org.hanzozt.netty
 
 import io.netty.channel.ChannelFactory
 import io.netty.channel.ServerChannel
-import org.openziti.ZitiAddress
-import org.openziti.ZitiContext
+import org.hanzozt.ZitiAddress
+import org.hanzozt.ZitiContext
 
 class ZitiServerChannelFactory(val ziti: ZitiContext, val bindings: Map<Int, ZitiAddress.Bind>): ChannelFactory<ServerChannel> {
 
