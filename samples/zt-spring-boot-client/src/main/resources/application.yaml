@@ -1,0 +1,12 @@
+
+logging:
+  level:
+    org.hanzozt: WARN
+server:
+  port: 0
+
+spring:
+  zt:
+    client:
+      identity:
+        file: classpath:client1.zid

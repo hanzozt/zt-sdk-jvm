@@ -5,7 +5,7 @@
 ## Enum
 
 
-* `ZITI` (value: `"ziti"`)
+* `ZITI` (value: `"zt"`)
 
 * `URL` (value: `"url"`)
 

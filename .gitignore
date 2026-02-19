@@ -46,11 +46,11 @@ out/
 #
 # Transient Sample Files
 #
-samples/ziti-jdbc-spring-jpa/network/*.json
-samples/ziti-jdbc-spring-jpa/network/*.jwt
-samples/ziti-jdbc-spring-jpa/network/simplified-docker-compose.yml
-samples/ziti-jdbc-spring-jpa/network/.env
+samples/zt-jdbc-spring-jpa/network/*.json
+samples/zt-jdbc-spring-jpa/network/*.jwt
+samples/zt-jdbc-spring-jpa/network/simplified-docker-compose.yml
+samples/zt-jdbc-spring-jpa/network/.env
 
-samples/ziti-jdbc-postgresql/network/databaseClient.json
-samples/ziti-jdbc-postgresql/network/tunnel
-samples/ziti-jdbc-mssql/network/DBClient.json
+samples/zt-jdbc-postgresql/network/databaseClient.json
+samples/zt-jdbc-postgresql/network/tunnel
+samples/zt-jdbc-mssql/network/DBClient.json

@@ -1,6 +1,6 @@
 # EnrollApi
 
-All URIs are relative to *https://demo.ziti.dev/edge/client/v1*
+All URIs are relative to *https://demo.zt.dev/edge/client/v1*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -53,7 +53,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         UUID token = UUID.randomUUID(); // UUID | 
@@ -130,7 +130,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         UUID token = UUID.randomUUID(); // UUID | 
@@ -216,7 +216,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         try {
@@ -283,7 +283,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         try {
@@ -359,7 +359,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         ErOttEnrollmentRequest erOttEnrollmentRequest = new ErOttEnrollmentRequest(); // ErOttEnrollmentRequest | An OTT enrollment request
@@ -429,7 +429,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         ErOttEnrollmentRequest erOttEnrollmentRequest = new ErOttEnrollmentRequest(); // ErOttEnrollmentRequest | An OTT enrollment request
@@ -508,7 +508,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         OttEnrollmentRequest ottEnrollmentRequest = new OttEnrollmentRequest(); // OttEnrollmentRequest | An OTT enrollment request
@@ -579,7 +579,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         OttEnrollmentRequest ottEnrollmentRequest = new OttEnrollmentRequest(); // OttEnrollmentRequest | An OTT enrollment request
@@ -659,7 +659,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         OttEnrollmentRequest ottEnrollmentRequest = new OttEnrollmentRequest(); // OttEnrollmentRequest | An OTT enrollment request
@@ -729,7 +729,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         OttEnrollmentRequest ottEnrollmentRequest = new OttEnrollmentRequest(); // OttEnrollmentRequest | An OTT enrollment request
@@ -788,7 +788,7 @@ No authorization required
 
 ## enrollToken
 
-> CompletableFuture<EnrollmentCertsEnvelope> enrollToken(authorization, tokenEnrollmentRequest, zitiTokenIssuerId)
+> CompletableFuture<EnrollmentCertsEnvelope> enrollToken(authorization, tokenEnrollmentRequest, ztTokenIssuerId)
 
 
 
@@ -806,14 +806,14 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         String authorization = "authorization_example"; // String | An identifying token to enroll with
         TokenEnrollmentRequest tokenEnrollmentRequest = new TokenEnrollmentRequest(); // TokenEnrollmentRequest | A  enrollment request with or without a CSR. Including a CSR indicated an attempt to enroll with certificate  credentials. If no CSR is included, the request is assumed to be a token enrollment request that will authenticate via tokens. 
-        String zitiTokenIssuerId = "zitiTokenIssuerId_example"; // String | The id of the token issuer to use for enrollment, optional as long the the token is not opaque
+        String ztTokenIssuerId = "ztTokenIssuerId_example"; // String | The id of the token issuer to use for enrollment, optional as long the the token is not opaque
         try {
-            CompletableFuture<EnrollmentCertsEnvelope> result = apiInstance.enrollToken(authorization, tokenEnrollmentRequest, zitiTokenIssuerId);
+            CompletableFuture<EnrollmentCertsEnvelope> result = apiInstance.enrollToken(authorization, tokenEnrollmentRequest, ztTokenIssuerId);
             System.out.println(result.get());
         } catch (ApiException e) {
             System.err.println("Exception when calling EnrollApi#enrollToken");
@@ -833,7 +833,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **authorization** | **String**| An identifying token to enroll with | |
 | **tokenEnrollmentRequest** | [**TokenEnrollmentRequest**](TokenEnrollmentRequest.md)| A  enrollment request with or without a CSR. Including a CSR indicated an attempt to enroll with certificate  credentials. If no CSR is included, the request is assumed to be a token enrollment request that will authenticate via tokens.  | |
-| **zitiTokenIssuerId** | **String**| The id of the token issuer to use for enrollment, optional as long the the token is not opaque | [optional] |
+| **ztTokenIssuerId** | **String**| The id of the token issuer to use for enrollment, optional as long the the token is not opaque | [optional] |
 
 ### Return type
 
@@ -862,7 +862,7 @@ No authorization required
 
 ## enrollTokenWithHttpInfo
 
-> CompletableFuture<ApiResponse<EnrollmentCertsEnvelope>> enrollToken enrollTokenWithHttpInfo(authorization, tokenEnrollmentRequest, zitiTokenIssuerId)
+> CompletableFuture<ApiResponse<EnrollmentCertsEnvelope>> enrollToken enrollTokenWithHttpInfo(authorization, tokenEnrollmentRequest, ztTokenIssuerId)
 
 
 
@@ -881,14 +881,14 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         String authorization = "authorization_example"; // String | An identifying token to enroll with
         TokenEnrollmentRequest tokenEnrollmentRequest = new TokenEnrollmentRequest(); // TokenEnrollmentRequest | A  enrollment request with or without a CSR. Including a CSR indicated an attempt to enroll with certificate  credentials. If no CSR is included, the request is assumed to be a token enrollment request that will authenticate via tokens. 
-        String zitiTokenIssuerId = "zitiTokenIssuerId_example"; // String | The id of the token issuer to use for enrollment, optional as long the the token is not opaque
+        String ztTokenIssuerId = "ztTokenIssuerId_example"; // String | The id of the token issuer to use for enrollment, optional as long the the token is not opaque
         try {
-            CompletableFuture<ApiResponse<EnrollmentCertsEnvelope>> response = apiInstance.enrollTokenWithHttpInfo(authorization, tokenEnrollmentRequest, zitiTokenIssuerId);
+            CompletableFuture<ApiResponse<EnrollmentCertsEnvelope>> response = apiInstance.enrollTokenWithHttpInfo(authorization, tokenEnrollmentRequest, ztTokenIssuerId);
             System.out.println("Status code: " + response.get().getStatusCode());
             System.out.println("Response headers: " + response.get().getHeaders());
             System.out.println("Response body: " + response.get().getData());
@@ -917,7 +917,7 @@ public class Example {
 |------------- | ------------- | ------------- | -------------|
 | **authorization** | **String**| An identifying token to enroll with | |
 | **tokenEnrollmentRequest** | [**TokenEnrollmentRequest**](TokenEnrollmentRequest.md)| A  enrollment request with or without a CSR. Including a CSR indicated an attempt to enroll with certificate  credentials. If no CSR is included, the request is assumed to be a token enrollment request that will authenticate via tokens.  | |
-| **zitiTokenIssuerId** | **String**| The id of the token issuer to use for enrollment, optional as long the the token is not opaque | [optional] |
+| **ztTokenIssuerId** | **String**| The id of the token issuer to use for enrollment, optional as long the the token is not opaque | [optional] |
 
 ### Return type
 
@@ -967,7 +967,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         UUID token = UUID.randomUUID(); // UUID | 
@@ -1040,7 +1040,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         UUID token = UUID.randomUUID(); // UUID | 
@@ -1122,7 +1122,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         NonceChallenge nonce = new NonceChallenge(); // NonceChallenge | 
@@ -1191,7 +1191,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         NonceChallenge nonce = new NonceChallenge(); // NonceChallenge | 
@@ -1270,7 +1270,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
         
         // Configure API key authorization: ztSession
         ApiKeyAuth ztSession = (ApiKeyAuth) defaultClient.getAuthentication("ztSession");
@@ -1351,7 +1351,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
         
         // Configure API key authorization: ztSession
         ApiKeyAuth ztSession = (ApiKeyAuth) defaultClient.getAuthentication("ztSession");
@@ -1440,7 +1440,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         RouterExtendEnrollmentRequest routerExtendEnrollmentRequest = new RouterExtendEnrollmentRequest(); // RouterExtendEnrollmentRequest | 
@@ -1510,7 +1510,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         RouterExtendEnrollmentRequest routerExtendEnrollmentRequest = new RouterExtendEnrollmentRequest(); // RouterExtendEnrollmentRequest | 
@@ -1590,7 +1590,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
         
         // Configure API key authorization: ztSession
         ApiKeyAuth ztSession = (ApiKeyAuth) defaultClient.getAuthentication("ztSession");
@@ -1671,7 +1671,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
         
         // Configure API key authorization: ztSession
         ApiKeyAuth ztSession = (ApiKeyAuth) defaultClient.getAuthentication("ztSession");
@@ -1760,7 +1760,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         try {
@@ -1823,7 +1823,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         EnrollApi apiInstance = new EnrollApi(defaultClient);
         try {

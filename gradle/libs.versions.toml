@@ -10,8 +10,8 @@ shadow-jar = "9.3.1"
 download = "5.7.0"
 
 # Hanzo ZT Edge API
-ziti-api = "0.26.53"
-ziti-cli = "1.6.9"
+zt-api = "0.26.53"
+zt-cli = "1.6.9"
 
 # third party
 lazysodium-java = "5.2.0"

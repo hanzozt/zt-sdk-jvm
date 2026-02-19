@@ -41,7 +41,7 @@ public class App {
 		
 		Ziti.init(identityLocation, "".toCharArray(), false);
 		
-		String url = "jdbc:postgresql://zitified-postgres/simpledb";
+		String url = "jdbc:postgresql://ztfied-postgres/simpledb";
 		Properties props = new Properties();
 		props.setProperty("user", "postgres");
 		props.setProperty("password", "postgres");

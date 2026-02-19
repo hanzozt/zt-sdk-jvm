@@ -26,7 +26,7 @@ repositories {
 
 group = "org.hanzozt.sample"
 version = "0.0.1-SNAPSHOT"
-println("ziti-version = ${libs.versions.hanzozt.get()}")
+println("zt-version = ${libs.versions.hanzozt.get()}")
 
 subprojects {
     apply plugin: "java"

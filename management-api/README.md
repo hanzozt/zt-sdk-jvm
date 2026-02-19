@@ -107,7 +107,7 @@ public class ApiSessionApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://demo.ziti.dev/edge/management/v1*
+All URIs are relative to *https://demo.zt.dev/edge/management/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

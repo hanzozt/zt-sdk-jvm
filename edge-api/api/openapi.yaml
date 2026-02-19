@@ -11,7 +11,7 @@ info:
   title: Ziti Edge Client
   version: 0.26.53
 servers:
-- url: https://demo.ziti.dev/edge/client/v1
+- url: https://demo.zt.dev/edge/client/v1
 paths:
   /:
     get:
@@ -3630,7 +3630,7 @@ paths:
       - description: "The id of the token issuer to use for enrollment, optional as\
           \ long the the token is not opaque"
         in: header
-        name: ziti-token-issuer-id
+        name: zt-token-issuer-id
         schema:
           type: string
       - description: An identifying token to enroll with
@@ -6585,7 +6585,7 @@ components:
       example:
         clientId: clientId
         isTotpEnrolled: true
-        provider: ziti
+        provider: zt
         httpUrl: httpUrl
         minLength: 6
         format: numeric
@@ -7142,7 +7142,7 @@ components:
         authQueries:
         - clientId: clientId
           isTotpEnrolled: true
-          provider: ziti
+          provider: zt
           httpUrl: httpUrl
           minLength: 6
           format: numeric
@@ -7155,7 +7155,7 @@ components:
           maxLength: 0
         - clientId: clientId
           isTotpEnrolled: true
-          provider: ziti
+          provider: zt
           httpUrl: httpUrl
           minLength: 6
           format: numeric
@@ -7207,7 +7207,7 @@ components:
           authQueries:
           - clientId: clientId
             isTotpEnrolled: true
-            provider: ziti
+            provider: zt
             httpUrl: httpUrl
             minLength: 6
             format: numeric
@@ -7220,7 +7220,7 @@ components:
             maxLength: 0
           - clientId: clientId
             isTotpEnrolled: true
-            provider: ziti
+            provider: zt
             httpUrl: httpUrl
             minLength: 6
             format: numeric
@@ -9768,7 +9768,7 @@ components:
       type: string
     mfaProviders:
       enum:
-      - ziti
+      - zt
       - url
       type: string
     networkJWT:

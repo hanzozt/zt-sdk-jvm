@@ -14,12 +14,12 @@
  * limitations under the License.
  */
 
-rootProject.name = "ziti-jvm"
+rootProject.name = "zt-jvm"
 include("management-api")
 include("edge-api")
-include("ziti")
-include("ziti-netty")
-include("ziti-springboot")
-include("ziti-springboot-client")
-include("ziti-jdbc")
-include("ziti-vertx")
+include("zt")
+include("zt-netty")
+include("zt-springboot")
+include("zt-springboot-client")
+include("zt-jdbc")
+include("zt-vertx")

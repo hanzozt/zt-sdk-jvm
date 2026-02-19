@@ -27,7 +27,7 @@ jobs:
       - name: Setup Gradle
         uses: gradle/actions/setup-gradle@v5
 
-      - uses: hanzozt/ziti/setup-cli@main
+      - uses: hanzozt/zt/setup-cli@main
 
       - name: Check
         run: |
@@ -40,7 +40,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: test-results
-          path: ziti/build/test-results/**/*.xml
+          path: zt/build/test-results/**/*.xml
 
       - name: upload test summary
         if: always()

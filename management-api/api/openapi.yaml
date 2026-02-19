@@ -11,7 +11,7 @@ info:
   title: Ziti Edge Management
   version: 0.26.53
 servers:
-- url: https://demo.ziti.dev/edge/management/v1
+- url: https://demo.zt.dev/edge/management/v1
 paths:
   /:
     get:
@@ -27327,7 +27327,7 @@ components:
         authQueries:
         - clientId: clientId
           isTotpEnrolled: true
-          provider: ziti
+          provider: zt
           httpUrl: httpUrl
           minLength: 6
           format: numeric
@@ -27340,7 +27340,7 @@ components:
           maxLength: 0
         - clientId: clientId
           isTotpEnrolled: true
-          provider: ziti
+          provider: zt
           httpUrl: httpUrl
           minLength: 6
           format: numeric
@@ -27698,7 +27698,7 @@ components:
       example:
         clientId: clientId
         isTotpEnrolled: true
-        provider: ziti
+        provider: zt
         httpUrl: httpUrl
         minLength: 6
         format: numeric
@@ -28201,7 +28201,7 @@ components:
           nullable: false
           type: object
         name:
-          example: default.ziti-tunneler-server.v1
+          example: default.zt-tunneler-server.v1
           type: string
         tags:
           $ref: "#/components/schemas/tags"
@@ -28270,7 +28270,7 @@ components:
             in the type parameter
           type: object
         name:
-          example: default.ziti-tunneler-server.v1
+          example: default.zt-tunneler-server.v1
           type: string
         tags:
           $ref: "#/components/schemas/tags"
@@ -28279,7 +28279,7 @@ components:
       description: A config-type create object
       properties:
         name:
-          example: ziti-tunneler-server.v1
+          example: zt-tunneler-server.v1
           type: string
         schema:
           additionalProperties: true
@@ -28295,7 +28295,7 @@ components:
       - $ref: "#/components/schemas/baseEntity"
       - properties:
           name:
-            example: ziti-tunneler-server.v1
+            example: zt-tunneler-server.v1
             type: string
           schema:
             additionalProperties: true
@@ -28315,7 +28315,7 @@ components:
             method: method
             comment: comment
             href: https://openapi-generator.tech
-        name: ziti-tunneler-server.v1
+        name: zt-tunneler-server.v1
         id: id
         tags: {}
         updatedAt: 2000-01-23T04:56:07.000+00:00
@@ -28328,7 +28328,7 @@ components:
       description: A config-type patch object
       properties:
         name:
-          example: ziti-tunneler-server.v1
+          example: zt-tunneler-server.v1
           type: string
         schema:
           additionalProperties: true
@@ -28341,7 +28341,7 @@ components:
       description: A config-type update object
       properties:
         name:
-          example: ziti-tunneler-server.v1
+          example: zt-tunneler-server.v1
           type: string
         schema:
           additionalProperties: true
@@ -28372,7 +28372,7 @@ components:
           nullable: false
           type: object
         name:
-          example: default.ziti-tunneler-server.v1
+          example: default.zt-tunneler-server.v1
           type: string
         tags:
           $ref: "#/components/schemas/tags"
@@ -28599,7 +28599,7 @@ components:
         authQueries:
         - clientId: clientId
           isTotpEnrolled: true
-          provider: ziti
+          provider: zt
           httpUrl: httpUrl
           minLength: 6
           format: numeric
@@ -28612,7 +28612,7 @@ components:
           maxLength: 0
         - clientId: clientId
           isTotpEnrolled: true
-          provider: ziti
+          provider: zt
           httpUrl: httpUrl
           minLength: 6
           format: numeric
@@ -28664,7 +28664,7 @@ components:
           authQueries:
           - clientId: clientId
             isTotpEnrolled: true
-            provider: ziti
+            provider: zt
             httpUrl: httpUrl
             minLength: 6
             format: numeric
@@ -28677,7 +28677,7 @@ components:
             maxLength: 0
           - clientId: clientId
             isTotpEnrolled: true
-            provider: ziti
+            provider: zt
             httpUrl: httpUrl
             minLength: 6
             format: numeric
@@ -28984,7 +28984,7 @@ components:
           authQueries:
           - clientId: clientId
             isTotpEnrolled: true
-            provider: ziti
+            provider: zt
             httpUrl: httpUrl
             minLength: 6
             format: numeric
@@ -28997,7 +28997,7 @@ components:
             maxLength: 0
           - clientId: clientId
             isTotpEnrolled: true
-            provider: ziti
+            provider: zt
             httpUrl: httpUrl
             minLength: 6
             format: numeric
@@ -29258,7 +29258,7 @@ components:
               method: method
               comment: comment
               href: https://openapi-generator.tech
-          name: ziti-tunneler-server.v1
+          name: zt-tunneler-server.v1
           id: id
           tags: {}
           updatedAt: 2000-01-23T04:56:07.000+00:00
@@ -32496,7 +32496,7 @@ components:
           authQueries:
           - clientId: clientId
             isTotpEnrolled: true
-            provider: ziti
+            provider: zt
             httpUrl: httpUrl
             minLength: 6
             format: numeric
@@ -32509,7 +32509,7 @@ components:
             maxLength: 0
           - clientId: clientId
             isTotpEnrolled: true
-            provider: ziti
+            provider: zt
             httpUrl: httpUrl
             minLength: 6
             format: numeric
@@ -32556,7 +32556,7 @@ components:
           authQueries:
           - clientId: clientId
             isTotpEnrolled: true
-            provider: ziti
+            provider: zt
             httpUrl: httpUrl
             minLength: 6
             format: numeric
@@ -32569,7 +32569,7 @@ components:
             maxLength: 0
           - clientId: clientId
             isTotpEnrolled: true
-            provider: ziti
+            provider: zt
             httpUrl: httpUrl
             minLength: 6
             format: numeric
@@ -32882,7 +32882,7 @@ components:
               method: method
               comment: comment
               href: https://openapi-generator.tech
-          name: ziti-tunneler-server.v1
+          name: zt-tunneler-server.v1
           id: id
           tags: {}
           updatedAt: 2000-01-23T04:56:07.000+00:00
@@ -32894,7 +32894,7 @@ components:
               method: method
               comment: comment
               href: https://openapi-generator.tech
-          name: ziti-tunneler-server.v1
+          name: zt-tunneler-server.v1
           id: id
           tags: {}
           updatedAt: 2000-01-23T04:56:07.000+00:00
@@ -35026,7 +35026,7 @@ components:
       type: string
     mfaProviders:
       enum:
-      - ziti
+      - zt
       - url
       type: string
     namedRole:

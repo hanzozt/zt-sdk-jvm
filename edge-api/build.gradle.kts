@@ -61,7 +61,7 @@ dependencies {
 // generate Ziti Edge API client
 // only needed if new version was published in github.com/hanzozt/edge-api
 // run `./gradlew :openApiGenerate`, check build, commit, push
-val edgeApiVersion = libs.versions.ziti.api.get()
+val edgeApiVersion = libs.versions.zt.api.get()
 
 openApiGenerate {
     applyDefaults()

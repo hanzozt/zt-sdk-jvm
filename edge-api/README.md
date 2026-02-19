@@ -108,7 +108,7 @@ public class AuthenticationApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://demo.ziti.dev/edge/client/v1*
+All URIs are relative to *https://demo.zt.dev/edge/client/v1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

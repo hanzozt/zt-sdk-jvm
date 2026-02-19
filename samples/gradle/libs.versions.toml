@@ -15,11 +15,11 @@ httpcomponentscore5h2 = "org.apache.httpcomponents.core5:httpcore5-h2:5.3.6"
 log4j = "org.apache.logging.log4j:log4j-core:2.17.1"
 kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlin" }
 kotlinx-coroutines = "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.8.1"
-ziti = { module = "org.hanzozt:ziti", version.ref = "hanzozt" }
-ziti-jdbc = { module = "org.hanzozt:ziti-jdbc", version.ref = "hanzozt" }
-ziti-netty = { module = "org.hanzozt:ziti-netty", version.ref = "hanzozt" }
-ziti-springboot = { module = "org.hanzozt:ziti-springboot", version.ref = "hanzozt" }
-ziti-springboot-client = { module = "org.hanzozt:ziti-springboot-client", version.ref = "hanzozt" }
+zt = { module = "org.hanzozt:zt", version.ref = "hanzozt" }
+zt-jdbc = { module = "org.hanzozt:zt-jdbc", version.ref = "hanzozt" }
+zt-netty = { module = "org.hanzozt:zt-netty", version.ref = "hanzozt" }
+zt-springboot = { module = "org.hanzozt:zt-springboot", version.ref = "hanzozt" }
+zt-springboot-client = { module = "org.hanzozt:zt-springboot-client", version.ref = "hanzozt" }
 slf4j-api = { module = "org.slf4j:slf4j-api", version.ref = "slf4j" }
 slf4j-simple = { module = "org.slf4j:slf4j-simple", version.ref = "slf4j" }
 

@@ -1,6 +1,6 @@
 # ExternalJwtSignerApi
 
-All URIs are relative to *https://demo.ziti.dev/edge/client/v1*
+All URIs are relative to *https://demo.zt.dev/edge/client/v1*
 
 | Method | HTTP request | Description |
 |------------- | ------------- | -------------|
@@ -31,7 +31,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         ExternalJwtSignerApi apiInstance = new ExternalJwtSignerApi(defaultClient);
         Integer limit = 56; // Integer | 
@@ -106,7 +106,7 @@ import java.util.concurrent.CompletableFuture;
 public class Example {
     public static void main(String[] args) {
         ApiClient defaultClient = Configuration.getDefaultApiClient();
-        defaultClient.setBasePath("https://demo.ziti.dev/edge/client/v1");
+        defaultClient.setBasePath("https://demo.zt.dev/edge/client/v1");
 
         ExternalJwtSignerApi apiInstance = new ExternalJwtSignerApi(defaultClient);
         Integer limit = 56; // Integer | 

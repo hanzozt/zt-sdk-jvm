@@ -14,23 +14,23 @@
  * limitations under the License.
  */
 
-rootProject.name = 'ziti-jvm-samples'
+rootProject.name = 'zt-jvm-samples'
 
 //includeBuild("..")
 
-include 'ziti-enroller'
-include 'ziti-half-close'
+include 'zt-enroller'
+include 'zt-half-close'
 include 'sample'
 include 'http-sample'
 include 'sample-host'
-include 'ziti-netty-samples'
+include 'zt-netty-samples'
 include 'terminators-sample'
 include 'sample-okhttp'
-include 'ziti-spring-boot'
-include 'ziti-spring-boot-client'
-include 'ziti-jdbc-postgresql'
-include 'ziti-jdbc-mssql'
-include 'ziti-jdbc-spring-jpa:initial:server'
-include 'ziti-jdbc-spring-jpa:initial:client'
-include 'ziti-jdbc-spring-jpa:complete:server'
-include 'ziti-jdbc-spring-jpa:complete:client'
+include 'zt-spring-boot'
+include 'zt-spring-boot-client'
+include 'zt-jdbc-postgresql'
+include 'zt-jdbc-mssql'
+include 'zt-jdbc-spring-jpa:initial:server'
+include 'zt-jdbc-spring-jpa:initial:client'
+include 'zt-jdbc-spring-jpa:complete:server'
+include 'zt-jdbc-spring-jpa:complete:client'
